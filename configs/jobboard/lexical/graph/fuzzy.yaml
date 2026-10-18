@@ -1,0 +1,21 @@
+defaults:
+- lexical
+- /jobboard/lexical/retrieval@_global_.jobboard.retrieval.fuzzy: fuzzy
+- _self_
+entries:
+  fuzzy_leaf:
+    _target_: src.core.transformers.opensearch.jobboard.search.JobSearchTransformer
+    integration:
+      _target_: src.integrations.opensearch.client.OpenSearchIntegration
+      url: ${connection.url}
+      authorization: ${connection.authorization}
+      timeout: ${connection.timeout}
+    parser: ${jobboard.parser}
+    source: ${jobboard.source}
+    query: ${jobboard.retrieval.fuzzy}
+    size: ${jobboard.candidate_depth}
+  fuzzy:
+    _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+    steps:
+    - fuzzy_leaf
+    - top_k

@@ -1,0 +1,15 @@
+defaults:
+  - /jobboard/lexical/research@_global_: profile
+  - _self_
+_target_: src.experiments.research.search.ResearchExperiment
+registry: ${jobboard.registry}
+variants: [c1, c2, c3, c4, c5]
+now_ms: ${jobboard.session.now_ms}
+source_id: ${jobboard.source.index}
+context: {}
+filters: []
+text: комплектовщик ТСД без опыта
+input_path: null
+exporters:
+  - _target_: src.components.reporting.exporters.json.JSONExporter
+    path: ${hydra:runtime.output_dir}/research.json

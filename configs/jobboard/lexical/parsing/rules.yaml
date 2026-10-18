@@ -1,0 +1,26 @@
+_target_: src.components.query.jobboard.parser.ModularQueryParser
+normalizer:
+  _target_: src.components.query.normalization.NormalizeText
+  protected_terms: ${jobboard.lexicons.protected.terms}
+stages:
+- _target_: src.components.query.jobboard.lexicon.LexiconQueryStage
+  kind: role
+  entries: ${jobboard.lexicons.roles.entries}
+- _target_: src.components.query.jobboard.lexicon.LexiconQueryStage
+  kind: skill
+  entries: ${jobboard.lexicons.skills.entries}
+- _target_: src.components.query.jobboard.lexicon.LexiconQueryStage
+  kind: seniority
+  entries: ${jobboard.lexicons.seniority.entries}
+- _target_: src.components.query.jobboard.lexicon.LexiconQueryStage
+  kind: work_mode
+  entries: ${jobboard.lexicons.work_modes.entries}
+- _target_: src.components.query.jobboard.lexicon.LexiconQueryStage
+  kind: location
+  entries: ${jobboard.lexicons.locations.entries}
+unsupported_markers: ${jobboard.lexicons.syntax.unsupported_markers}
+syntax_whitelist: ${jobboard.lexicons.syntax.whitelist}
+max_input_characters: 512
+max_concept_groups: 16
+max_alternatives_per_concept: 4
+max_alternatives_total: 48

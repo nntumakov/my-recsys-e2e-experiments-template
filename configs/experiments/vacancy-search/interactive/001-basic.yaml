@@ -1,0 +1,23 @@
+_target_: src.experiments.direct.search.SearchExperiment
+pipeline: search_pipeline
+context: {}
+filters: []
+registry:
+  _target_: src.core.registry.BasicTransformerRegistry
+  entries:
+    search_pipeline:
+      _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+      steps: [search]
+    search:
+      _target_: src.core.transformers.opensearch.search.OpenSearchTransformer
+      index: ${search.index}
+      fields: ${search.fields}
+      size: ${search.size}
+      integration:
+        _target_: src.integrations.opensearch.client.OpenSearchIntegration
+        url: ${connection.url}
+        authorization: ${connection.authorization}
+        timeout: ${connection.timeout}
+exporters:
+  - _target_: src.components.reporting.exporters.json.JSONExporter
+    path: ${hydra:runtime.output_dir}/searches.json

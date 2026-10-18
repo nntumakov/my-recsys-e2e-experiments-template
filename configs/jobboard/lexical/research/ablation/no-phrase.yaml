@@ -1,0 +1,3 @@
+jobboard:
+  query:
+    title_phrase_boost: 0

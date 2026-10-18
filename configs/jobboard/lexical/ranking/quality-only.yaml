@@ -1,0 +1,13 @@
+_target_: src.core.transformers.opensearch.jobboard.ranking.RankingConfig
+mode: script_score
+field_params: {quality_field: quality}
+script:
+  lang: painless
+  params: {quality_pivot: 10.0, beta: 0.2}
+  source: |
+    double x = 0.0;
+    if (doc.containsKey(params.quality_field) && doc[params.quality_field].size() != 0) {
+      x = Math.max(0.0, (double)doc[params.quality_field].value);
+    }
+    double quality = 1.0 - params.quality_pivot / (x + params.quality_pivot);
+    return _score * (1.0 + params.beta * quality);

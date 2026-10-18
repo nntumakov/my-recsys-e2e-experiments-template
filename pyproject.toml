@@ -1,0 +1,26 @@
+[project]
+name = "recsys-experiments"
+version = "0.1.0"
+description = "Composable search experiments"
+requires-python = ">=3.12"
+dependencies = ["hydra-core>=1.3.2,<1.4"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1", "ty>=0.0.1,<1"]
+
+[tool.poetry]
+package-mode = false
+requires-poetry = ">=2.2,<3"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP"]
+
+[tool.ty.environment]
+python-version = "3.12"

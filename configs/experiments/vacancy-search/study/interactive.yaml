@@ -1,0 +1,11 @@
+_target_: src.experiments.research.composition.study_experiment
+_recursive_: false
+variant_definitions: ${study.variant_definitions}
+variants: ${study.registered}
+bindings: ${study.filters}
+context: ${study.context}
+filters: ${study.static_filters}
+comparability: ${study.comparability}
+exporters:
+  - _target_: src.components.reporting.exporters.json.JSONExporter
+    path: ${hydra:runtime.output_dir}/search-study.json

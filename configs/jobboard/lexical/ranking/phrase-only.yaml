@@ -1,0 +1,9 @@
+_target_: src.core.transformers.opensearch.jobboard.ranking.RankingConfig
+mode: phrase_rescore
+window_size: 200
+phrase_slop: 1
+rescore_weight: 2.0
+script:
+  lang: painless
+  params: {phrase_pivot: 2.0}
+  source: return _score / (_score + params.phrase_pivot);

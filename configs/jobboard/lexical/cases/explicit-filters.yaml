@@ -1,0 +1,65 @@
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: explicit-filter
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: python
+    - _target_: src.domain.request.filters.TermFilter
+      field: remote
+      value: true
+  relevance:
+    j01: 3
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 3
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: user-property-filter
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context:
+      selected_city: moscow
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: python
+    - _target_: src.domain.request.filters.UserPropertyFilter
+      field: city
+      property: selected_city
+  relevance:
+    j01: 3
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 3
+    j15: 0
+    j16: 3
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0

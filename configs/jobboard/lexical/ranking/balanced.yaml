@@ -1,0 +1,20 @@
+_target_: src.core.transformers.opensearch.jobboard.ranking.RankingConfig
+mode: script_score
+field_params: {date_field: published_at, quality_field: quality}
+now_param: now_ms
+script:
+  lang: painless
+  params: {half_life_days: 14.0, quality_pivot: 10.0, alpha: 0.2, beta: 0.2}
+  source: |
+    double fresh = 0.0;
+    if (doc.containsKey(params.date_field) && doc[params.date_field].size() != 0) {
+      long published = doc[params.date_field].value.toInstant().toEpochMilli();
+      double age = Math.max(0.0, (params.now_ms - published) / 86400000.0);
+      fresh = Math.exp(-Math.log(2.0) * age / params.half_life_days);
+    }
+    double x = 0.0;
+    if (doc.containsKey(params.quality_field) && doc[params.quality_field].size() != 0) {
+      x = Math.max(0.0, (double)doc[params.quality_field].value);
+    }
+    double quality = 1.0 - params.quality_pivot / (x + params.quality_pivot);
+    return _score * (1.0 + params.alpha * fresh + params.beta * quality);

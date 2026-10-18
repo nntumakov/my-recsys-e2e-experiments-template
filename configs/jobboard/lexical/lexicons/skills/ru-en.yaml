@@ -1,0 +1,376 @@
+entries:
+- id: skill.python
+  canonical: Python
+  surfaces:
+  - Python
+  - питон
+  - пайтон
+  alternatives:
+  - text: питон
+    relation: curated_translation
+  - text: пайтон
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.java
+  canonical: Java
+  surfaces:
+  - Java
+  - джава
+  alternatives:
+  - text: джава
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.javascript
+  canonical: JavaScript
+  surfaces:
+  - JavaScript
+  - джаваскрипт
+  - js
+  alternatives:
+  - text: джаваскрипт
+    relation: curated_translation
+  ambiguous_surfaces:
+  - js
+  requires_any:
+  - javascript
+  - developer
+  - frontend
+  - разработчик
+- id: skill.typescript
+  canonical: TypeScript
+  surfaces:
+  - TypeScript
+  - тайпскрипт
+  - ts
+  alternatives:
+  - text: тайпскрипт
+    relation: curated_translation
+  ambiguous_surfaces:
+  - ts
+  requires_any:
+  - typescript
+  - developer
+  - frontend
+  - разработчик
+- id: skill.c
+  canonical: C
+  surfaces:
+  - C
+  - язык си
+  alternatives:
+  - text: язык си
+    relation: curated_translation
+  ambiguous_surfaces:
+  - c
+  requires_any:
+  - developer
+  - programmer
+  - разработчик
+  - программист
+  - язык
+- id: skill.cpp
+  canonical: C++
+  surfaces:
+  - C++
+  - си плюс плюс
+  alternatives:
+  - text: си плюс плюс
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.csharp
+  canonical: C#
+  surfaces:
+  - C#
+  - си шарп
+  - c sharp
+  alternatives:
+  - text: c sharp
+    relation: curated_equivalent
+  - text: си шарп
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.dotnet
+  canonical: .NET
+  surfaces:
+  - .NET
+  - дотнет
+  - dotnet
+  alternatives:
+  - text: dotnet
+    relation: curated_equivalent
+  - text: дотнет
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.go
+  canonical: Go
+  surfaces:
+  - Go
+  - голанг
+  - golang
+  alternatives:
+  - text: golang
+    relation: curated_equivalent
+  - text: голанг
+    relation: curated_translation
+  ambiguous_surfaces:
+  - go
+  requires_any:
+  - developer
+  - engineer
+  - programmer
+  - разработчик
+  - программист
+  - backend
+- id: skill.r
+  canonical: R
+  surfaces:
+  - R
+  - язык r
+  alternatives:
+  - text: язык r
+    relation: curated_translation
+  ambiguous_surfaces:
+  - r
+  requires_any:
+  - data
+  - analyst
+  - scientist
+  - аналитик
+  - статистика
+  - язык
+  - programming
+- id: skill.sql
+  canonical: SQL
+  surfaces:
+  - SQL
+  - эс ку эль
+  alternatives:
+  - text: эс ку эль
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.postgresql
+  canonical: PostgreSQL
+  surfaces:
+  - PostgreSQL
+  - постгрес
+  - postgres
+  alternatives:
+  - text: postgres
+    relation: curated_equivalent
+  - text: постгрес
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.mysql
+  canonical: MySQL
+  surfaces:
+  - MySQL
+  - май эскьюэль
+  alternatives:
+  - text: май эскьюэль
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.redis
+  canonical: Redis
+  surfaces:
+  - Redis
+  - редис
+  alternatives:
+  - text: редис
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.mongodb
+  canonical: MongoDB
+  surfaces:
+  - MongoDB
+  - монгодб
+  - mongo db
+  alternatives:
+  - text: mongo db
+    relation: curated_equivalent
+  - text: монгодб
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.docker
+  canonical: Docker
+  surfaces:
+  - Docker
+  - докер
+  alternatives:
+  - text: докер
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.kubernetes
+  canonical: Kubernetes
+  surfaces:
+  - Kubernetes
+  - кубернетес
+  - k8s
+  alternatives:
+  - text: k8s
+    relation: curated_equivalent
+  - text: кубернетес
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.linux
+  canonical: Linux
+  surfaces:
+  - Linux
+  - линукс
+  alternatives:
+  - text: линукс
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.git
+  canonical: Git
+  surfaces:
+  - Git
+  - гит
+  alternatives:
+  - text: гит
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.kafka
+  canonical: Apache Kafka
+  surfaces:
+  - Apache Kafka
+  - кафка
+  - kafka
+  alternatives:
+  - text: kafka
+    relation: curated_equivalent
+  - text: кафка
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.airflow
+  canonical: Apache Airflow
+  surfaces:
+  - Apache Airflow
+  - эйрфлоу
+  - airflow
+  alternatives:
+  - text: airflow
+    relation: curated_equivalent
+  - text: эйрфлоу
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.spark
+  canonical: Apache Spark
+  surfaces:
+  - Apache Spark
+  - апач спарк
+  alternatives:
+  - text: апач спарк
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.tensorflow
+  canonical: TensorFlow
+  surfaces:
+  - TensorFlow
+  - тензорфлоу
+  alternatives:
+  - text: тензорфлоу
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.pytorch
+  canonical: PyTorch
+  surfaces:
+  - PyTorch
+  - пайторч
+  alternatives:
+  - text: пайторч
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.react
+  canonical: React
+  surfaces:
+  - React
+  - реакт
+  - react.js
+  alternatives:
+  - text: react.js
+    relation: curated_equivalent
+  - text: реакт
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.vue
+  canonical: Vue.js
+  surfaces:
+  - Vue.js
+  - вью джей эс
+  - vuejs
+  alternatives:
+  - text: vuejs
+    relation: curated_equivalent
+  - text: вью джей эс
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.angular
+  canonical: Angular
+  surfaces:
+  - Angular
+  - ангуляр
+  alternatives:
+  - text: ангуляр
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.nodejs
+  canonical: Node.js
+  surfaces:
+  - Node.js
+  - нод джей эс
+  - nodejs
+  alternatives:
+  - text: nodejs
+    relation: curated_equivalent
+  - text: нод джей эс
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.excel
+  canonical: Microsoft Excel
+  surfaces:
+  - Microsoft Excel
+  - эксель
+  - excel
+  alternatives:
+  - text: excel
+    relation: curated_equivalent
+  - text: эксель
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: skill.onec
+  canonical: 1С
+  surfaces:
+  - 1С
+  - один эс
+  - 1c
+  alternatives:
+  - text: 1c
+    relation: curated_translation
+  - text: один эс
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []

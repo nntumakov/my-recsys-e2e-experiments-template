@@ -1,0 +1,1564 @@
+- id: q001
+  text: грузчик
+  group: concepts
+  expected:
+    concepts:
+    - role.loader
+    structured: true
+- id: q002
+  text: комплектовщик
+  group: concepts
+  expected:
+    concepts:
+    - role.picker
+    structured: true
+- id: q003
+  text: кладовщик
+  group: concepts
+  expected:
+    concepts:
+    - role.stockkeeper
+    structured: true
+- id: q004
+  text: упаковщик
+  group: concepts
+  expected:
+    concepts:
+    - role.packer
+    structured: true
+- id: q005
+  text: фасовщик
+  group: concepts
+  expected:
+    concepts:
+    - role.portioner
+    structured: true
+- id: q006
+  text: приёмщик товара
+  group: concepts
+  expected:
+    concepts:
+    - role.receiver
+    structured: true
+- id: q007
+  text: водитель погрузчика
+  group: concepts
+  expected:
+    concepts:
+    - role.forklift_driver
+    structured: true
+- id: q008
+  text: оператор склада
+  group: concepts
+  expected:
+    concepts:
+    - role.warehouse_operator
+    structured: true
+- id: q009
+  text: водитель
+  group: concepts
+  expected:
+    concepts:
+    - role.driver
+    structured: true
+- id: q010
+  text: водитель-экспедитор
+  group: concepts
+  expected:
+    concepts:
+    - role.expeditor_driver
+    structured: true
+- id: q011
+  text: водитель автобуса
+  group: concepts
+  expected:
+    concepts:
+    - role.bus_driver
+    structured: true
+- id: q012
+  text: водитель самосвала
+  group: concepts
+  expected:
+    concepts:
+    - role.dump_driver
+    structured: true
+- id: q013
+  text: водитель автомобиля с манипулятором
+  group: concepts
+  expected:
+    concepts:
+    - role.manipulator_driver
+    structured: true
+- id: q014
+  text: курьер
+  group: concepts
+  expected:
+    concepts:
+    - role.courier
+    structured: true
+- id: q015
+  text: пеший курьер
+  group: concepts
+  expected:
+    concepts:
+    - role.walking_courier
+    structured: true
+- id: q016
+  text: автомобильный курьер
+  group: concepts
+  expected:
+    concepts:
+    - role.car_courier
+    structured: true
+- id: q017
+  text: сварщик
+  group: concepts
+  expected:
+    concepts:
+    - role.welder
+    structured: true
+- id: q018
+  text: электрогазосварщик
+  group: concepts
+  expected:
+    concepts:
+    - role.electric_gas_welder
+    structured: true
+- id: q019
+  text: токарь
+  group: concepts
+  expected:
+    concepts:
+    - role.turner
+    structured: true
+- id: q020
+  text: фрезеровщик
+  group: concepts
+  expected:
+    concepts:
+    - role.miller
+    structured: true
+- id: q021
+  text: оператор станков с ЧПУ
+  group: concepts
+  expected:
+    concepts:
+    - role.cnc_operator
+    structured: true
+- id: q022
+  text: наладчик станков с ЧПУ
+  group: concepts
+  expected:
+    concepts:
+    - role.cnc_setter
+    structured: true
+- id: q023
+  text: слесарь-сборщик
+  group: concepts
+  expected:
+    concepts:
+    - role.assembly_fitter
+    structured: true
+- id: q024
+  text: оператор производственной линии
+  group: concepts
+  expected:
+    concepts:
+    - role.line_operator
+    structured: true
+- id: q025
+  text: разнорабочий
+  group: concepts
+  expected:
+    concepts:
+    - role.handyman
+    structured: true
+- id: q026
+  text: бетонщик
+  group: concepts
+  expected:
+    concepts:
+    - role.concrete_worker
+    structured: true
+- id: q027
+  text: арматурщик
+  group: concepts
+  expected:
+    concepts:
+    - role.rebar_worker
+    structured: true
+- id: q028
+  text: каменщик
+  group: concepts
+  expected:
+    concepts:
+    - role.bricklayer
+    structured: true
+- id: q029
+  text: штукатур
+  group: concepts
+  expected:
+    concepts:
+    - role.plasterer
+    structured: true
+- id: q030
+  text: маляр
+  group: concepts
+  expected:
+    concepts:
+    - role.painter
+    structured: true
+- id: q031
+  text: плиточник
+  group: concepts
+  expected:
+    concepts:
+    - role.tiler
+    structured: true
+- id: q032
+  text: монтажник металлоконструкций
+  group: concepts
+  expected:
+    concepts:
+    - role.steel_installer
+    structured: true
+- id: q033
+  text: электромонтёр
+  group: concepts
+  expected:
+    concepts:
+    - role.maintenance_electrician
+    structured: true
+- id: q034
+  text: электромонтажник
+  group: concepts
+  expected:
+    concepts:
+    - role.installation_electrician
+    structured: true
+- id: q035
+  text: слесарь-ремонтник
+  group: concepts
+  expected:
+    concepts:
+    - role.repair_fitter
+    structured: true
+- id: q036
+  text: сантехник
+  group: concepts
+  expected:
+    concepts:
+    - role.plumber
+    structured: true
+- id: q037
+  text: автомеханик
+  group: concepts
+  expected:
+    concepts:
+    - role.car_mechanic
+    structured: true
+- id: q038
+  text: шиномонтажник
+  group: concepts
+  expected:
+    concepts:
+    - role.tire_fitter
+    structured: true
+- id: q039
+  text: машинист экскаватора
+  group: concepts
+  expected:
+    concepts:
+    - role.excavator_driver
+    structured: true
+- id: q040
+  text: машинист крана
+  group: concepts
+  expected:
+    concepts:
+    - role.crane_driver
+    structured: true
+- id: q041
+  text: продавец
+  group: concepts
+  expected:
+    concepts:
+    - role.seller
+    structured: true
+- id: q042
+  text: кассир
+  group: concepts
+  expected:
+    concepts:
+    - role.cashier
+    structured: true
+- id: q043
+  text: продавец-кассир
+  group: concepts
+  expected:
+    concepts:
+    - role.seller_cashier
+    structured: true
+- id: q044
+  text: работник торгового зала
+  group: concepts
+  expected:
+    concepts:
+    - role.shop_worker
+    structured: true
+- id: q045
+  text: мерчандайзер
+  group: concepts
+  expected:
+    concepts:
+    - role.merchandiser
+    structured: true
+- id: q046
+  text: пекарь
+  group: concepts
+  expected:
+    concepts:
+    - role.baker
+    structured: true
+- id: q047
+  text: кондитер
+  group: concepts
+  expected:
+    concepts:
+    - role.confectioner
+    structured: true
+- id: q048
+  text: обвальщик мяса
+  group: concepts
+  expected:
+    concepts:
+    - role.meat_boner
+    structured: true
+- id: q049
+  text: повар
+  group: concepts
+  expected:
+    concepts:
+    - role.cook
+    structured: true
+- id: q050
+  text: повар горячего цеха
+  group: concepts
+  expected:
+    concepts:
+    - role.hot_cook
+    structured: true
+- id: q051
+  text: повар холодного цеха
+  group: concepts
+  expected:
+    concepts:
+    - role.cold_cook
+    structured: true
+- id: q052
+  text: помощник повара
+  group: concepts
+  expected:
+    concepts:
+    - role.assistant_cook
+    structured: true
+- id: q053
+  text: кухонный рабочий
+  group: concepts
+  expected:
+    concepts:
+    - role.kitchen_worker
+    structured: true
+- id: q054
+  text: мойщик посуды
+  group: concepts
+  expected:
+    concepts:
+    - role.dishwasher
+    structured: true
+- id: q055
+  text: бариста
+  group: concepts
+  expected:
+    concepts:
+    - role.barista
+    structured: true
+- id: q056
+  text: изготовитель пищевых полуфабрикатов
+  group: concepts
+  expected:
+    concepts:
+    - role.food_maker
+    structured: true
+- id: q057
+  text: уборщик помещений
+  group: concepts
+  expected:
+    concepts:
+    - role.indoor_cleaner
+    structured: true
+- id: q058
+  text: уборщик территории
+  group: concepts
+  expected:
+    concepts:
+    - role.outdoor_cleaner
+    structured: true
+- id: q059
+  text: дворник
+  group: concepts
+  expected:
+    concepts:
+    - role.janitor
+    structured: true
+- id: q060
+  text: горничная
+  group: concepts
+  expected:
+    concepts:
+    - role.maid
+    structured: true
+- id: q061
+  text: охранник
+  group: concepts
+  expected:
+    concepts:
+    - role.guard
+    structured: true
+- id: q062
+  text: контролёр КПП
+  group: concepts
+  expected:
+    concepts:
+    - role.checkpoint
+    structured: true
+- id: q063
+  text: оператор прачечной
+  group: concepts
+  expected:
+    concepts:
+    - role.laundry_operator
+    structured: true
+- id: q064
+  text: швея
+  group: concepts
+  expected:
+    concepts:
+    - role.seamstress
+    structured: true
+- id: q065
+  text: комплектовщик ТСД
+  group: concepts
+  expected:
+    concepts:
+    - role.picker
+    - skill.scanner
+    structured: true
+- id: q066
+  text: кладовщик WMS
+  group: concepts
+  expected:
+    concepts:
+    - role.stockkeeper
+    - skill.wms
+    structured: true
+- id: q067
+  text: водитель ричтрака
+  group: concepts
+  expected:
+    concepts:
+    - role.driver
+    - skill.reach_truck
+    structured: true
+- id: q068
+  text: грузчик ночные смены
+  group: concepts
+  expected:
+    concepts:
+    - role.loader
+    - schedule.night
+    structured: true
+- id: q069
+  text: комплектовщик 2/2
+  group: concepts
+  expected:
+    concepts:
+    - role.picker
+    - schedule.two_two
+    structured: true
+- id: q070
+  text: кладовщик тёплый склад
+  group: concepts
+  expected:
+    concepts:
+    - role.stockkeeper
+    - condition.warm
+    structured: true
+- id: q071
+  text: фасовщик без опыта
+  group: concepts
+  expected:
+    concepts:
+    - role.portioner
+    - experience.none
+    structured: true
+- id: q072
+  text: водитель категории B
+  group: concepts
+  expected:
+    concepts:
+    - role.driver
+    - qualification.driving_b
+    structured: true
+- id: q073
+  text: водитель категории C
+  group: concepts
+  expected:
+    concepts:
+    - role.driver
+    - qualification.driving_c
+    structured: true
+- id: q074
+  text: водитель категории CE
+  group: concepts
+  expected:
+    concepts:
+    - role.driver
+    - qualification.driving_ce
+    structured: true
+- id: q075
+  text: водитель автобуса категория D
+  group: concepts
+  expected:
+    concepts:
+    - role.bus_driver
+    - qualification.driving_d
+    structured: true
+- id: q076
+  text: курьер на своём автомобиле
+  group: concepts
+  expected:
+    concepts:
+    - role.courier
+    - condition.own_car
+    structured: true
+- id: q077
+  text: курьер подработка
+  group: concepts
+  expected:
+    concepts:
+    - role.courier
+    - employment.side
+    structured: true
+- id: q078
+  text: курьер ежедневные выплаты
+  group: concepts
+  expected:
+    concepts:
+    - role.courier
+    - condition.daily_pay
+    structured: true
+- id: q079
+  text: сварщик полуавтомат
+  group: concepts
+  expected:
+    concepts:
+    - role.welder
+    - skill.mig_welding
+    structured: true
+- id: q080
+  text: сварщик НАКС
+  group: concepts
+  expected:
+    concepts:
+    - role.welder
+    - qualification.naks
+    structured: true
+- id: q081
+  text: токарь 5 разряд
+  group: concepts
+  expected:
+    concepts:
+    - role.turner
+    - qualification.grade_5
+    structured: true
+- id: q082
+  text: электрогазосварщик вахта
+  group: concepts
+  expected:
+    concepts:
+    - role.electric_gas_welder
+    - employment.rotation
+    structured: true
+- id: q083
+  text: разнорабочий с проживанием
+  group: concepts
+  expected:
+    concepts:
+    - role.handyman
+    - condition.housing
+    structured: true
+- id: q084
+  text: бетонщик вахта 30/30
+  group: concepts
+  expected:
+    concepts:
+    - role.concrete_worker
+    - employment.rotation
+    - schedule.rotation_30_30
+    structured: true
+- id: q085
+  text: маляр без опыта
+  group: concepts
+  expected:
+    concepts:
+    - role.painter
+    - experience.none
+    structured: true
+- id: q086
+  text: электромонтёр III группа
+  group: concepts
+  expected:
+    concepts:
+    - role.maintenance_electrician
+    - qualification.electrical_iii
+    structured: true
+- id: q087
+  text: шиномонтажник сезонная работа
+  group: concepts
+  expected:
+    concepts:
+    - role.tire_fitter
+    - employment.seasonal
+    structured: true
+- id: q088
+  text: кассир выходного дня
+  group: concepts
+  expected:
+    concepts:
+    - role.cashier
+    - schedule.weekend
+    structured: true
+- id: q089
+  text: пекарь ночные смены
+  group: concepts
+  expected:
+    concepts:
+    - role.baker
+    - schedule.night
+    structured: true
+- id: q090
+  text: охранник 4 разряд
+  group: concepts
+  expected:
+    concepts:
+    - role.guard
+    - qualification.grade_4
+    structured: true
+- id: q091
+  text: ищу работу грузчиком в Москве
+  group: concepts
+  expected:
+    concepts:
+    - role.loader
+    - place.moscow
+    structured: true
+- id: q092
+  text: кладовщик в Казани
+  group: concepts
+  expected:
+    concepts:
+    - role.stockkeeper
+    - place.kazan
+    structured: true
+- id: q093
+  text: повар Санкт-Петербург
+  group: concepts
+  expected:
+    concepts:
+    - role.cook
+    - place.petersburg
+    structured: true
+- id: q094
+  text: швея в Иваново
+  group: concepts
+  expected:
+    concepts:
+    - role.seamstress
+    structured: true
+- id: q095
+  text: оператор ЧПУ
+  group: concepts
+  expected:
+    concepts:
+    - role.cnc_operator
+    structured: true
+- id: q096
+  text: наладчик ЧПУ
+  group: concepts
+  expected:
+    concepts:
+    - role.cnc_setter
+    structured: true
+- id: q097
+  text: слесарь сборщик
+  group: concepts
+  expected:
+    concepts:
+    - role.assembly_fitter
+    structured: true
+- id: q098
+  text: оператор линии
+  group: concepts
+  expected:
+    concepts:
+    - role.line_operator
+    structured: true
+- id: q099
+  text: сборщик заказов
+  group: concepts
+  expected:
+    concepts:
+    - role.picker
+    structured: true
+- id: q100
+  text: водитель экспедитор
+  group: concepts
+  expected:
+    concepts:
+    - role.expeditor_driver
+    structured: true
+- id: q101
+  text: водитель манипулятора
+  group: concepts
+  expected:
+    concepts:
+    - role.manipulator_driver
+    structured: true
+- id: q102
+  text: продавец кассир
+  group: concepts
+  expected:
+    concepts:
+    - role.seller_cashier
+    structured: true
+- id: q103
+  text: посудомойщица
+  group: concepts
+  expected:
+    concepts:
+    - role.dishwasher
+    structured: true
+- id: q104
+  text: уборщица офиса
+  group: concepts
+  expected:
+    concepts:
+    - role.indoor_cleaner
+    structured: true
+- id: q105
+  text: кладовщик инвентаризация
+  group: concepts
+  expected:
+    concepts:
+    - role.stockkeeper
+    - skill.inventory
+    structured: true
+- id: q106
+  text: монтажник металлоконструкций по чертежам
+  group: concepts
+  expected:
+    concepts:
+    - role.steel_installer
+    - skill.blueprints
+    structured: true
+- id: q107
+  text: вадитель
+  group: rewrite
+  expected:
+    rewrite: водитель
+    structured: true
+- id: q108
+  text: грузщек
+  group: rewrite
+  expected:
+    rewrite: грузчик
+    structured: true
+- id: q109
+  text: сваршик
+  group: rewrite
+  expected:
+    rewrite: сварщик
+    structured: true
+- id: q110
+  text: кладовшик
+  group: rewrite
+  expected:
+    rewrite: кладовщик
+    structured: true
+- id: q111
+  text: косир
+  group: rewrite
+  expected:
+    rewrite: кассир
+    structured: true
+- id: q112
+  text: токорь
+  group: rewrite
+  expected:
+    rewrite: токарь
+    structured: true
+- id: q113
+  text: повор
+  group: rewrite
+  expected:
+    rewrite: повар
+    structured: true
+- id: q114
+  text: курер
+  group: rewrite
+  expected:
+    rewrite: курьер
+    structured: true
+- id: q115
+  text: уборшик офиса
+  group: rewrite
+  expected:
+    rewrite: уборщик офиса
+    structured: true
+- id: q116
+  text: пекорь
+  group: rewrite
+  expected:
+    rewrite: пекарь
+    structured: true
+- id: q117
+  text: djlbntkm
+  group: rewrite
+  expected:
+    rewrite: водитель
+    structured: true
+- id: q118
+  text: uhepxbr
+  group: rewrite
+  expected:
+    rewrite: грузчик
+    structured: true
+- id: q119
+  text: cdfhobr
+  group: rewrite
+  expected:
+    rewrite: сварщик
+    structured: true
+- id: q120
+  text: rkfljdobr
+  group: rewrite
+  expected:
+    rewrite: кладовщик
+    structured: true
+- id: q121
+  text: rfccbh
+  group: rewrite
+  expected:
+    rewrite: кассир
+    structured: true
+- id: q122
+  text: njrfhm
+  group: rewrite
+  expected:
+    rewrite: токарь
+    structured: true
+- id: q123
+  text: gjdfh
+  group: rewrite
+  expected:
+    rewrite: повар
+    structured: true
+- id: q124
+  text: rehmth
+  group: rewrite
+  expected:
+    rewrite: курьер
+    structured: true
+- id: q125
+  text: e,jhobr офиса
+  group: rewrite
+  expected:
+    rewrite: уборщик офиса
+    structured: true
+- id: q126
+  text: gtrfhm
+  group: rewrite
+  expected:
+    rewrite: пекарь
+    structured: true
+- id: q127
+  text: voditel
+  group: rewrite
+  expected:
+    rewrite: водитель
+    structured: true
+- id: q128
+  text: gruzchik
+  group: rewrite
+  expected:
+    rewrite: грузчик
+    structured: true
+- id: q129
+  text: svarshik
+  group: rewrite
+  expected:
+    rewrite: сварщик
+    structured: true
+- id: q130
+  text: kladovshik
+  group: rewrite
+  expected:
+    rewrite: кладовщик
+    structured: true
+- id: q131
+  text: kassir
+  group: rewrite
+  expected:
+    rewrite: кассир
+    structured: true
+- id: q132
+  text: tokar
+  group: rewrite
+  expected:
+    rewrite: токарь
+    structured: true
+- id: q133
+  text: povar
+  group: rewrite
+  expected:
+    rewrite: повар
+    structured: true
+- id: q134
+  text: kuryer
+  group: rewrite
+  expected:
+    rewrite: курьер
+    structured: true
+- id: q135
+  text: uborshik офиса
+  group: rewrite
+  expected:
+    rewrite: уборщик офиса
+    structured: true
+- id: q136
+  text: pekar
+  group: rewrite
+  expected:
+    rewrite: пекарь
+    structured: true
+- id: q137
+  text: комплектовшик
+  group: rewrite
+  expected:
+    rewrite: комплектовщик
+    structured: true
+- id: q138
+  text: фасовшик
+  group: rewrite
+  expected:
+    rewrite: фасовщик
+    structured: true
+- id: q139
+  text: упаковшик
+  group: rewrite
+  expected:
+    rewrite: упаковщик
+    structured: true
+- id: q140
+  text: электромантер
+  group: rewrite
+  expected:
+    rewrite: электромонтёр
+    structured: true
+- id: q141
+  text: шиномонтажнек
+  group: rewrite
+  expected:
+    rewrite: шиномонтажник
+    structured: true
+- id: q142
+  text: мерчендайзер
+  group: rewrite
+  expected:
+    rewrite: мерчандайзер
+    structured: true
+- id: q143
+  text: разнарабочий
+  group: rewrite
+  expected:
+    rewrite: разнорабочий
+    structured: true
+- id: q144
+  text: арматуршик
+  group: rewrite
+  expected:
+    rewrite: арматурщик
+    structured: true
+- id: q145
+  text: сантехнек
+  group: rewrite
+  expected:
+    rewrite: сантехник
+    structured: true
+- id: q146
+  text: пасудомойщик
+  group: rewrite
+  expected:
+    rewrite: посудомойщик
+    structured: true
+- id: q147
+  text: ТСД
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q148
+  text: ЧПУ
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q149
+  text: НАКС
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q150
+  text: КПП
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q151
+  text: WMS
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q152
+  text: C++
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q153
+  text: C#
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q154
+  text: .NET
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q155
+  text: Go
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q156
+  text: R
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q157
+  text: SQL
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q158
+  text: QA
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q159
+  text: 2/2
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q160
+  text: 30/30
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q161
+  text: CE
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q162
+  text: B
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q163
+  text: C
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q164
+  text: В
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q165
+  text: С
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q166
+  text: СЕ
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q167
+  text: 6/1
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q168
+  text: III
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q169
+  text: 4 разряд
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q170
+  text: 3500 за смену
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q171
+  text: брендкворикс
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q172
+  text: новыйбрендксерон
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q173
+  text: уборшик
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q174
+  text: e,jhobr
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q175
+  text: uborshik
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q176
+  text: не вадитель
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q177
+  text: вадитель или грузщек
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q178
+  text: водитель 5/2
+  group: rewrite
+  expected:
+    rewrite: null
+- id: q179
+  text: экспедитор без вождения
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q180
+  text: грузчик не вахта
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q181
+  text: охранник без лицензии
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q182
+  text: водитель от 100000 на руки
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q183
+  text: работа 2/2
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q184
+  text: комплектовщик без проживания
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q185
+  text: сварщик не ночные
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q186
+  text: повар кроме доставки
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q187
+  text: грузчик или курьер
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q188
+  text: водитель без категории
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q189
+  text: работа без медкнижки
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q190
+  text: подработка
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q191
+  text: вахта
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q192
+  text: без опыта
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q193
+  text: от 80000
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q194
+  text: 80 тысяч на руки
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q195
+  text: 3500 руб за смену
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q196
+  text: до 120000
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q197
+  text: ежедневно 4000
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q198
+  text: без проживания
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q199
+  text: без медкнижки
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q200
+  text: не вахта
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q201
+  text: не ночные
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q202
+  text: кроме доставки
+  group: guards
+  expected:
+    structured: false
+    rewrite: null
+- id: q203
+  text: Москва
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q204
+  text: Иваново
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q205
+  text: работа
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q206
+  text: срочно
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q207
+  text: ищу работу
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q208
+  text: требуется
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q209
+  text: нужна работа
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q210
+  text: ищу подработку
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q211
+  text: подработка без опыта
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q212
+  text: вахта без опыта
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q213
+  text: склад неизвестныйбренд
+  group: guards
+  expected:
+    structured: true
+    rewrite: null
+- id: q214
+  text: грузчик дневные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q215
+  text: грузчик ночная смена
+  group: ranking
+  expected:
+    structured: true
+- id: q216
+  text: грузчик 2/2
+  group: ranking
+  expected:
+    structured: true
+- id: q217
+  text: кладовщик дневная смена
+  group: ranking
+  expected:
+    structured: true
+- id: q218
+  text: кладовщик ночные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q219
+  text: комплектовщик дневные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q220
+  text: комплектовщик ночная смена
+  group: ranking
+  expected:
+    structured: true
+- id: q221
+  text: повар дневные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q222
+  text: повар ночные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q223
+  text: кассир 2/2
+  group: ranking
+  expected:
+    structured: true
+- id: q224
+  text: кассир 5/2
+  group: ranking
+  expected:
+    structured: true
+- id: q225
+  text: водитель дневная смена
+  group: ranking
+  expected:
+    structured: true
+- id: q226
+  text: водитель ночные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q227
+  text: сварщик дневные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q228
+  text: сварщик ночные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q229
+  text: токарь дневные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q230
+  text: токарь ночные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q231
+  text: упаковщик дневная смена
+  group: ranking
+  expected:
+    structured: true
+- id: q232
+  text: упаковщик ночная смена
+  group: ranking
+  expected:
+    structured: true
+- id: q233
+  text: фасовщик дневная смена
+  group: ranking
+  expected:
+    structured: true
+- id: q234
+  text: фасовщик ночная смена
+  group: ranking
+  expected:
+    structured: true
+- id: q235
+  text: охранник сутки через трое
+  group: ranking
+  expected:
+    structured: true
+- id: q236
+  text: охранник дневная смена
+  group: ranking
+  expected:
+    structured: true
+- id: q237
+  text: охранник ночные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q238
+  text: дворник дневные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q239
+  text: швея дневные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q240
+  text: швея ночные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q241
+  text: пекарь дневные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q242
+  text: уборщица дневные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q243
+  text: уборщица ночные смены
+  group: ranking
+  expected:
+    structured: true
+- id: q244
+  text: курьер выходного дня
+  group: ranking
+  expected:
+    structured: true
+- id: q245
+  text: водитель подработка
+  group: ranking
+  expected:
+    structured: true
+- id: q246
+  text: вадитель категории C
+  group: rewrite
+  expected:
+    rewrite: водитель категории c
+- id: q247
+  text: rkfljdobr Москва
+  group: rewrite
+  expected:
+    rewrite: кладовщик москва
+- id: q248
+  text: svarshik вахта
+  group: rewrite
+  expected:
+    rewrite: сварщик вахта
+- id: q249
+  text: комплектовшик ТСД
+  group: rewrite
+  expected:
+    rewrite: комплектовщик тсд

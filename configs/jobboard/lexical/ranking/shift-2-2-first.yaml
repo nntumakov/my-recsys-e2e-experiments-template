@@ -1,0 +1,4 @@
+defaults: [day-first, _self_]
+script:
+  params:
+    tiers: {day: 1, shift_2_2: 0, night: 2, other: 3}

@@ -1,0 +1,18 @@
+defaults:
+- /jobboard/lexical@_global_: profile
+- /jobboard/lexical/cases@_global_.jobboard.cases: synthetic
+- _self_
+_target_: src.experiments.testing.compare.CompareExperiment
+registry: ${jobboard.registry}
+pipelines:
+  baseline: baseline
+  lexical: lexical
+  parsed: parsed
+cases: ${jobboard.cases}
+metrics:
+  ndcg:
+    _target_: src.components.evaluation.metrics.listwise.ndcg.ListWiseNDCG
+    k: ${jobboard.evaluation_k}
+exporters:
+- _target_: src.components.reporting.exporters.json.JSONExporter
+  path: ${hydra:runtime.output_dir}/comparison.json

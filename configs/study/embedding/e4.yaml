@@ -1,0 +1,12 @@
+_target_: src.core.transformers.qdrant.study.TitleBodyStudySearch
+integration: ${qdrant.integration}
+embedder: ${embedding.encoder}
+title_source: ${study.sources.title}
+title_collection: ${study.collections.title}
+body_source: ${study.sources.body}
+body_collection: ${study.collections.body}
+candidate_depth: ${study.candidate_depth}
+final_k: ${study.final_k}
+exact: ${study.exact}
+hnsw_ef: ${study.hnsw_ef}
+rrf_constant: ${study.rank_constant}

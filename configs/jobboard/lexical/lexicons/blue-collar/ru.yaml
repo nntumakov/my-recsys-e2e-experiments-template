@@ -1,0 +1,19 @@
+defaults:
+  - ru/roles@entries.role
+  - ru/skills@entries.skill
+  - ru/qualifications@entries.qualification
+  - ru/experience@entries.experience
+  - ru/schedules@entries.schedule
+  - ru/employment@entries.employment
+  - ru/conditions@entries.work_condition
+  - ru/locations@entries.location
+  - ru/rewrites@rewrites
+  - _self_
+version: blue-collar-ru-v1
+protected: [ТСД, ЧПУ, НАКС, КПП, WMS, B, C, CE, D, В, С, СЕ, II, III, IV, V, C++, 'C#', .NET]
+introductions: [ищу работу, ищу подработку, нужна работа, вакансия, требуется]
+unsupported_markers: [не, без, кроме, или, not, without, except, or]
+syntax_whitelist: [без опыта, без опыта работы, без стажа]
+keyboard:
+  ru: йцукенгшщзхъфывапролджэячсмитьбюё
+  en: "qwertyuiop[]asdfghjkl;'zxcvbnm,.`"

@@ -1,0 +1,77 @@
+- id: two_two
+  canonical: 2/2
+  forms:
+  - два через два
+- id: afive_two
+  canonical: 5/2
+  forms:
+  - пять через два
+- id: three_three
+  canonical: 3/3
+  forms:
+  - три через три
+- id: six_one
+  canonical: 6/1
+  forms:
+  - шесть через один
+- id: one_three
+  canonical: сутки через трое
+  forms:
+  - 1/3
+- id: night
+  canonical: ночные смены
+  forms:
+  - ночная смена
+  - ночью
+  - ночные
+- id: day
+  canonical: дневные смены
+  forms:
+  - дневная смена
+  - днём
+  - днем
+- id: flexible
+  canonical: гибкий график
+  forms:
+  - свободный график
+- id: weekend
+  canonical: выходные дни
+  forms:
+  - выходного дня
+  - по выходным
+- id: rotation_15_15
+  canonical: 15/15
+  ambiguous:
+  - 15/15
+  requires:
+  - вахта
+  - вахтой
+  - вахтовый
+  - вахтовым
+- id: rotation_30_30
+  canonical: 30/30
+  ambiguous:
+  - 30/30
+  requires:
+  - вахта
+  - вахтой
+  - вахтовый
+  - вахтовым
+- id: rotation_45_15
+  canonical: 45/15
+  ambiguous:
+  - 45/15
+  requires:
+  - вахта
+  - вахтой
+  - вахтовый
+  - вахтовым
+- id: rotation_60_30
+  canonical: 60/30
+  ambiguous:
+  - 60/30
+  requires:
+  - вахта
+  - вахтой
+  - вахтовый
+  - вахтовым

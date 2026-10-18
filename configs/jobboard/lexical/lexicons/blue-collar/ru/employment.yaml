@@ -1,0 +1,29 @@
+- id: full
+  canonical: полная занятость
+  forms:
+  - полный день
+- id: part
+  canonical: частичная занятость
+  forms:
+  - неполный день
+- id: side
+  canonical: подработка
+  forms:
+  - подработку
+  - подработкой
+- id: seasonal
+  canonical: сезонная работа
+  forms:
+  - сезонная
+  - сезонно
+- id: temporary
+  canonical: временная работа
+  forms:
+  - временно
+  - временная
+- id: rotation
+  canonical: вахта
+  forms:
+  - вахтой
+  - вахтовый метод
+  - вахтовым методом

@@ -1,0 +1,171 @@
+defaults:
+  - jobboard/lexical/lexicons/blue-collar@study.content: ru
+  - vector/embedding@embedding: multilingual-e5-base
+  - vector/qdrant@qdrant: standalone
+  - study/fulltext@study.variant_definitions.f1: f1
+  - study/fulltext@study.variant_definitions.f2: f2
+  - study/fulltext@study.variant_definitions.f3: f3
+  - study/fulltext@study.variant_definitions.f4: f4
+  - study/fulltext@study.variant_definitions.f5: f5
+  - study/embedding@study.variant_definitions.e1: e1
+  - study/embedding@study.variant_definitions.e2: e2
+  - study/embedding@study.variant_definitions.e3: e3
+  - study/embedding@study.variant_definitions.e4: e4
+  - study/embedding@study.variant_definitions.e5: e5
+  - experiments/vacancy-search/study@experiment: manual
+  - _self_
+
+# These declarations are examples. Supply actual site values before selected calls.
+connection:
+  url: null
+  authorization: ${oc.env:OPENSEARCH_AUTHORIZATION,null}
+  timeout: 30.0
+embedding:
+  runtime:
+    image: null
+    gpu_uuid: null
+    cache_dir: null
+qdrant:
+  url: null
+  collection: null
+  filter_fields:
+    _target_: src.experiments.research.filters.qdrant_filter_fields
+    declarations: ${study.filters}
+
+corpus:
+  identity: study-cohort-v1
+  path: null
+  title_field: title
+  description_field: description
+  reader:
+    _target_: src.components.corpus.study.StudyCohortReader
+    path: ${corpus.path}
+    title_field: ${corpus.title_field}
+    description_field: ${corpus.description_field}
+
+study:
+  registered: [f1, f2, f3, f4, f5]
+  candidate_depth: 100
+  final_k: 20
+  preference_budget: 0.2
+  rank_constant: 60
+  preference_aggregation: mean
+  exact: true
+  hnsw_ef: 128
+  preference_bindings: {}
+  similarity_evidence: {}
+  fulltext_description_field: description
+  filters:
+    city: {type: keyword, opensearch_field: city.keyword, opensearch_source_path: [city], qdrant_path: [city]}
+    active: {type: boolean, opensearch_field: active, opensearch_source_path: [active], qdrant_path: [active]}
+  context: {}
+  static_filters: []
+  comparability: {comparable: false}
+  opensearch:
+    _target_: src.integrations.opensearch.client.OpenSearchIntegration
+    url: ${connection.url}
+    authorization: ${connection.authorization}
+    timeout: ${connection.timeout}
+  fulltext_source:
+    _target_: src.core.transformers.opensearch.jobboard.query.SourceProfile
+    index: null
+    fields: [title, description]
+    title_field: title
+    term_fields:
+      _target_: src.experiments.research.filters.opensearch_filter_fields
+      declarations: ${study.filters}
+  parser:
+    _target_: src.components.query.jobboard.catalog.work_parser
+    entries: ${study.content.entries}
+    protected: ${study.content.protected}
+    introductions: ${study.content.introductions}
+    unsupported_markers: ${study.content.unsupported_markers}
+    syntax_whitelist: ${study.content.syntax_whitelist}
+  fulltext_query:
+    _target_: src.core.transformers.opensearch.jobboard.slots.SlotQueryConfig
+    title_field_weight: 4.0
+    default_field_weight: 1.0
+    title_phrase_boost: 2.0
+    literal_minimum_should_match: 2<75%
+    role_phrase_boost: 1.0
+  collections:
+    whole: null
+    title: null
+    body: null
+    chunk: null
+  recipes:
+    whole:
+      _target_: src.components.embedding.vacancy.VacancyText
+      fields:
+        - {name: '${corpus.title_field}', required: true}
+        - {name: '${corpus.description_field}', required: true}
+    title:
+      _target_: src.components.embedding.representations.SingleFieldText
+      field: ${corpus.title_field}
+      purpose: title
+    body:
+      _target_: src.components.embedding.representations.SingleFieldText
+      field: ${corpus.description_field}
+      purpose: description
+    chunk:
+      _target_: src.components.embedding.chunks.ChunkVacancyText
+      title_field: ${corpus.title_field}
+      description_field: ${corpus.description_field}
+      title_tokens: 64
+      window_tokens: 384
+      overlap_tokens: 64
+      max_chunks: 64
+  sources:
+    whole:
+      _target_: src.integrations.qdrant.source.QdrantSource
+      profile: ${embedding.profile}
+      recipe: ${study.recipes.whole}
+      corpus_identity: ${corpus.identity}
+      filter_fields: ${qdrant.filter_fields}
+      vector: ${qdrant.vector}
+      runtime: {version: '${embedding.runtime.version}', image: '${embedding.runtime.image}'}
+    title:
+      _target_: src.integrations.qdrant.source.QdrantSource
+      profile: ${embedding.profile}
+      recipe: ${study.recipes.title}
+      corpus_identity: ${corpus.identity}
+      filter_fields: ${qdrant.filter_fields}
+      vector: ${qdrant.vector}
+      runtime: {version: '${embedding.runtime.version}', image: '${embedding.runtime.image}'}
+    body:
+      _target_: src.integrations.qdrant.source.QdrantSource
+      profile: ${embedding.profile}
+      recipe: ${study.recipes.body}
+      corpus_identity: ${corpus.identity}
+      filter_fields: ${qdrant.filter_fields}
+      vector: ${qdrant.vector}
+      runtime: {version: '${embedding.runtime.version}', image: '${embedding.runtime.image}'}
+    chunk:
+      _target_: src.integrations.qdrant.chunks.ChunkQdrantSource
+      profile: ${embedding.profile}
+      recipe: ${study.recipes.chunk}
+      corpus_identity: ${corpus.identity}
+      filter_fields: ${qdrant.filter_fields}
+      vector: ${qdrant.vector}
+      runtime: {version: '${embedding.runtime.version}', image: '${embedding.runtime.image}'}
+  chunk_integration:
+    _target_: src.integrations.qdrant.chunks.ChunkQdrantIntegration
+    url: ${qdrant.url}
+    api_key: ${qdrant.api_key}
+    version: ${qdrant.version}
+    timeout: ${qdrant.timeout}
+    operation_timeout: ${qdrant.operation_timeout}
+    verification_deadline: ${qdrant.verification_deadline}
+    response_bytes: ${qdrant.response_bytes}
+    payload_bytes: ${qdrant.payload_bytes}
+    upload_batch_bytes: ${qdrant.upload_batch_bytes}
+    shards: ${qdrant.shards}
+    replicas: ${qdrant.replicas}
+    write_consistency: ${qdrant.write_consistency}
+  build_kind: whole
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}-${run_id:}

@@ -1,0 +1,10 @@
+_target_: src.core.transformers.opensearch.jobboard.query.SourceProfile
+index: work-fixture
+fields: [title, description]
+title_field: title
+term_fields: {city: keyword, active: boolean}
+ranking_fields:
+  published_at: {field: published_at, type: date}
+  quality: {field: card_completeness, type: numeric}
+  category: {field: schedule_category, type: keyword}
+  stable_id: {field: vacancy_id, type: keyword}

@@ -1,0 +1,54 @@
+profile:
+  schema_version: 1
+  model_id: intfloat/multilingual-e5-base
+  revision: d128750597153bb5987e10b1c3493a34e5a4502a
+  tokenizer_model_id: ${embedding.profile.model_id}
+  tokenizer_revision: ${embedding.profile.revision}
+  dimensions: 768
+  pooling: mean
+  normalization: l2
+  query_prefix: "query: "
+  document_prefix: "passage: "
+  query_text_policy: nfc-whitespace-v1
+  document_text_policy: fieldwise-nfc-whitespace-v1
+  max_tokens: 512
+  query_overflow: reject
+  document_overflow: truncate_right
+  inference_dtype: float16
+  model_quantization: none
+
+client:
+  _target_: src.integrations.embedding.client.TEIIntegration
+  url: http://127.0.0.1:${embedding.runtime.host_port}
+  api_key: ${oc.env:TEI_API_KEY,null}
+  timeout: 60.0
+  response_bytes: ${embedding.limits.response_bytes}
+  tokenize_response_bytes: ${embedding.limits.tokenize_response_bytes}
+
+runtime:
+  version: 1.9.4
+  image: ???
+  gpu_uuid: ???
+  container_name: recsys-tei
+  cache_dir: ???
+  host_port: 8080
+  startup_deadline: 600.0
+  max_batch_tokens: 4096
+  max_client_batch_size: 8
+  max_concurrent_requests: 32
+  auto_truncate: false
+
+limits:
+  query_bytes: 4096
+  document_bytes: 65536
+  batch_inputs: 8
+  batch_bytes: 262144
+  response_bytes: 1048576
+  tokenize_response_bytes: 16777216
+
+encoder:
+  _target_: src.components.embedding.encoder.TextEmbedder
+  profile: ${embedding.profile}
+  integration: ${embedding.client}
+  limits: ${embedding.limits}
+  runtime_version: ${embedding.runtime.version}

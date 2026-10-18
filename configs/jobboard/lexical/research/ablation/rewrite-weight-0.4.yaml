@@ -1,0 +1,4 @@
+jobboard:
+  variants:
+    c5:
+      rewrite_weight: 0.4

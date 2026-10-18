@@ -1,0 +1,685 @@
+- id: s01
+  slice: roles
+  query: грузчик
+  filters:
+    city: Москва
+    active: true
+  positive_document: s01-positive
+  negative_document: s01-negative
+  expected_contract: F2 обязателен role group; условия соседней роли не обходят gate.
+  human_rationale: Близкий складской контекст не делает оператора техники грузчиком.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.loader
+    abstention: null
+    topic: грузчик
+- id: s02
+  slice: roles
+  query: водитель погрузчика
+  filters:
+    city: Москва
+    active: true
+  positive_document: s02-positive
+  negative_document: s02-negative
+  expected_contract: Role phrase mandatory; measure body mention false positive live.
+  human_rationale: Упоминание коллеги не доказывает основную профессию.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.forklift_driver
+    abstention: null
+    topic: водитель погрузчика
+- id: s03
+  slice: roles
+  query: наладчик ЧПУ
+  filters:
+    city: Москва
+    active: true
+  positive_document: s03-positive
+  negative_document: s03-negative
+  expected_contract: Не blanket synonym operator=setter; E3 original branch neighbouring
+    role risk.
+  human_rationale: Одинаковое оборудование, разные функции.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.cnc_setter
+    abstention: null
+    topic: наладчик ЧПУ
+- id: s04
+  slice: roles
+  query: повар горячего цеха
+  filters:
+    city: Москва
+    active: true
+  positive_document: s04-positive
+  negative_document: s04-negative
+  expected_contract: Сохранить полный role span и проверить neighbouring profession.
+  human_rationale: Помощник не эквивалентен самостоятельному повару.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.hot_cook
+    abstention: null
+    topic: повар горячего цеха
+- id: s05
+  slice: roles
+  query: водитель категории CE
+  filters:
+    city: Москва
+    active: true
+  positive_document: s05-positive
+  negative_document: s05-negative
+  expected_contract: F2 qualification mandatory, not diluted by skill coverage.
+  human_rationale: Категория CE обязательна в текстовом ядре.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.driver
+    - qualification.driving_ce
+    abstention: null
+    topic: водитель категории CE
+- id: s06
+  slice: roles
+  query: охранник 4 разряд
+  filters:
+    city: Москва
+    active: true
+  positive_document: s06-positive
+  negative_document: s06-negative
+  expected_contract: F2 qualification retained; no semantic legal guarantee.
+  human_rationale: Похожая задача не подтверждает квалификацию.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.guard
+    - qualification.grade_4
+    abstention: null
+    topic: охранник 4 разряд
+- id: s07
+  slice: roles
+  query: кассир
+  filters:
+    city: Москва
+    active: true
+  positive_document: s07-positive
+  negative_document: s07-negative
+  expected_contract: Сопоставить title evidence F1/E4 против body neighbour.
+  human_rationale: Единичное упоминание кассира даёт lexical challenge.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.cashier
+    abstention: null
+    topic: кассир
+- id: s08
+  slice: roles
+  query: сварщик НАКС
+  filters:
+    city: Москва
+    active: true
+  positive_document: s08-positive
+  negative_document: s08-negative
+  expected_contract: Qualification must separate from coverage; protected acronym
+    preserved.
+  human_rationale: Название профессии без допуска слабее точного запроса.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.welder
+    - qualification.naks
+    abstention: null
+    topic: сварщик НАКС
+- id: s09
+  slice: phrasing
+  query: комплектовщик ТСД
+  filters:
+    city: Москва
+    active: true
+  positive_document: s09-positive
+  negative_document: s09-negative
+  expected_contract: F1 field-local MSM; F2 separate role+skill groups.
+  human_rationale: Роль и навык могут находиться в разных полях.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.picker
+    - skill.scanner
+    abstention: null
+    topic: комплектовщик ТСД
+- id: s10
+  slice: phrasing
+  query: сборщик заказов
+  filters:
+    city: Москва
+    active: true
+  positive_document: s10-positive
+  negative_document: s10-negative
+  expected_contract: F2 aliases-off control isolates curated equivalent admission.
+  human_rationale: Curated equivalent относится к заказам, не ко всем сборщикам.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.picker
+    abstention: null
+    topic: сборщик заказов
+- id: s11
+  slice: phrasing
+  query: нужно собирать товары по заказам со сканером
+  filters:
+    city: Москва
+    active: true
+  positive_document: s11-positive
+  negative_document: s11-negative
+  expected_contract: E1 semantic contrast; F2 unknown residual preserved, no guessed
+    role.
+  human_rationale: Task paraphrase может найти роль без её имени.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts: []
+    abstention: null
+    topic: нужно собирать товары по заказам со сканером
+- id: s12
+  slice: phrasing
+  query: кладовщик WMS
+  filters:
+    city: Москва
+    active: true
+  positive_document: s12-positive
+  negative_document: s12-negative
+  expected_contract: F2 cross-field coverage; E4 title-only ablation may lose WMS.
+  human_rationale: Техническое обозначение только в описании значимо.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.stockkeeper
+    - skill.wms
+    abstention: null
+    topic: кладовщик WMS
+- id: s13
+  slice: phrasing
+  query: водитель ричтрака
+  filters:
+    city: Москва
+    active: true
+  positive_document: s13-positive
+  negative_document: s13-negative
+  expected_contract: No blanket equipment alias; E3 neighboring profession case.
+  human_rationale: Ричтрак не безусловный synonym любого погрузчика.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.driver
+    - skill.reach_truck
+    abstention: null
+    topic: водитель ричтрака
+- id: s14
+  slice: phrasing
+  query: уборка офисных помещений
+  filters:
+    city: Москва
+    active: true
+  positive_document: s14-positive
+  negative_document: s14-negative
+  expected_contract: E1 paraphrase, E4 separate title/body ranks; fixture no semantic
+    quality claim.
+  human_rationale: Задача сформулирована без точного title.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts: []
+    abstention: null
+    topic: уборка офисных помещений
+- id: s15
+  slice: phrasing
+  query: ищу работу водителем в Москве
+  filters:
+    city: Москва
+    active: true
+  positive_document: s15-positive
+  negative_document: s15-negative
+  expected_contract: F2 ignored introduction, role remains required; no implicit city
+    filter.
+  human_rationale: Вводная фраза не часть профессии, Москва в query остаётся soft.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.driver
+    - place.moscow
+    abstention: null
+    topic: ищу работу водителем
+- id: s16
+  slice: phrasing
+  query: оператор ЧПУ настройка станка
+  filters:
+    city: Москва
+    active: true
+  positive_document: s16-positive
+  negative_document: s16-negative
+  expected_contract: E3 union may admit neighbour; compare E2 fixed topic pool.
+  human_rationale: Оборудование и действие не заменяют роль в явном запросе.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.cnc_operator
+    abstention: null
+    topic: оператор ЧПУ настройка станка
+- id: s17
+  slice: soft
+  query: комплектовщик ТСД без опыта 2/2
+  filters:
+    city: Москва
+    active: true
+  positive_document: s17-positive
+  negative_document: s17-negative
+  expected_contract: F3 bounded compensation, F4 all-tier dominates; same core eligibility.
+  human_rationale: Тема сильнее у первого, условия яснее у второго.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.picker
+    - skill.scanner
+    - experience.none
+    - schedule.two_two
+    abstention: null
+    topic: комплектовщик ТСД
+- id: s18
+  slice: soft
+  query: комплектовщик 2/2
+  filters:
+    city: Москва
+    active: true
+  positive_document: s18-positive
+  negative_document: s18-negative
+  expected_contract: F3 cannot exceed 1.2 multiplier; F4 2/2 tier first.
+  human_rationale: Строгий приоритет пожелания может перекрыть большой score gap.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.picker
+    - schedule.two_two
+    abstention: null
+    topic: комплектовщик
+- id: s19
+  slice: soft
+  query: комплектовщик без опыта
+  filters:
+    city: Москва
+    active: true
+  positive_document: s19-positive
+  negative_document: s19-negative
+  expected_contract: F3/F4 text predicate deliberately not semantic entailment.
+  human_rationale: Положительная phrase внутри отрицания даёт false evidence.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.picker
+    - experience.none
+    abstention: null
+    topic: комплектовщик
+- id: s20
+  slice: soft
+  query: разнорабочий проживание
+  filters:
+    city: Москва
+    active: true
+  positive_document: s20-positive
+  negative_document: s20-negative
+  expected_contract: Text contradiction challenge; no guaranteed satisfaction.
+  human_rationale: Одинаковое слово не подтверждает наличие жилья.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.handyman
+    - condition.housing
+    abstention: null
+    topic: разнорабочий
+- id: s21
+  slice: soft
+  query: кладовщик 2/2 без опыта
+  filters:
+    city: Москва
+    active: true
+  positive_document: s21-positive
+  negative_document: s21-negative
+  expected_contract: F4 T1 retains core order; E2 separate anchored preferences.
+  human_rationale: Два частичных совпадения относятся к одной partial tier.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.stockkeeper
+    - schedule.two_two
+    - experience.none
+    abstention: null
+    topic: кладовщик
+- id: s22
+  slice: soft
+  query: грузчик не вахта
+  filters:
+    city: Москва
+    active: true
+  positive_document: s22-positive
+  negative_document: s22-negative
+  expected_contract: All decomposed variants declared unsupported_syntax original
+    fallback.
+  human_rationale: Отрицание нельзя удалять и превращать в положительную вахту.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.loader
+    - employment.rotation
+    abstention: unsupported_syntax
+    topic: грузчик не вахта
+- id: s23
+  slice: soft
+  query: комплектовщик 2/2 5/2
+  filters:
+    city: Москва
+    active: true
+  positive_document: s23-positive
+  negative_document: s23-negative
+  expected_contract: With scalar bindings conflicting_preferences; absent map no invented
+    conflict.
+  human_rationale: Два графика конфликтуют только при declared single-valued map.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.picker
+    - schedule.two_two
+    - schedule.afive_two
+    abstention: null
+    topic: комплектовщик
+- id: s24
+  slice: soft
+  query: курьер ежедневные выплаты Москва
+  filters:
+    city: Москва
+    active: true
+  positive_document: s24-positive
+  negative_document: s24-negative
+  expected_contract: E2 pool fixed; F2 score excludes both soft spans; F3/F4 positive
+    evidence.
+  human_rationale: Пожелания не становятся обязательным внешним фильтром.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.courier
+    - condition.daily_pay
+    - place.moscow
+    abstention: null
+    topic: курьер
+- id: s25
+  slice: long
+  query: наладчик ЧПУ
+  filters:
+    city: Москва
+    active: true
+  positive_document: s25-positive
+  negative_document: s25-negative
+  expected_contract: E5 vs E1 whole token cutoff; marker expansion belongs to boundary
+    generator.
+  human_rationale: Релевантный фрагмент после whole truncation требует passage retrieval.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.cnc_setter
+    abstention: null
+    topic: наладчик ЧПУ
+- id: s26
+  slice: long
+  query: комплектовщик ТСД
+  filters:
+    city: Москва
+    active: true
+  positive_document: s26-positive
+  negative_document: s26-negative
+  expected_contract: E5 max avoids summing but 0/5/20 unrelated chunks opportunity
+    bias measured live.
+  human_rationale: Одинаковое passage evidence при разной длине.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.picker
+    - skill.scanner
+    abstention: null
+    topic: комплектовщик ТСД
+- id: s27
+  slice: long
+  query: сварщик полуавтомат
+  filters:
+    city: Москва
+    active: true
+  positive_document: s27-positive
+  negative_document: s27-negative
+  expected_contract: E5 vacancy maximum not count/sum; duplicate opportunity caveat
+    remains.
+  human_rationale: Повторение chunks не должно суммировать score вакансии.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.welder
+    - skill.mig_welding
+    abstention: null
+    topic: сварщик полуавтомат
+- id: s28
+  slice: long
+  query: электромонтёр III группа
+  filters:
+    city: Москва
+    active: true
+  positive_document: s28-positive
+  negative_document: s28-negative
+  expected_contract: E4 title/body separate views compared with same full fields.
+  human_rationale: Qualification evidence не должен исчезнуть при структурном перераспределении.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.maintenance_electrician
+    - qualification.electrical_iii
+    abstention: null
+    topic: электромонтёр III группа
+- id: s29
+  slice: long
+  query: токарь 5 разряд
+  filters:
+    city: Москва
+    active: true
+  positive_document: s29-positive
+  negative_document: s29-negative
+  expected_contract: E5 clipped title64 plus audit512; no silent chunk truncation.
+  human_rationale: Важная часть title вокруг 64-token cutoff — boundary recipe.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.turner
+    - qualification.grade_5
+    abstention: null
+    topic: токарь 5 разряд
+- id: s30
+  slice: long
+  query: кладовщик инвентаризация
+  filters:
+    city: Москва
+    active: true
+  positive_document: s30-positive
+  negative_document: s30-negative
+  expected_contract: E4 body-only ablation; RRF preserves independent views.
+  human_rationale: Общий title может скрывать сильный body.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.stockkeeper
+    - skill.inventory
+    abstention: null
+    topic: кладовщик инвентаризация
+- id: s31
+  slice: long
+  query: повар горячего цеха
+  filters:
+    city: Москва
+    active: true
+  positive_document: s31-positive
+  negative_document: s31-negative
+  expected_contract: E5 chunk cap64 error before writes; not silently first64.
+  human_rationale: Слишком длинный документ отклоняется целиком, хвост не теряется.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.hot_cook
+    abstention: null
+    topic: повар горячего цеха
+- id: s32
+  slice: long
+  query: охранник
+  filters:
+    city: Москва
+    active: true
+  positive_document: s32-positive
+  negative_document: s32-negative
+  expected_contract: E5 excluding seen document ids recovers unique vacancies beyond
+    firstpage.
+  human_rationale: Top100 chunks могут содержать мало уникальных вакансий.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.guard
+    abstention: null
+    topic: охранник
+- id: s33
+  slice: hard
+  query: комплектовщик
+  filters:
+    city: Москва
+    active: true
+  positive_document: s33-positive
+  negative_document: s33-negative
+  expected_contract: All leaves physically enforce city+active; no postfilter.
+  human_rationale: Точный city AND active применяется до retrieval.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.picker
+    abstention: null
+    topic: комплектовщик
+- id: s34
+  slice: hard
+  query: грузчик
+  filters:
+    city: Москва
+    active: true
+  positive_document: s34-positive
+  negative_document: s34-negative
+  expected_contract: Every fusion branch and tier carries hard filters.
+  human_rationale: Старая карточка не проходит active=true независимо от score.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.loader
+    abstention: null
+    topic: грузчик
+- id: s35
+  slice: hard
+  query: кладовщик 2/2
+  filters:
+    city: Москва
+    active: true
+    schedule: 2/2
+  positive_document: s35-positive
+  negative_document: s35-negative
+  expected_contract: Hard schedule restricts eligibility; preferences remain separate
+    evidence.
+  human_rationale: Явный schedule=2/2 сильнее пожелания в тексте.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.stockkeeper
+    - schedule.two_two
+    abstention: null
+    topic: кладовщик
+- id: s36
+  slice: hard
+  query: повар
+  filters:
+    city: Москва
+    active: true
+  positive_document: s36-positive
+  negative_document: s36-negative
+  expected_contract: Missing city excluded; false field omission never fallback.
+  human_rationale: Missing scalar не равно совпадению фильтра.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.cook
+    abstention: null
+    topic: повар
+- id: s37
+  slice: hard
+  query: водитель
+  filters:
+    city: Москва
+    active: true
+    additional_terms:
+    - field: city
+      value: Казань
+  positive_document: s37-positive
+  negative_document: s37-negative
+  expected_contract: AND city=Москва and city=Казань, valid request expected empty
+    live.
+  human_rationale: Противоречащие city filters дают пустую выдачу, не отмену фильтра.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.driver
+    abstention: null
+    topic: водитель
+- id: s38
+  slice: hard
+  query: курьер
+  filters:
+    city: Москва
+    active: true
+    employment: full
+  positive_document: s38-positive
+  negative_document: s38-negative
+  expected_contract: Optional supported employment hardfield; undeclared binding error
+    beforeHTTP.
+  human_rationale: Объявленный employment binding допускает точное ограничение.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.courier
+    abstention: null
+    topic: курьер
+- id: s39
+  slice: hard
+  query: уборщица
+  filters:
+    city: Москва
+    active: true
+  positive_document: s39-positive
+  negative_document: s39-negative
+  expected_contract: Source scalar validation before writes; native lexical source
+    still external.
+  human_rationale: Невалидный тип не должен допускаться при построении корпуса.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.indoor_cleaner
+    abstention: null
+    topic: уборщица
+- id: s40
+  slice: hard
+  query: сварщик
+  filters:
+    city: Иваново
+    active: true
+  positive_document: s40-positive
+  negative_document: s40-negative
+  expected_contract: No fallback on transport/partialresponse; repeated nextcall succeeds.
+  human_rationale: Пустая выдача в выбранном city отличается от отказа сервера.
+  quality_claim: hypothesis_requires_live_source
+  expected_parse:
+    concepts:
+    - role.welder
+    abstention: null
+    topic: сварщик

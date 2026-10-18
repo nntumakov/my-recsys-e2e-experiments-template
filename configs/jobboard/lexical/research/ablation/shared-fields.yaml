@@ -1,0 +1,3 @@
+jobboard:
+  query:
+    route_by_kind: false

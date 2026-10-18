@@ -1,0 +1,18 @@
+identity: vacancies-research-v1
+path: ???
+reader:
+  _target_: src.components.corpus.json.JSONVacancyReader
+  path: ${corpus.path}
+text:
+  schema_version: 1
+  renderer: vacancy-fields-v1
+  fields:
+    - {name: title, required: false}
+    - {name: description, required: false}
+  separator: "\n\n"
+renderer:
+  _target_: src.components.embedding.vacancy.VacancyText
+  schema_version: ${corpus.text.schema_version}
+  renderer: ${corpus.text.renderer}
+  fields: ${corpus.text.fields}
+  separator: ${corpus.text.separator}

@@ -1,0 +1,11 @@
+defaults:
+- /jobboard/lexical@_global_: profile
+- _self_
+_target_: src.experiments.direct.search.SearchExperiment
+registry: ${jobboard.registry}
+pipeline: parsed
+context: {}
+filters: []
+exporters:
+- _target_: src.components.reporting.exporters.json.JSONExporter
+  path: ${hydra:runtime.output_dir}/searches.json

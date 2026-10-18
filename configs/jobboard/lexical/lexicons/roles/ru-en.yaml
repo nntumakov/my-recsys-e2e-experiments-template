@@ -1,0 +1,465 @@
+entries:
+- id: role.backend_developer
+  canonical: backend developer
+  surfaces:
+  - backend developer
+  - бэкенд разработчик
+  - разработчик бэкенда
+  - backend engineer
+  - back-end developer
+  - backend
+  alternatives:
+  - text: backend engineer
+    relation: curated_equivalent
+  - text: back-end developer
+    relation: curated_equivalent
+  - text: бэкенд разработчик
+    relation: curated_translation
+  - text: разработчик бэкенда
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.frontend_developer
+  canonical: frontend developer
+  surfaces:
+  - frontend developer
+  - фронтенд разработчик
+  - разработчик фронтенда
+  - frontend engineer
+  - front-end developer
+  - frontend
+  alternatives:
+  - text: frontend engineer
+    relation: curated_equivalent
+  - text: front-end developer
+    relation: curated_equivalent
+  - text: фронтенд разработчик
+    relation: curated_translation
+  - text: разработчик фронтенда
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.fullstack_developer
+  canonical: full stack developer
+  surfaces:
+  - full stack developer
+  - фулстек разработчик
+  - fullstack разработчик
+  - fullstack developer
+  - full-stack developer
+  alternatives:
+  - text: fullstack developer
+    relation: curated_equivalent
+  - text: full-stack developer
+    relation: curated_equivalent
+  - text: фулстек разработчик
+    relation: curated_translation
+  - text: fullstack разработчик
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.android_developer
+  canonical: android developer
+  surfaces:
+  - android developer
+  - андроид разработчик
+  - разработчик android
+  - android engineer
+  alternatives:
+  - text: android engineer
+    relation: curated_equivalent
+  - text: андроид разработчик
+    relation: curated_translation
+  - text: разработчик android
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.ios_developer
+  canonical: ios developer
+  surfaces:
+  - ios developer
+  - ios разработчик
+  - разработчик ios
+  - ios engineer
+  alternatives:
+  - text: ios engineer
+    relation: curated_equivalent
+  - text: ios разработчик
+    relation: curated_translation
+  - text: разработчик ios
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.devops_engineer
+  canonical: devops engineer
+  surfaces:
+  - devops engineer
+  - devops инженер
+  - девопс инженер
+  - devops
+  alternatives:
+  - text: devops
+    relation: curated_equivalent
+  - text: devops инженер
+    relation: curated_translation
+  - text: девопс инженер
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.sre
+  canonical: site reliability engineer
+  surfaces:
+  - site reliability engineer
+  - инженер по надежности сервисов
+  - инженер по надёжности сервисов
+  - sre
+  alternatives:
+  - text: sre
+    relation: curated_equivalent
+  - text: инженер по надежности сервисов
+    relation: curated_translation
+  - text: инженер по надёжности сервисов
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.data_engineer
+  canonical: data engineer
+  surfaces:
+  - data engineer
+  - дата инженер
+  - инженер данных
+  - data engineering specialist
+  alternatives:
+  - text: data engineering specialist
+    relation: curated_equivalent
+  - text: дата инженер
+    relation: curated_translation
+  - text: инженер данных
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.data_scientist
+  canonical: data scientist
+  surfaces:
+  - data scientist
+  - специалист по data science
+  - дата сайентист
+  - data science specialist
+  alternatives:
+  - text: data science specialist
+    relation: curated_equivalent
+  - text: специалист по data science
+    relation: curated_translation
+  - text: дата сайентист
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.data_analyst
+  canonical: data analyst
+  surfaces:
+  - data analyst
+  - аналитик данных
+  - data analytics specialist
+  alternatives:
+  - text: data analytics specialist
+    relation: curated_equivalent
+  - text: аналитик данных
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.business_analyst
+  canonical: business analyst
+  surfaces:
+  - business analyst
+  - бизнес аналитик
+  - бизнес-аналитик
+  - business analysis specialist
+  - ba
+  alternatives:
+  - text: business analysis specialist
+    relation: curated_equivalent
+  - text: бизнес аналитик
+    relation: curated_translation
+  - text: бизнес-аналитик
+    relation: curated_translation
+  ambiguous_surfaces:
+  - ba
+  requires_any:
+  - business analyst
+  - бизнес аналитик
+- id: role.system_analyst
+  canonical: systems analyst
+  surfaces:
+  - systems analyst
+  - системный аналитик
+  - system analyst
+  alternatives:
+  - text: system analyst
+    relation: curated_equivalent
+  - text: системный аналитик
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.manual_qa
+  canonical: manual qa engineer
+  surfaces:
+  - manual qa engineer
+  - тестировщик ручного тестирования
+  - ручной тестировщик
+  - manual tester
+  - manual testing engineer
+  - qa
+  alternatives:
+  - text: manual tester
+    relation: curated_equivalent
+  - text: manual testing engineer
+    relation: curated_equivalent
+  - text: тестировщик ручного тестирования
+    relation: curated_translation
+  - text: ручной тестировщик
+    relation: curated_translation
+  ambiguous_surfaces:
+  - qa
+  requires_any: []
+- id: role.automation_qa
+  canonical: test automation engineer
+  surfaces:
+  - test automation engineer
+  - инженер по автоматизации тестирования
+  - автоматизатор тестирования
+  - qa automation engineer
+  - automation tester
+  - qa
+  alternatives:
+  - text: qa automation engineer
+    relation: curated_equivalent
+  - text: automation tester
+    relation: curated_equivalent
+  - text: инженер по автоматизации тестирования
+    relation: curated_translation
+  - text: автоматизатор тестирования
+    relation: curated_translation
+  ambiguous_surfaces:
+  - qa
+  requires_any: []
+- id: role.security_engineer
+  canonical: information security engineer
+  surfaces:
+  - information security engineer
+  - инженер информационной безопасности
+  - инженер по информационной безопасности
+  - security engineer
+  - cyber security engineer
+  alternatives:
+  - text: security engineer
+    relation: curated_equivalent
+  - text: cyber security engineer
+    relation: curated_equivalent
+  - text: инженер информационной безопасности
+    relation: curated_translation
+  - text: инженер по информационной безопасности
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.sysadmin
+  canonical: system administrator
+  surfaces:
+  - system administrator
+  - системный администратор
+  - сисадмин
+  - sysadmin
+  - systems administrator
+  alternatives:
+  - text: sysadmin
+    relation: curated_equivalent
+  - text: systems administrator
+    relation: curated_equivalent
+  - text: системный администратор
+    relation: curated_translation
+  - text: сисадмин
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.project_manager
+  canonical: project manager
+  surfaces:
+  - project manager
+  - менеджер проектов
+  - руководитель проектов
+  - project management specialist
+  - pm
+  alternatives:
+  - text: project management specialist
+    relation: curated_equivalent
+  - text: менеджер проектов
+    relation: curated_translation
+  - text: руководитель проектов
+    relation: curated_translation
+  ambiguous_surfaces:
+  - pm
+  requires_any: []
+- id: role.product_manager
+  canonical: product manager
+  surfaces:
+  - product manager
+  - продакт менеджер
+  - менеджер продукта
+  - product management specialist
+  - pm
+  alternatives:
+  - text: product management specialist
+    relation: curated_equivalent
+  - text: продакт менеджер
+    relation: curated_translation
+  - text: менеджер продукта
+    relation: curated_translation
+  ambiguous_surfaces:
+  - pm
+  requires_any: []
+- id: role.ux_designer
+  canonical: ux designer
+  surfaces:
+  - ux designer
+  - ux дизайнер
+  - дизайнер пользовательского опыта
+  - user experience designer
+  alternatives:
+  - text: user experience designer
+    relation: curated_equivalent
+  - text: ux дизайнер
+    relation: curated_translation
+  - text: дизайнер пользовательского опыта
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.support
+  canonical: technical support specialist
+  surfaces:
+  - technical support specialist
+  - специалист технической поддержки
+  - специалист техподдержки
+  - technical support engineer
+  - helpdesk specialist
+  alternatives:
+  - text: technical support engineer
+    relation: curated_equivalent
+  - text: helpdesk specialist
+    relation: curated_equivalent
+  - text: специалист технической поддержки
+    relation: curated_translation
+  - text: специалист техподдержки
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.accountant
+  canonical: accountant
+  surfaces:
+  - accountant
+  - бухгалтер
+  - accounting specialist
+  alternatives:
+  - text: accounting specialist
+    relation: curated_equivalent
+  - text: бухгалтер
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.recruiter
+  canonical: recruiter
+  surfaces:
+  - recruiter
+  - рекрутер
+  - специалист по подбору персонала
+  - recruitment specialist
+  alternatives:
+  - text: recruitment specialist
+    relation: curated_equivalent
+  - text: рекрутер
+    relation: curated_translation
+  - text: специалист по подбору персонала
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.sales_manager
+  canonical: sales manager
+  surfaces:
+  - sales manager
+  - менеджер по продажам
+  - sales representative
+  alternatives:
+  - text: sales representative
+    relation: curated_equivalent
+  - text: менеджер по продажам
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.electrician
+  canonical: electrician
+  surfaces:
+  - electrician
+  - электрик
+  - электромонтер
+  - электромонтёр
+  - electrical technician
+  alternatives:
+  - text: electrical technician
+    relation: curated_equivalent
+  - text: электрик
+    relation: curated_translation
+  - text: электромонтер
+    relation: curated_translation
+  - text: электромонтёр
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.nurse
+  canonical: nurse
+  surfaces:
+  - nurse
+  - медицинская сестра
+  - медицинский брат
+  - медсестра
+  - медбрат
+  - registered nurse
+  alternatives:
+  - text: registered nurse
+    relation: curated_equivalent
+  - text: медицинская сестра
+    relation: curated_translation
+  - text: медицинский брат
+    relation: curated_translation
+  - text: медсестра
+    relation: curated_translation
+  - text: медбрат
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.driver
+  canonical: driver
+  surfaces:
+  - driver
+  - водитель
+  - professional driver
+  alternatives:
+  - text: professional driver
+    relation: curated_equivalent
+  - text: водитель
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []
+- id: role.warehouse_worker
+  canonical: warehouse worker
+  surfaces:
+  - warehouse worker
+  - работник склада
+  - сотрудник склада
+  - warehouse operative
+  alternatives:
+  - text: warehouse operative
+    relation: curated_equivalent
+  - text: работник склада
+    relation: curated_translation
+  - text: сотрудник склада
+    relation: curated_translation
+  ambiguous_surfaces: []
+  requires_any: []

@@ -1,0 +1,1 @@
+"""Jobboard lexical retrieval."""

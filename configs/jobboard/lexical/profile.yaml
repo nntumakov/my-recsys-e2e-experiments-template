@@ -1,0 +1,14 @@
+defaults:
+- /jobboard/lexical/source@jobboard.source: basic
+- /jobboard/lexical/lexicons@jobboard.lexicons: ru-en
+- /jobboard/lexical/parsing@jobboard.parser: rules
+- /jobboard/lexical/parsing@jobboard.lexical_parser: no_entities
+- /jobboard/lexical/retrieval@jobboard.retrieval.lexical: lexical
+- /jobboard/lexical/retrieval@jobboard.retrieval.parsed: parsed
+- /jobboard/lexical/graph@jobboard.registry: lexical
+- _self_
+jobboard:
+  candidate_depth: 100
+  final_k: 20
+  evaluation_k: 10
+  rank_constant: 60

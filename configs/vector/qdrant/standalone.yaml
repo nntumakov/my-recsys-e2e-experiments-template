@@ -1,0 +1,43 @@
+url: ???
+api_key: ${oc.env:QDRANT_API_KEY,null}
+version: 1.19.2
+collection: ???
+timeout: 120.0
+operation_timeout: 60
+verification_deadline: 600.0
+response_bytes: 33554432
+payload_bytes: 262144
+upload_batch_bytes: 4194304
+filter_fields: {}
+vector:
+  size: ${embedding.profile.dimensions}
+  distance: Cosine
+shards: 1
+replicas: 1
+write_consistency: 1
+
+integration:
+  _target_: src.integrations.qdrant.client.QdrantIntegration
+  url: ${qdrant.url}
+  api_key: ${qdrant.api_key}
+  version: ${qdrant.version}
+  timeout: ${qdrant.timeout}
+  operation_timeout: ${qdrant.operation_timeout}
+  verification_deadline: ${qdrant.verification_deadline}
+  response_bytes: ${qdrant.response_bytes}
+  payload_bytes: ${qdrant.payload_bytes}
+  upload_batch_bytes: ${qdrant.upload_batch_bytes}
+  shards: ${qdrant.shards}
+  replicas: ${qdrant.replicas}
+  write_consistency: ${qdrant.write_consistency}
+
+source:
+  _target_: src.integrations.qdrant.source.QdrantSource
+  profile: ${embedding.profile}
+  recipe: ${corpus.text}
+  corpus_identity: ${corpus.identity}
+  filter_fields: ${qdrant.filter_fields}
+  vector: ${qdrant.vector}
+  runtime:
+    version: ${embedding.runtime.version}
+    image: ${embedding.runtime.image}

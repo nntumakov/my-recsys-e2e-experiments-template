@@ -1,0 +1,27 @@
+_target_: src.experiments.direct.search.SearchExperiment
+pipeline: search_pipeline
+context: {}
+filters: []
+registry:
+  _target_: src.core.registry.BasicTransformerRegistry
+  entries:
+    search_pipeline:
+      _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+      steps: [vector_search, top_k]
+    vector_search:
+      _target_: src.core.transformers.qdrant.search.VectorSearchTransformer
+      integration: ${qdrant.integration}
+      embedder: ${embedding.encoder}
+      source: ${qdrant.source}
+      collection: ${qdrant.collection}
+      candidate_depth: ${retrieval.candidate_depth}
+      final_k: ${retrieval.final_k}
+      exact: ${retrieval.exact}
+      indexed_only: ${retrieval.indexed_only}
+      hnsw_ef: ${retrieval.hnsw_ef}
+    top_k:
+      _target_: src.core.transformers.transformers.top_k.TopKTransformer
+      k: ${retrieval.final_k}
+exporters:
+  - _target_: src.components.reporting.exporters.json.JSONExporter
+    path: ${hydra:runtime.output_dir}/searches.json

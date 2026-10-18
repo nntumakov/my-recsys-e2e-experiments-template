@@ -1,0 +1,116 @@
+entries:
+- id: level.intern
+  canonical: intern
+  surfaces:
+  - intern
+  - internship
+  - стажер
+  - стажёр
+  - стажировка
+  alternatives:
+  - text: internship
+    relation: curated_equivalent
+  - text: стажер
+    relation: curated_equivalent
+  - text: стажёр
+    relation: curated_equivalent
+  - text: стажировка
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: level.trainee
+  canonical: trainee
+  surfaces:
+  - trainee
+  - ученик
+  alternatives:
+  - text: ученик
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: level.junior
+  canonical: junior
+  surfaces:
+  - junior
+  - jr
+  - джуниор
+  - младший
+  alternatives:
+  - text: jr
+    relation: curated_equivalent
+  - text: джуниор
+    relation: curated_equivalent
+  - text: младший
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: level.middle
+  canonical: middle
+  surfaces:
+  - middle
+  - mid-level
+  - мидл
+  - миддл
+  alternatives:
+  - text: mid-level
+    relation: curated_equivalent
+  - text: мидл
+    relation: curated_equivalent
+  - text: миддл
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: level.senior
+  canonical: senior
+  surfaces:
+  - senior
+  - sr
+  - сеньор
+  - синьор
+  - старший
+  alternatives:
+  - text: sr
+    relation: curated_equivalent
+  - text: сеньор
+    relation: curated_equivalent
+  - text: синьор
+    relation: curated_equivalent
+  - text: старший
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: level.lead
+  canonical: lead
+  surfaces:
+  - lead
+  - team lead
+  - тимлид
+  - ведущий
+  alternatives:
+  - text: team lead
+    relation: curated_equivalent
+  - text: тимлид
+    relation: curated_equivalent
+  - text: ведущий
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: level.entry
+  canonical: entry level
+  surfaces:
+  - entry level
+  - без опыта
+  - без коммерческого опыта
+  - without experience
+  - no experience required
+  alternatives:
+  - text: без опыта
+    relation: curated_equivalent
+  - text: без коммерческого опыта
+    relation: curated_equivalent
+  - text: without experience
+    relation: curated_equivalent
+  - text: no experience required
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []

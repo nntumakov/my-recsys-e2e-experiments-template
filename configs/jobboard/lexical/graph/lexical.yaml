@@ -1,0 +1,66 @@
+_target_: src.core.registry.BasicTransformerRegistry
+entries:
+  baseline_leaf:
+    _target_: src.core.transformers.opensearch.search.OpenSearchTransformer
+    index: ${jobboard.source.index}
+    fields: ${jobboard.source.fields}
+    size: ${jobboard.candidate_depth}
+    integration:
+      _target_: src.integrations.opensearch.client.OpenSearchIntegration
+      url: ${connection.url}
+      authorization: ${connection.authorization}
+      timeout: ${connection.timeout}
+  lexical_leaf:
+    _target_: src.core.transformers.opensearch.jobboard.search.JobSearchTransformer
+    integration:
+      _target_: src.integrations.opensearch.client.OpenSearchIntegration
+      url: ${connection.url}
+      authorization: ${connection.authorization}
+      timeout: ${connection.timeout}
+    parser: ${jobboard.lexical_parser}
+    source: ${jobboard.source}
+    query: ${jobboard.retrieval.lexical}
+    size: ${jobboard.candidate_depth}
+  parsed_leaf:
+    _target_: src.core.transformers.opensearch.jobboard.search.JobSearchTransformer
+    integration:
+      _target_: src.integrations.opensearch.client.OpenSearchIntegration
+      url: ${connection.url}
+      authorization: ${connection.authorization}
+      timeout: ${connection.timeout}
+    parser: ${jobboard.parser}
+    source: ${jobboard.source}
+    query: ${jobboard.retrieval.parsed}
+    size: ${jobboard.candidate_depth}
+  top_k:
+    _target_: src.core.transformers.transformers.top_k.TopKTransformer
+    k: ${jobboard.final_k}
+  baseline:
+    _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+    steps:
+    - baseline_leaf
+    - top_k
+  lexical:
+    _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+    steps:
+    - lexical_leaf
+    - top_k
+  parsed:
+    _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+    steps:
+    - parsed_leaf
+    - top_k
+  branches:
+    _target_: src.core.transformers.transformers.branch.BranchTransformer
+    branches:
+      lexical: lexical_leaf
+      parsed: parsed_leaf
+  rrf:
+    _target_: src.core.transformers.aggregation.rrf.ReciprocalRankFusionTransformer
+    rank_constant: ${jobboard.rank_constant}
+  fused:
+    _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+    steps:
+    - branches
+    - rrf
+    - top_k

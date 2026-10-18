@@ -1,0 +1,88 @@
+entries:
+- id: place.moscow
+  canonical: Москва
+  surfaces:
+  - Москва
+  - в Москве
+  - Moscow
+  alternatives:
+  - text: в Москве
+    relation: curated_equivalent
+  - text: Moscow
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: place.saint_petersburg
+  canonical: Санкт-Петербург
+  surfaces:
+  - Санкт-Петербург
+  - Санкт Петербург
+  - в Санкт-Петербурге
+  - СПб
+  - Saint Petersburg
+  - St Petersburg
+  alternatives:
+  - text: Санкт Петербург
+    relation: curated_equivalent
+  - text: в Санкт-Петербурге
+    relation: curated_equivalent
+  - text: СПб
+    relation: curated_equivalent
+  - text: Saint Petersburg
+    relation: curated_equivalent
+  - text: St Petersburg
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: place.kazan
+  canonical: Казань
+  surfaces:
+  - Казань
+  - в Казани
+  - Kazan
+  alternatives:
+  - text: в Казани
+    relation: curated_equivalent
+  - text: Kazan
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: place.novosibirsk
+  canonical: Новосибирск
+  surfaces:
+  - Новосибирск
+  - в Новосибирске
+  - Novosibirsk
+  alternatives:
+  - text: в Новосибирске
+    relation: curated_equivalent
+  - text: Novosibirsk
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: place.berlin
+  canonical: Berlin
+  surfaces:
+  - Berlin
+  - Берлин
+  - в Берлине
+  alternatives:
+  - text: Берлин
+    relation: curated_equivalent
+  - text: в Берлине
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: place.london
+  canonical: London
+  surfaces:
+  - London
+  - Лондон
+  - в Лондоне
+  alternatives:
+  - text: Лондон
+    relation: curated_equivalent
+  - text: в Лондоне
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []

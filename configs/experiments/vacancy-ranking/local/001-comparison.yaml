@@ -1,0 +1,48 @@
+_target_: src.experiments.testing.compare.CompareExperiment
+pipelines:
+  first: first
+  fused: fused
+registry:
+  _target_: src.core.registry.BasicTransformerRegistry
+  entries:
+    score:
+      _target_: src.core.transformers.extractors.score.FieldScoreExtractor
+      field: quality
+    first:
+      _target_: src.core.transformers.transformers.top_k.TopKTransformer
+      k: 1
+    both:
+      _target_: src.core.transformers.transformers.top_k.TopKTransformer
+      k: 2
+    branches:
+      _target_: src.core.transformers.transformers.branch.BranchTransformer
+      branches:
+        short: first
+        full: both
+    merge:
+      _target_: src.core.transformers.aggregation.rrf.ReciprocalRankFusionTransformer
+    fused:
+      _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+      steps: [score, branches, merge]
+cases:
+  - _target_: src.experiments.testing.compare.ComparisonCase
+    key: local-example
+    data:
+      _target_: src.core.transformers.data.PipelineData
+      items:
+        _target_: src.domain.collection.serp.SERP
+        items:
+          - _target_: src.domain.document.vacancy.Vacancy
+            id: a
+            fields: {quality: 3}
+          - _target_: src.domain.document.vacancy.Vacancy
+            id: b
+            fields: {quality: 1}
+    relevance: {a: 3, b: 1}
+metrics:
+  ndcg@2:
+    _target_: src.components.evaluation.metrics.listwise.ndcg.ListWiseNDCG
+    k: 2
+exporters:
+  - _target_: src.components.reporting.exporters.json.JSONExporter
+    path: ${hydra:runtime.output_dir}/comparison.json

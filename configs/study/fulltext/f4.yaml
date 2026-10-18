@@ -1,0 +1,13 @@
+_target_: src.core.transformers.opensearch.study.FulltextStudyTransformer
+integration: ${study.opensearch}
+parser: ${study.parser}
+source: ${study.fulltext_source}
+query: ${study.fulltext_query}
+variant: f4
+candidate_depth: ${study.candidate_depth}
+final_k: ${study.final_k}
+preference_budget: ${study.preference_budget}
+preference_bindings: ${study.preference_bindings}
+rank_constant: ${study.rank_constant}
+similarity_evidence: ${study.similarity_evidence}
+description_field: ${study.fulltext_description_field}

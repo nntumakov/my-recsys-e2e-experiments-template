@@ -1,0 +1,12 @@
+_target_: src.core.transformers.qdrant.study.MultiQueryStudySearch
+integration: ${qdrant.integration}
+embedder: ${embedding.encoder}
+source: ${study.sources.whole}
+collection: ${study.collections.whole}
+candidate_depth: ${study.candidate_depth}
+final_k: ${study.final_k}
+exact: ${study.exact}
+hnsw_ef: ${study.hnsw_ef}
+parser: ${study.parser}
+preference_bindings: ${study.preference_bindings}
+rrf_constant: ${study.rank_constant}

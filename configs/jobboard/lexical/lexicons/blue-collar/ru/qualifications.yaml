@@ -1,0 +1,180 @@
+- id: driving_b
+  canonical: категория B
+  forms:
+  - категории B
+  - права B
+  - B
+  - категория В
+  - категории В
+  - права В
+  - В
+  ambiguous:
+  - B
+  - В
+  requires:
+  - водитель
+  - водителем
+  - категория
+  - категории
+  - права
+  surface_prefixes:
+    B:
+    - категория
+    - категории
+    - права
+    - водитель
+    - водителем
+    В:
+    - категория
+    - категории
+    - права
+- id: driving_c
+  canonical: категория C
+  forms:
+  - категории C
+  - права C
+  - C
+  - категория С
+  - категории С
+  - права С
+  - С
+  ambiguous:
+  - C
+  - С
+  requires:
+  - водитель
+  - водителем
+  - категория
+  - категории
+  - права
+  surface_prefixes:
+    C:
+    - категория
+    - категории
+    - права
+    - водитель
+    - водителем
+    С:
+    - категория
+    - категории
+    - права
+- id: driving_ce
+  canonical: категория CE
+  forms:
+  - категории CE
+  - права CE
+  - CE
+  - категория СЕ
+  - категории СЕ
+  - права СЕ
+  - СЕ
+  ambiguous:
+  - CE
+  - СЕ
+  requires:
+  - водитель
+  - водителем
+  - категория
+  - категории
+  - права
+  surface_prefixes:
+    CE:
+    - категория
+    - категории
+    - права
+    - водитель
+    - водителем
+    СЕ:
+    - категория
+    - категории
+    - права
+- id: driving_d
+  canonical: категория D
+  forms:
+  - категории D
+  - права D
+  - D
+  ambiguous:
+  - D
+  requires:
+  - водитель
+  - водителем
+  - категория
+  - категории
+  - права
+  surface_prefixes:
+    D:
+    - категория
+    - категории
+    - права
+    - водитель
+    - водителем
+- id: tractor_license
+  canonical: удостоверение тракториста-машиниста
+  forms:
+  - удостоверение тракториста
+  - тракторист машинист
+- id: naks
+  canonical: НАКС
+  forms:
+  - аттестация накс
+  - допуск накс
+- id: guard_license
+  canonical: удостоверение охранника
+  forms:
+  - лицензия охранника
+  - учо
+- id: medical_book
+  canonical: медкнижка
+  forms:
+  - медицинская книжка
+  - медкнижкой
+- id: grade_2
+  canonical: 2 разряд
+  forms:
+  - 2-й разряд
+  - 2 разряда
+- id: grade_3
+  canonical: 3 разряд
+  forms:
+  - 3-й разряд
+  - 3 разряда
+- id: grade_4
+  canonical: 4 разряд
+  forms:
+  - 4-й разряд
+  - 4 разряда
+- id: grade_5
+  canonical: 5 разряд
+  forms:
+  - 5-й разряд
+  - 5 разряда
+- id: grade_6
+  canonical: 6 разряд
+  forms:
+  - 6-й разряд
+  - 6 разряда
+- id: electrical_ii
+  canonical: II группа электробезопасности
+  forms:
+  - II группа
+  - группа II
+  aliases: []
+- id: electrical_iii
+  canonical: III группа электробезопасности
+  forms:
+  - III группа
+  - группа III
+  aliases: []
+- id: electrical_iv
+  canonical: IV группа электробезопасности
+  forms:
+  - IV группа
+  - группа IV
+  aliases: []
+- id: electrical_v
+  canonical: V группа электробезопасности
+  forms:
+  - V группа
+  - группа V
+  aliases: []

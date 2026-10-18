@@ -1,0 +1,11 @@
+defaults:
+  - /experiments/vacancy-search/vector@search: 002-interactive
+  - _self_
+
+_target_: src.experiments.batch.search.BatchSearchExperiment
+input_path: ???
+search:
+  exporters: []
+exporters:
+  - _target_: src.components.reporting.exporters.csv.SearchCSVExporter
+    path: ${hydra:runtime.output_dir}/searches.csv

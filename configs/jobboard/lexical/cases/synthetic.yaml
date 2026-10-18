@@ -1,0 +1,696 @@
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q01
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: python backend developer
+  relevance:
+    j01: 3
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q02
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: java developer
+  relevance:
+    j01: 0
+    j02: 3
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q03
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: javascript frontend
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 3
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q04
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: разработчик C++
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 3
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q05
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: C# .NET backend
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 3
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q06
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: golang backend developer
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 3
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q07
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: project manager
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 3
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q08
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: product manager
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 3
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q09
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: аналитик данных без опыта
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 3
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q10
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: бухгалтер 1С
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 3
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q11
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: водитель категории C
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 3
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q12
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: медицинская сестра Москва
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 3
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q13
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: менеджер по продажам удаленно
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 3
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q14
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: python test automation
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 3
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q15
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: senior recruiter remote Moscow
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 3
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q16
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: data scientist python
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 3
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q17
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: technical support Linux
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 3
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q18
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: электрик Новосибирск
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 3
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q19
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: UX designer London
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 3
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q20
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: работа на складе без опыта
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 3
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q21
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: PM
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 2
+    j08: 2
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q22
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: python
+  relevance:
+    j01: 3
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 3
+    j15: 0
+    j16: 3
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q23
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: python remote
+  relevance:
+    j01: 3
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 1
+    j15: 0
+    j16: 3
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: q24
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    context: {}
+    filters:
+    - _target_: src.domain.request.filters.QueryFilter
+      text: энтомолог
+  relevance:
+    j01: 0
+    j02: 0
+    j03: 0
+    j04: 0
+    j05: 0
+    j06: 0
+    j07: 0
+    j08: 0
+    j09: 0
+    j10: 0
+    j11: 0
+    j12: 0
+    j13: 0
+    j14: 0
+    j15: 0
+    j16: 0
+    j17: 0
+    j18: 0
+    j19: 0
+    j20: 0

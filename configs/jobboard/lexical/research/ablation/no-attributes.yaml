@@ -1,0 +1,10 @@
+jobboard:
+  query:
+    attribute_boosts:
+      seniority: 0
+      work_mode: 0
+      location: 0
+      experience: 0
+      schedule: 0
+      employment: 0
+      work_condition: 0

@@ -1,0 +1,30 @@
+- id: none
+  canonical: без опыта
+  forms:
+  - без опыта работы
+  - без стажа
+- id: training
+  canonical: с обучением
+  forms:
+  - обучение
+  - обучим
+- id: apprentice
+  canonical: ученик
+  forms:
+  - учеником
+  - ученица
+- id: internship
+  canonical: стажировка
+  forms:
+  - стажёр
+  - стажер
+- id: one_year
+  canonical: опыт от года
+  forms:
+  - опыт от 1 года
+  - опыт 1 год
+- id: three_years
+  canonical: опыт от 3 лет
+  forms:
+  - опыт от трёх лет
+  - опыт от трех лет

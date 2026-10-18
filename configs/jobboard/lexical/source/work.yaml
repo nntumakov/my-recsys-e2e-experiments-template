@@ -1,0 +1,7 @@
+_target_: src.core.transformers.opensearch.jobboard.query.SourceProfile
+index: ???
+fields: ???
+title_field: ???
+term_fields: {}
+# Only declare metadata that actually exists; C1/C4/C5 need no ranking fields.
+ranking_fields: {}

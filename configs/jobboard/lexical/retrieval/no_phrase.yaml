@@ -1,0 +1,4 @@
+defaults:
+- lexical
+- _self_
+title_phrase_boost: 0

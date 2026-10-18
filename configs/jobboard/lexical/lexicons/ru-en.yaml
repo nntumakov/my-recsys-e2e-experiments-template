@@ -1,0 +1,11 @@
+version: jobboard-seed-v1
+source: local-curation
+defaults:
+  - /jobboard/lexical/lexicons/roles@roles: ru-en
+  - /jobboard/lexical/lexicons/skills@skills: ru-en
+  - /jobboard/lexical/lexicons/seniority@seniority: ru-en
+  - /jobboard/lexical/lexicons/work_modes@work_modes: ru-en
+  - /jobboard/lexical/lexicons/locations@locations: ru-en
+  - /jobboard/lexical/lexicons/protected@protected: default
+  - /jobboard/lexical/lexicons/syntax@syntax: conservative
+  - _self_

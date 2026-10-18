@@ -1,0 +1,10 @@
+_target_: src.experiments.indexing.vector.VectorIndexExperiment
+reader: ${corpus.reader}
+renderer: ${corpus.renderer}
+embedder: ${embedding.encoder}
+integration: ${qdrant.integration}
+source: ${qdrant.source}
+collection: ${qdrant.collection}
+exporters:
+  - _target_: src.components.reporting.exporters.json.JSONExporter
+    path: ${hydra:runtime.output_dir}/vector-index.json

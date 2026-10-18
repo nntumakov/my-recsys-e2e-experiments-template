@@ -1,0 +1,48 @@
+- id: housing
+  canonical: проживание
+  forms:
+  - с проживанием
+  - жильё
+  - жилье
+- id: meals
+  canonical: питание
+  forms:
+  - с питанием
+- id: shuttle
+  canonical: развозка
+  forms:
+  - развозкой
+  - служебный транспорт
+- id: daily_pay
+  canonical: ежедневные выплаты
+  forms:
+  - оплата каждый день
+  - выплаты ежедневно
+- id: weekly_pay
+  canonical: еженедельные выплаты
+  forms:
+  - выплаты каждую неделю
+- id: employment_contract
+  canonical: оформление по ТК
+  forms:
+  - по тк
+  - трудовой договор
+- id: self_employed
+  canonical: самозанятость
+  forms:
+  - самозанятый
+  - самозанятым
+- id: warm
+  canonical: тёплый склад
+  forms:
+  - теплый склад
+  - тёплом складе
+- id: cold
+  canonical: холодный склад
+  forms:
+  - холодном складе
+- id: own_car
+  canonical: на своём автомобиле
+  forms:
+  - на своем автомобиле
+  - личный автомобиль

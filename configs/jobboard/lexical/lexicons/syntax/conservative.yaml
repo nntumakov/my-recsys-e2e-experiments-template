@@ -1,0 +1,15 @@
+unsupported_markers:
+- или
+- or
+- не
+- not
+- без
+- without
+- кроме
+- except
+- 'no'
+whitelist:
+- без опыта
+- без коммерческого опыта
+- without experience
+- no experience required

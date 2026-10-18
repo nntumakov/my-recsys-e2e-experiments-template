@@ -1,0 +1,3 @@
+defaults: [001-compare, _self_]
+text: null
+input_path: examples/blue-collar/queries.csv

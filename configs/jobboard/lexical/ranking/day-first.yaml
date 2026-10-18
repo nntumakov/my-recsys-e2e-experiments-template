@@ -1,0 +1,14 @@
+_target_: src.core.transformers.opensearch.jobboard.ranking.RankingConfig
+mode: script_sort
+field_params: {category_field: category}
+script:
+  lang: painless
+  params:
+    tiers: {day: 0, shift_2_2: 1, night: 2, other: 3}
+    other_tier: 3
+  source: |
+    if (!doc.containsKey(params.category_field) || doc[params.category_field].size() == 0) {
+      return params.other_tier;
+    }
+    String value = doc[params.category_field].value;
+    return params.tiers.containsKey(value) ? params.tiers[value] : params.other_tier;

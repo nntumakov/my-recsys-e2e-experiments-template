@@ -1,0 +1,58 @@
+entries:
+- id: mode.remote
+  canonical: remote
+  surfaces:
+  - remote
+  - удаленно
+  - удалённо
+  - удаленка
+  - удалёнка
+  - удаленная работа
+  - удалённая работа
+  alternatives:
+  - text: удаленно
+    relation: curated_equivalent
+  - text: удалённо
+    relation: curated_equivalent
+  - text: удаленка
+    relation: curated_equivalent
+  - text: удалёнка
+    relation: curated_equivalent
+  - text: удаленная работа
+    relation: curated_equivalent
+  - text: удалённая работа
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: mode.hybrid
+  canonical: hybrid
+  surfaces:
+  - hybrid
+  - гибрид
+  - гибридный формат
+  alternatives:
+  - text: гибрид
+    relation: curated_equivalent
+  - text: гибридный формат
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []
+- id: mode.office
+  canonical: office
+  surfaces:
+  - office
+  - onsite
+  - on-site
+  - офис
+  - работа в офисе
+  alternatives:
+  - text: onsite
+    relation: curated_equivalent
+  - text: on-site
+    relation: curated_equivalent
+  - text: офис
+    relation: curated_equivalent
+  - text: работа в офисе
+    relation: curated_equivalent
+  ambiguous_surfaces: []
+  requires_any: []

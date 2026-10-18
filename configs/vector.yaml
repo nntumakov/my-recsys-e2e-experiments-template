@@ -1,0 +1,19 @@
+defaults:
+  - vector/embedding@embedding: multilingual-e5-base
+  - vector/corpus@corpus: json-vacancies
+  - vector/qdrant@qdrant: standalone
+  - experiments/vacancy-search/vector@experiment: 002-interactive
+  - _self_
+
+retrieval:
+  candidate_depth: 100
+  final_k: 20
+  exact: false
+  indexed_only: false
+  hnsw_ef: 128
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}-${run_id:}

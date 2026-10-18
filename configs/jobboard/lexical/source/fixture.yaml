@@ -1,0 +1,9 @@
+_target_: src.core.transformers.opensearch.jobboard.query.SourceProfile
+index: fixture-vacancies
+fields:
+- title
+- description
+title_field: title
+term_fields:
+  city: keyword
+  remote: boolean

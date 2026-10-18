@@ -1,0 +1,10 @@
+_target_: src.experiments.indexing.chunks.ChunkIndexExperiment
+reader: ${corpus.reader}
+renderer: ${study.recipes.chunk}
+embedder: ${embedding.encoder}
+integration: ${study.chunk_integration}
+source: ${study.sources.chunk}
+collection: ${study.collections.chunk}
+exporters:
+  - _target_: src.components.reporting.exporters.json.JSONExporter
+    path: ${hydra:runtime.output_dir}/chunk-index.json

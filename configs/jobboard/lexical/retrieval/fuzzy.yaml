@@ -1,0 +1,10 @@
+defaults:
+- parsed
+- _self_
+fuzzy:
+  _target_: src.core.transformers.opensearch.jobboard.query.FuzzyQueryConfig
+  enabled: true
+  distance: 1
+  minimum_length: 5
+  prefix_length: 1
+  max_expansions: 25

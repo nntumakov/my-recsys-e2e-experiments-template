@@ -1,0 +1,3 @@
+jobboard:
+  query:
+    literal_minimum_should_match: 100%

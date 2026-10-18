@@ -1,0 +1,50 @@
+f1:
+  differentiating_scenario: s09
+  mechanism_off_control: f2 literal-only same-field control
+  negative_scenario: s18
+  observable_rule: Field-centric MSM vs independent core groups
+f2:
+  differentiating_scenario: s05
+  mechanism_off_control: f1 and f2 aliases=false route_by_kind=false
+  negative_scenario: s22
+  observable_rule: Mandatory profession and qualification, no literal bypass
+f3:
+  differentiating_scenario: s17
+  mechanism_off_control: f3 preference_budget=0
+  negative_scenario: s19
+  observable_rule: Eligibility identical, bounded multiplier ≤1+alpha
+f4:
+  differentiating_scenario: s18
+  mechanism_off_control: f2 tier off
+  negative_scenario: s20
+  observable_rule: All/partial/none strict sequence, no global exclusion
+f5:
+  differentiating_scenario: s09
+  mechanism_off_control: f1 only and f2 only
+  negative_scenario: s22
+  observable_rule: Independent ranks plus union, abstention one vote
+e1:
+  differentiating_scenario: s11
+  mechanism_off_control: f1 literal query
+  negative_scenario: s03
+  observable_rule: Task paraphrase cosine, no lexical overlap guarantee
+e2:
+  differentiating_scenario: s17
+  mechanism_off_control: e2 preference_budget=0 on same topic pool
+  negative_scenario: s22
+  observable_rule: Fixed thematic pool and bounded anchored preference rerank
+e3:
+  differentiating_scenario: s16
+  mechanism_off_control: e1 original only and topic only
+  negative_scenario: s22
+  observable_rule: Two independent candidate lists, union beyond E2 fixedpool
+e4:
+  differentiating_scenario: s30
+  mechanism_off_control: title-only and body-only same cohort
+  negative_scenario: s07
+  observable_rule: Independent views with rankfusion, no sumcosine
+e5:
+  differentiating_scenario: s25
+  mechanism_off_control: e1 whole-vacancy and e5 max singlechunk
+  negative_scenario: s31
+  observable_rule: Late passage recovered, unique vacancymax, lengthbias challenge

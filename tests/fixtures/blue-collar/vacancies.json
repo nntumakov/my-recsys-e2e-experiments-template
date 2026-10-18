@@ -1,0 +1,1344 @@
+[
+  {
+    "id": "w001",
+    "fields": {
+      "vacancy_id": "w001",
+      "title": "грузчик",
+      "description": "Разгрузка коробов вручную, перемещение на тележке. Заказы собирают комплектовщики соседнего участка.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 1",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w002",
+    "fields": {
+      "vacancy_id": "w002",
+      "title": "комплектовщик",
+      "description": "Сборка заказов со сканером ТСД, проверка артикула и передача упакованного заказа на отгрузку.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 1",
+      "published_at": "2026-09-28T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w003",
+    "fields": {
+      "vacancy_id": "w003",
+      "title": "кладовщик",
+      "description": "Учёт остатков в WMS, инвентаризация, приёмка товара по документам. Погрузчиком управляет отдельный водитель.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 1",
+      "published_at": "2026-09-27T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w004",
+    "fields": {
+      "vacancy_id": "w004",
+      "title": "упаковщик",
+      "description": "Упаковка готовых наборов в коробки, проверка целостности, наклейка этикеток перед отправкой.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 1",
+      "published_at": "2026-09-26T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w005",
+    "fields": {
+      "vacancy_id": "w005",
+      "title": "фасовщик",
+      "description": "Взвешивание крупы, фасовка по пакетам, контроль массы. Предусмотрено обучение на участке.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 1",
+      "published_at": "2026-09-25T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w006",
+    "fields": {
+      "vacancy_id": "w006",
+      "title": "приёмщик товара",
+      "description": "Сверка поставки с накладными, контроль количества и целостности коробов, оформление расхождений.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 1",
+      "published_at": "2026-09-24T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w007",
+    "fields": {
+      "vacancy_id": "w007",
+      "title": "водитель погрузчика",
+      "description": "Перевозка паллет на вилочном погрузчике. Требуется удостоверение тракториста-машиниста.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 1",
+      "published_at": "2026-09-23T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w008",
+    "fields": {
+      "vacancy_id": "w008",
+      "title": "оператор склада",
+      "description": "Регистрация складских операций в терминале, печать сопроводительных документов и учёт перемещений.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 1",
+      "published_at": "2026-09-22T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w009",
+    "fields": {
+      "vacancy_id": "w009",
+      "title": "водитель",
+      "description": "Доставка хозяйственных товаров на легковом автомобиле. Требуются права категории B.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 2",
+      "published_at": "2026-09-21T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w010",
+    "fields": {
+      "vacancy_id": "w010",
+      "title": "водитель-экспедитор",
+      "description": "Вождение грузового автомобиля и передача товара получателю по накладной. Нужна категория C.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 2",
+      "published_at": "2026-09-20T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w011",
+    "fields": {
+      "vacancy_id": "w011",
+      "title": "водитель автобуса",
+      "description": "Перевозка сотрудников на автобусе по закреплённому маршруту, категория D обязательна.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 2",
+      "published_at": "2026-09-19T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w012",
+    "fields": {
+      "vacancy_id": "w012",
+      "title": "водитель самосвала",
+      "description": "Перевозка сыпучих материалов на самосвале между строительными участками, категория C.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 2",
+      "published_at": "2026-09-18T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w013",
+    "fields": {
+      "vacancy_id": "w013",
+      "title": "водитель автомобиля с манипулятором",
+      "description": "Доставка стройматериалов, управление краном-манипулятором при разгрузке, допуск к работе с КМУ.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 2",
+      "published_at": "2026-09-17T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w014",
+    "fields": {
+      "vacancy_id": "w014",
+      "title": "курьер",
+      "description": "Доставка небольших заказов клиентам, подтверждение вручения в приложении, способ передвижения согласуется.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 2",
+      "published_at": "2026-09-16T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w015",
+    "fields": {
+      "vacancy_id": "w015",
+      "title": "пеший курьер",
+      "description": "Доставка документов пешком по компактному району, автомобиль не требуется.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 2",
+      "published_at": "2026-09-15T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w016",
+    "fields": {
+      "vacancy_id": "w016",
+      "title": "автомобильный курьер",
+      "description": "Доставка заказов на автомобиле, контроль сохранности посылок, маршруты внутри города.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 2",
+      "published_at": "2026-09-14T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w017",
+    "fields": {
+      "vacancy_id": "w017",
+      "title": "сварщик",
+      "description": "Сварка деталей полуавтоматом, зачистка швов, чтение чертежей. Нужен опыт сварочных работ.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 3",
+      "published_at": "2026-09-13T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w018",
+    "fields": {
+      "vacancy_id": "w018",
+      "title": "электрогазосварщик",
+      "description": "Ручная дуговая сварка труб и газовая резка заготовок, подготовка соединений, аттестация НАКС.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 3",
+      "published_at": "2026-09-12T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w019",
+    "fields": {
+      "vacancy_id": "w019",
+      "title": "токарь",
+      "description": "Обработка металлических втулок на токарном станке, контроль размеров, требуется 5 разряд.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 3",
+      "published_at": "2026-09-11T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w020",
+    "fields": {
+      "vacancy_id": "w020",
+      "title": "фрезеровщик",
+      "description": "Фрезерование пазов и плоскостей по чертежам, измерение готовых деталей, подбор инструмента.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 3",
+      "published_at": "2026-09-10T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w021",
+    "fields": {
+      "vacancy_id": "w021",
+      "title": "оператор станков с ЧПУ",
+      "description": "Загрузка заготовок в станок с ЧПУ, запуск готовой программы и контроль изделия. Наладку выполняет наладчик.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 3",
+      "published_at": "2026-09-09T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w022",
+    "fields": {
+      "vacancy_id": "w022",
+      "title": "наладчик станков с ЧПУ",
+      "description": "Наладка станков с ЧПУ, подбор инструмента и корректировка режимов. Не только загрузка заготовок.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 3",
+      "published_at": "2026-09-08T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w023",
+    "fields": {
+      "vacancy_id": "w023",
+      "title": "слесарь-сборщик",
+      "description": "Сборка узлов по чертежам, установка крепежа и проверка размеров готовой конструкции.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 3",
+      "published_at": "2026-09-07T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w024",
+    "fields": {
+      "vacancy_id": "w024",
+      "title": "оператор производственной линии",
+      "description": "Контроль производственной линии, подача упаковки, фиксация остановок и передача смены.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 3",
+      "published_at": "2026-09-06T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w025",
+    "fields": {
+      "vacancy_id": "w025",
+      "title": "разнорабочий",
+      "description": "Подготовка площадки, перенос материалов, уборка рабочего места. С проживанием и питанием.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 4",
+      "published_at": "2026-09-05T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w026",
+    "fields": {
+      "vacancy_id": "w026",
+      "title": "бетонщик",
+      "description": "Заливка бетона и уплотнение смеси, уход за поверхностью. Вахта 30/30 с проживанием.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 4",
+      "published_at": "2026-09-04T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w027",
+    "fields": {
+      "vacancy_id": "w027",
+      "title": "арматурщик",
+      "description": "Вязка арматурных каркасов по схеме, установка фиксаторов и подготовка армирования к заливке.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 4",
+      "published_at": "2026-09-03T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w028",
+    "fields": {
+      "vacancy_id": "w028",
+      "title": "каменщик",
+      "description": "Кладка кирпичных стен и перегородок, приготовление раствора, контроль вертикали.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 4",
+      "published_at": "2026-09-02T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w029",
+    "fields": {
+      "vacancy_id": "w029",
+      "title": "штукатур",
+      "description": "Подготовка стен и нанесение штукатурки, выравнивание поверхностей и зачистка.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 4",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w030",
+    "fields": {
+      "vacancy_id": "w030",
+      "title": "маляр",
+      "description": "Подготовка поверхностей, грунтование и окраска. Возможен приём без опыта с обучением.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 4",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w031",
+    "fields": {
+      "vacancy_id": "w031",
+      "title": "плиточник",
+      "description": "Укладка плитки на стены и пол, подготовка основания, затирка швов по окончании работ.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 4",
+      "published_at": "2026-09-28T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w032",
+    "fields": {
+      "vacancy_id": "w032",
+      "title": "монтажник металлоконструкций",
+      "description": "Монтаж металлоконструкций по чертежам, установка болтовых соединений и проверка геометрии.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 4",
+      "published_at": "2026-09-27T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w033",
+    "fields": {
+      "vacancy_id": "w033",
+      "title": "электромонтёр",
+      "description": "Обслуживание электросетей объекта, поиск неисправностей. Требуется III группа электробезопасности.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 5",
+      "published_at": "2026-09-26T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w034",
+    "fields": {
+      "vacancy_id": "w034",
+      "title": "электромонтажник",
+      "description": "Прокладка кабеля и монтаж электрооборудования на строительном объекте по проекту.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 5",
+      "published_at": "2026-09-25T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w035",
+    "fields": {
+      "vacancy_id": "w035",
+      "title": "слесарь-ремонтник",
+      "description": "Ремонт производственных механизмов, замена подшипников, регулировка передач и профилактический осмотр.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 5",
+      "published_at": "2026-09-24T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w036",
+    "fields": {
+      "vacancy_id": "w036",
+      "title": "сантехник",
+      "description": "Ремонт водопровода и канализации, замена сантехнической арматуры, устранение протечек.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 5",
+      "published_at": "2026-09-23T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w037",
+    "fields": {
+      "vacancy_id": "w037",
+      "title": "автомеханик",
+      "description": "Диагностика и ремонт автомобилей, замена узлов подвески и обслуживание тормозной системы.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 5",
+      "published_at": "2026-09-22T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w038",
+    "fields": {
+      "vacancy_id": "w038",
+      "title": "шиномонтажник",
+      "description": "Снятие и установка шин, балансировка колёс, сезонная работа с повышенной загрузкой.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 5",
+      "published_at": "2026-09-21T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w039",
+    "fields": {
+      "vacancy_id": "w039",
+      "title": "машинист экскаватора",
+      "description": "Разработка грунта экскаватором, планировка участка и ежедневный осмотр техники.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 5",
+      "published_at": "2026-09-20T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w040",
+    "fields": {
+      "vacancy_id": "w040",
+      "title": "машинист крана",
+      "description": "Перемещение грузов краном по сигналам стропальщика, проверка оборудования перед работой.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 5",
+      "published_at": "2026-09-19T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w041",
+    "fields": {
+      "vacancy_id": "w041",
+      "title": "продавец",
+      "description": "Консультация покупателей и подбор товара. Оплата принимается отдельным кассиром.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 6",
+      "published_at": "2026-09-18T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w042",
+    "fields": {
+      "vacancy_id": "w042",
+      "title": "кассир",
+      "description": "Расчёт покупателей на кассовом аппарате, возвраты и закрытие смены, работа 2/2.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 6",
+      "published_at": "2026-09-17T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w043",
+    "fields": {
+      "vacancy_id": "w043",
+      "title": "продавец-кассир",
+      "description": "Консультация покупателей, выкладка товара и расчёт на кассе в течение одной смены.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 6",
+      "published_at": "2026-09-16T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w044",
+    "fields": {
+      "vacancy_id": "w044",
+      "title": "работник торгового зала",
+      "description": "Выкладка товара, проверка сроков годности и поддержание порядка в торговом зале.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 6",
+      "published_at": "2026-09-15T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w045",
+    "fields": {
+      "vacancy_id": "w045",
+      "title": "мерчандайзер",
+      "description": "Выкладка продукции по планограмме, ротация товара и фотоотчёт по торговым точкам.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 6",
+      "published_at": "2026-09-14T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w046",
+    "fields": {
+      "vacancy_id": "w046",
+      "title": "пекарь",
+      "description": "Замес теста, формовка и выпечка хлеба в ночную смену, контроль готовности партии.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 6",
+      "published_at": "2026-09-13T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w047",
+    "fields": {
+      "vacancy_id": "w047",
+      "title": "кондитер",
+      "description": "Приготовление кремов и начинок, оформление кондитерских изделий по технологическим картам.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 6",
+      "published_at": "2026-09-12T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w048",
+    "fields": {
+      "vacancy_id": "w048",
+      "title": "обвальщик мяса",
+      "description": "Обвалка мяса, отделение жил и подготовка сырья для дальнейшей переработки.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 6",
+      "published_at": "2026-09-11T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w049",
+    "fields": {
+      "vacancy_id": "w049",
+      "title": "повар",
+      "description": "Приготовление блюд по технологическим картам, контроль заготовок и санитарного состояния кухни.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 7",
+      "published_at": "2026-09-10T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w050",
+    "fields": {
+      "vacancy_id": "w050",
+      "title": "повар горячего цеха",
+      "description": "Приготовление горячих блюд, работа с плитой и жарочным оборудованием в горячем цехе.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 7",
+      "published_at": "2026-09-09T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w051",
+    "fields": {
+      "vacancy_id": "w051",
+      "title": "повар холодного цеха",
+      "description": "Приготовление салатов и холодных закусок, порционирование и оформление в холодном цехе.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 7",
+      "published_at": "2026-09-08T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w052",
+    "fields": {
+      "vacancy_id": "w052",
+      "title": "помощник повара",
+      "description": "Подготовка ингредиентов под руководством повара, чистка овощей, самостоятельное ведение кухни не требуется.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 7",
+      "published_at": "2026-09-07T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w053",
+    "fields": {
+      "vacancy_id": "w053",
+      "title": "кухонный рабочий",
+      "description": "Подготовка продуктов, перенос посуды и поддержание чистоты кухонного инвентаря.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 7",
+      "published_at": "2026-09-06T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w054",
+    "fields": {
+      "vacancy_id": "w054",
+      "title": "мойщик посуды",
+      "description": "Мытьё столовой посуды вручную и в посудомоечной машине, сортировка чистой посуды.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 7",
+      "published_at": "2026-09-05T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w055",
+    "fields": {
+      "vacancy_id": "w055",
+      "title": "бариста",
+      "description": "Приготовление кофе, обслуживание кофемашины и приём заказов у стойки.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 7",
+      "published_at": "2026-09-04T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w056",
+    "fields": {
+      "vacancy_id": "w056",
+      "title": "изготовитель пищевых полуфабрикатов",
+      "description": "Формовка и упаковка пищевых полуфабрикатов, взвешивание порций, соблюдение санитарных правил.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 7",
+      "published_at": "2026-09-03T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w057",
+    "fields": {
+      "vacancy_id": "w057",
+      "title": "уборщик помещений",
+      "description": "Уборка офисных помещений поломоечной машиной, протирка поверхностей и вынос мусора.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 8",
+      "published_at": "2026-09-02T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w058",
+    "fields": {
+      "vacancy_id": "w058",
+      "title": "уборщик территории",
+      "description": "Уборка открытой территории предприятия, сбор мусора и сезонная очистка дорожек.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 8",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w059",
+    "fields": {
+      "vacancy_id": "w059",
+      "title": "дворник",
+      "description": "Уборка двора жилого комплекса, очистка тротуаров и поддержание порядка у контейнерной площадки.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 8",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w060",
+    "fields": {
+      "vacancy_id": "w060",
+      "title": "горничная",
+      "description": "Уборка гостиничных номеров, замена постельного белья и комплектация расходных материалов.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 8",
+      "published_at": "2026-09-28T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w061",
+    "fields": {
+      "vacancy_id": "w061",
+      "title": "охранник",
+      "description": "Охрана объекта, обход территории и контроль доступа. Требуется удостоверение охранника 4 разряда.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебный участок 8",
+      "published_at": "2026-09-27T00:00:00+00:00",
+      "card_completeness": 0,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w062",
+    "fields": {
+      "vacancy_id": "w062",
+      "title": "контролёр КПП",
+      "description": "Проверка пропусков на КПП, регистрация посетителей, работа без функций лицензированного охранника.",
+      "city": "Казань",
+      "active": true,
+      "company": "Учебный участок 8",
+      "published_at": "2026-09-26T00:00:00+00:00",
+      "card_completeness": 5,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w063",
+    "fields": {
+      "vacancy_id": "w063",
+      "title": "оператор прачечной",
+      "description": "Сортировка белья, загрузка промышленных стиральных машин и подготовка к сушке.",
+      "city": "Тула",
+      "active": true,
+      "company": "Учебный участок 8",
+      "published_at": "2026-09-25T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "shift_2_2"
+    }
+  },
+  {
+    "id": "w064",
+    "fields": {
+      "vacancy_id": "w064",
+      "title": "швея",
+      "description": "Пошив изделий на промышленной швейной машине, обработка края на оверлоке и контроль швов.",
+      "city": "Самара",
+      "active": true,
+      "company": "Учебный участок 8",
+      "published_at": "2026-09-24T00:00:00+00:00",
+      "card_completeness": 30,
+      "schedule_category": "other"
+    }
+  },
+  {
+    "id": "w065",
+    "fields": {
+      "vacancy_id": "w065",
+      "title": "грузчик",
+      "description": "Разгрузка коробов вручную, перемещение на тележке. Заказы собирают комплектовщики соседнего участка.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 1",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w066",
+    "fields": {
+      "vacancy_id": "w066",
+      "title": "грузчик",
+      "description": "Разгрузка коробов вручную, перемещение на тележке. Заказы собирают комплектовщики соседнего участка.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 1",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w067",
+    "fields": {
+      "vacancy_id": "w067",
+      "title": "комплектовщик",
+      "description": "Сборка заказов со сканером ТСД, проверка артикула и передача упакованного заказа на отгрузку.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 2",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w068",
+    "fields": {
+      "vacancy_id": "w068",
+      "title": "комплектовщик",
+      "description": "Сборка заказов со сканером ТСД, проверка артикула и передача упакованного заказа на отгрузку.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 2",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w069",
+    "fields": {
+      "vacancy_id": "w069",
+      "title": "кладовщик",
+      "description": "Учёт остатков в WMS, инвентаризация, приёмка товара по документам. Погрузчиком управляет отдельный водитель.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 3",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w070",
+    "fields": {
+      "vacancy_id": "w070",
+      "title": "кладовщик",
+      "description": "Учёт остатков в WMS, инвентаризация, приёмка товара по документам. Погрузчиком управляет отдельный водитель.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 3",
+      "published_at": "2026-10-06T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w071",
+    "fields": {
+      "vacancy_id": "w071",
+      "title": "упаковщик",
+      "description": "Упаковка готовых наборов в коробки, проверка целостности, наклейка этикеток перед отправкой.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 4",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w072",
+    "fields": {
+      "vacancy_id": "w072",
+      "title": "упаковщик",
+      "description": "Упаковка готовых наборов в коробки, проверка целостности, наклейка этикеток перед отправкой.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 4",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w073",
+    "fields": {
+      "vacancy_id": "w073",
+      "title": "фасовщик",
+      "description": "Взвешивание крупы, фасовка по пакетам, контроль массы. Предусмотрено обучение на участке.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 5",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": null,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w074",
+    "fields": {
+      "vacancy_id": "w074",
+      "title": "фасовщик",
+      "description": "Взвешивание крупы, фасовка по пакетам, контроль массы. Предусмотрено обучение на участке.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 5",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w075",
+    "fields": {
+      "vacancy_id": "w075",
+      "title": "приёмщик товара",
+      "description": "Сверка поставки с накладными, контроль количества и целостности коробов, оформление расхождений.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 6",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": -5,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w076",
+    "fields": {
+      "vacancy_id": "w076",
+      "title": "приёмщик товара",
+      "description": "Сверка поставки с накладными, контроль количества и целостности коробов, оформление расхождений.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 6",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w077",
+    "fields": {
+      "vacancy_id": "w077",
+      "title": "водитель погрузчика",
+      "description": "Перевозка паллет на вилочном погрузчике. Требуется удостоверение тракториста-машиниста.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 7",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w078",
+    "fields": {
+      "vacancy_id": "w078",
+      "title": "водитель погрузчика",
+      "description": "Перевозка паллет на вилочном погрузчике. Требуется удостоверение тракториста-машиниста.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 7",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w079",
+    "fields": {
+      "vacancy_id": "w079",
+      "title": "оператор склада",
+      "description": "Регистрация складских операций в терминале, печать сопроводительных документов и учёт перемещений.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 8",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "unclassified"
+    }
+  },
+  {
+    "id": "w080",
+    "fields": {
+      "vacancy_id": "w080",
+      "title": "оператор склада",
+      "description": "Регистрация складских операций в терминале, печать сопроводительных документов и учёт перемещений.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 8",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w081",
+    "fields": {
+      "vacancy_id": "w081",
+      "title": "водитель",
+      "description": "Доставка хозяйственных товаров на легковом автомобиле. Требуются права категории B. Проживание предоставляется в общежитии.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 9",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w082",
+    "fields": {
+      "vacancy_id": "w082",
+      "title": "водитель",
+      "description": "Доставка хозяйственных товаров на легковом автомобиле. Требуются права категории B. Проживание не предоставляется.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 9",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w083",
+    "fields": {
+      "vacancy_id": "w083",
+      "title": "водитель-экспедитор",
+      "description": "Вождение грузового автомобиля и передача товара получателю по накладной. Нужна категория C. Принимаем без опыта, предусмотрено обучение.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 10",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w084",
+    "fields": {
+      "vacancy_id": "w084",
+      "title": "водитель-экспедитор",
+      "description": "Вождение грузового автомобиля и передача товара получателю по накладной. Нужна категория C. Кандидаты без опыта не рассматриваются.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 10",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w085",
+    "fields": {
+      "vacancy_id": "w085",
+      "title": "водитель автобуса",
+      "description": "Перевозка сотрудников на автобусе по закреплённому маршруту, категория D обязательна. Оплата 3500 рублей за смену.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 11",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w086",
+    "fields": {
+      "vacancy_id": "w086",
+      "title": "водитель автобуса",
+      "description": "Перевозка сотрудников на автобусе по закреплённому маршруту, категория D обязательна. Оплата 80000 рублей в месяц до вычета налога.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 11",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w087",
+    "fields": {
+      "vacancy_id": "w087",
+      "title": "водитель самосвала",
+      "description": "Перевозка сыпучих материалов на самосвале между строительными участками, категория C. Вахта 30/30.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 12",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w088",
+    "fields": {
+      "vacancy_id": "w088",
+      "title": "водитель самосвала",
+      "description": "Перевозка сыпучих материалов на самосвале между строительными участками, категория C. График 2/2 без вахты.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 12",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w089",
+    "fields": {
+      "vacancy_id": "w089",
+      "title": "водитель автомобиля с манипулятором",
+      "description": "Доставка стройматериалов, управление краном-манипулятором при разгрузке, допуск к работе с КМУ. Обязательна категория CE.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 13",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w090",
+    "fields": {
+      "vacancy_id": "w090",
+      "title": "водитель автомобиля с манипулятором",
+      "description": "Доставка стройматериалов, управление краном-манипулятором при разгрузке, допуск к работе с КМУ. Достаточно категории C.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 13",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w091",
+    "fields": {
+      "vacancy_id": "w091",
+      "title": "курьер",
+      "description": "Доставка небольших заказов клиентам, подтверждение вручения в приложении, способ передвижения согласуется.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 14",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w092",
+    "fields": {
+      "vacancy_id": "w092",
+      "title": "курьер",
+      "description": "Доставка небольших заказов клиентам, подтверждение вручения в приложении, способ передвижения согласуется.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 14",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w093",
+    "fields": {
+      "vacancy_id": "w093",
+      "title": "пеший курьер",
+      "description": "Доставка документов пешком по компактному району, автомобиль не требуется.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 15",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10,
+      "schedule_category": "night"
+    }
+  },
+  {
+    "id": "w094",
+    "fields": {
+      "vacancy_id": "w094",
+      "title": "пеший курьер",
+      "description": "Доставка документов пешком по компактному району, автомобиль не требуется.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 15",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 1000000,
+      "schedule_category": "day"
+    }
+  },
+  {
+    "id": "w095",
+    "fields": {
+      "vacancy_id": "w095",
+      "title": "автомобильный курьер",
+      "description": "Доставка заказов на автомобиле, контроль сохранности посылок, маршруты внутри города.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 16",
+      "published_at": "2026-09-01T00:00:00+00:00",
+      "card_completeness": 10
+    }
+  },
+  {
+    "id": "w096",
+    "fields": {
+      "vacancy_id": "w096",
+      "title": "автомобильный курьер",
+      "description": "Доставка заказов на автомобиле, контроль сохранности посылок, маршруты внутри города.",
+      "city": "Москва",
+      "active": true,
+      "company": "Учебная пара 16",
+      "published_at": "2026-09-29T00:00:00+00:00",
+      "card_completeness": 90,
+      "schedule_category": "day"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+defaults:
+  - experiments/vacancy-search/interactive@experiment: 001-basic
+  - _self_
+
+connection:
+  url: ???
+  authorization: ${oc.env:OPENSEARCH_AUTHORIZATION,null}
+  timeout: 30.0
+
+search:
+  index: ???
+  fields: ???
+  size: ???
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}-${run_id:}

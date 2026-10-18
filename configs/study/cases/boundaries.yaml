@@ -1,0 +1,44 @@
+- id: unicode-byte-offsets
+  input: Ёж на складе 🚚 ТСД
+  expected: TEI UTF8 bytes converted at codepoint boundaries; reject interior bytes
+- id: unicode-expansion
+  input: комплектовщик ß без опыта
+  expected: span_mapping_unavailable, original-only path
+- id: title-missing
+  fields:
+    description: Комплектация ТСД
+  expected: declared title recipe rejects invalid source before writes
+- id: description-missing
+  fields:
+    title: Комплектовщик
+  expected: declared description recipe rejects invalid source before writes
+- id: scalar-array
+  fields:
+    city:
+    - Москва
+  expected: scalar boundary error before writes
+- id: scalar-bool-integer
+  fields:
+    active: 1
+  expected: strict boolean field error before writes
+- id: title-cutoff
+  title_tokens: 65
+  expected: E5 first64 title tokens, final passage audit≤512
+- id: body-tail
+  body_tokens: 513
+  evidence_token: 512
+  expected: whole truncation contrast; E5 keeps all bodytokens
+- id: chunk-cap
+  body_windows: 65
+  expected: error before writes, no dropped lastwindow
+- id: concentration
+  documents: 3
+  chunks_per_document: 64
+  first_page_hits: 100
+  expected: repeatquery excluding prior vacancy ids until depth100/exhausted
+- id: opportunity-bias
+  extra_unrelated_chunks:
+  - 0
+  - 5
+  - 20
+  expected: max is not length debiasing; report active scores/ranks live

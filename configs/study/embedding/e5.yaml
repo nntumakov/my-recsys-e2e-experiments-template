@@ -1,0 +1,9 @@
+_target_: src.core.transformers.qdrant.chunks.ChunkSearchTransformer
+integration: ${study.chunk_integration}
+embedder: ${embedding.encoder}
+source: ${study.sources.chunk}
+collection: ${study.collections.chunk}
+candidate_depth: ${study.candidate_depth}
+final_k: ${study.final_k}
+exact: ${study.exact}
+hnsw_ef: ${study.hnsw_ef}

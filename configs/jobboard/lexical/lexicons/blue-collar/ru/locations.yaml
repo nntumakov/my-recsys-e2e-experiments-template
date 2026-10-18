@@ -1,0 +1,120 @@
+- id: moscow
+  canonical: Москва
+  forms:
+  - Москве
+  - Москвы
+  - в Москве
+- id: petersburg
+  canonical: Санкт-Петербург
+  forms:
+  - Санкт-Петербурге
+  - СПб
+  - в Санкт-Петербурге
+- id: ekaterinburg
+  canonical: Екатеринбург
+  forms:
+  - Екатеринбурге
+  - Екатеринбурга
+  - в Екатеринбурге
+- id: novosibirsk
+  canonical: Новосибирск
+  forms:
+  - Новосибирске
+  - Новосибирска
+  - в Новосибирске
+- id: kazan
+  canonical: Казань
+  forms:
+  - Казани
+  - Казанью
+  - в Казани
+- id: nizhny
+  canonical: Нижний Новгород
+  forms:
+  - Нижнем Новгороде
+  - Нижнего Новгорода
+  - в Нижнем Новгороде
+- id: samara
+  canonical: Самара
+  forms:
+  - Самаре
+  - Самары
+  - в Самаре
+- id: chelyabinsk
+  canonical: Челябинск
+  forms:
+  - Челябинске
+  - Челябинска
+  - в Челябинске
+- id: omsk
+  canonical: Омск
+  forms:
+  - Омске
+  - Омска
+  - в Омске
+- id: rostov
+  canonical: Ростов-на-Дону
+  forms:
+  - Ростове-на-Дону
+  - Ростова-на-Дону
+  - в Ростове-на-Дону
+- id: ufa
+  canonical: Уфа
+  forms:
+  - Уфе
+  - Уфы
+  - в Уфе
+- id: krasnoyarsk
+  canonical: Красноярск
+  forms:
+  - Красноярске
+  - Красноярска
+  - в Красноярске
+- id: perm
+  canonical: Пермь
+  forms:
+  - Перми
+  - Пермью
+  - в Перми
+- id: voronezh
+  canonical: Воронеж
+  forms:
+  - Воронеже
+  - Воронежа
+  - в Воронеже
+- id: volgograd
+  canonical: Волгоград
+  forms:
+  - Волгограде
+  - Волгограда
+  - в Волгограде
+- id: krasnodar
+  canonical: Краснодар
+  forms:
+  - Краснодаре
+  - Краснодара
+  - в Краснодаре
+- id: tyumen
+  canonical: Тюмень
+  forms:
+  - Тюмени
+  - Тюменью
+  - в Тюмени
+- id: tula
+  canonical: Тула
+  forms:
+  - Туле
+  - Тулы
+  - в Туле
+- id: yaroslavl
+  canonical: Ярославль
+  forms:
+  - Ярославле
+  - Ярославля
+  - в Ярославле
+- id: izhevsk
+  canonical: Ижевск
+  forms:
+  - Ижевске
+  - Ижевска
+  - в Ижевске

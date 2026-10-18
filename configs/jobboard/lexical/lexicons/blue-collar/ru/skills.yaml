@@ -1,0 +1,185 @@
+- id: scanner
+  canonical: ТСД
+  forms:
+  - терминал сбора данных
+  - терминалом сбора данных
+  aliases:
+  - терминал сбора данных
+- id: wms
+  canonical: WMS
+  forms:
+  - вмс
+  - система управления складом
+- id: inventory
+  canonical: инвентаризация
+  forms:
+  - инвентаризацию
+  - инвентаризации
+- id: receiving
+  canonical: приёмка товара
+  forms:
+  - приемка товара
+  - приёмки товара
+- id: shipping
+  canonical: отгрузка товара
+  forms:
+  - отгрузке товара
+  - отгрузки товаров
+- id: picking
+  canonical: комплектация заказов
+  forms:
+  - комплектации заказов
+- id: palletizing
+  canonical: паллетирование
+  forms:
+  - паллетирования
+- id: labeling
+  canonical: маркировка товара
+  forms:
+  - маркировки товара
+- id: cnc
+  canonical: ЧПУ
+  forms:
+  - числовое программное управление
+  aliases:
+  - числовое программное управление
+- id: arc_welding
+  canonical: ручная дуговая сварка
+  forms:
+  - ручной дуговой сварки
+  - ручной дуговой сваркой
+- id: mig_welding
+  canonical: полуавтоматическая сварка
+  forms:
+  - полуавтомат
+  - полуавтоматом
+  - сварка полуавтоматом
+- id: tig_welding
+  canonical: аргонодуговая сварка
+  forms:
+  - аргон
+  - аргоновая сварка
+- id: blueprints
+  canonical: чтение чертежей
+  forms:
+  - читать чертежи
+  - по чертежам
+- id: metalworking
+  canonical: металлообработка
+  forms:
+  - обработка металла
+- id: steel_assembly
+  canonical: сборка металлоконструкций
+  forms:
+  - сборке металлоконструкций
+- id: conveyor
+  canonical: работа на конвейере
+  forms:
+  - конвейер
+  - конвейере
+- id: brickwork
+  canonical: кладка кирпича
+  forms:
+  - кладке кирпича
+- id: rebar
+  canonical: вязка арматуры
+  forms:
+  - вязке арматуры
+- id: concrete
+  canonical: заливка бетона
+  forms:
+  - заливке бетона
+- id: plastering
+  canonical: штукатурные работы
+  forms:
+  - штукатурных работ
+- id: painting
+  canonical: малярные работы
+  forms:
+  - малярных работ
+- id: tiling
+  canonical: укладка плитки
+  forms:
+  - укладке плитки
+- id: wiring
+  canonical: электромонтаж
+  forms:
+  - электромонтажа
+- id: car_repair
+  canonical: ремонт автомобилей
+  forms:
+  - ремонту автомобилей
+- id: cash_register
+  canonical: кассовый аппарат
+  forms:
+  - кассой
+  - касса
+- id: shelving
+  canonical: выкладка товара
+  forms:
+  - выкладке товара
+- id: rotation
+  canonical: ротация товара
+  forms:
+  - ротации товара
+- id: bread
+  canonical: выпечка хлеба
+  forms:
+  - выпечке хлеба
+- id: meat_cutting
+  canonical: разделка мяса
+  forms:
+  - разделке мяса
+- id: hot_kitchen
+  canonical: горячий цех
+  forms:
+  - горячего цеха
+  - горячем цехе
+- id: cold_kitchen
+  canonical: холодный цех
+  forms:
+  - холодного цеха
+  - холодном цехе
+- id: coffee
+  canonical: приготовление кофе
+  forms:
+  - готовить кофе
+- id: forklift
+  canonical: погрузчик
+  forms:
+  - погрузчика
+  - погрузчике
+- id: reach_truck
+  canonical: ричтрак
+  forms:
+  - ричтрака
+  - ричтраке
+- id: stacker
+  canonical: штабелёр
+  forms:
+  - штабелер
+  - штабелере
+- id: excavator
+  canonical: экскаватор
+  forms:
+  - экскаватора
+  - экскаваторе
+- id: manipulator
+  canonical: кран-манипулятор
+  forms:
+  - крана манипулятора
+  - манипулятор
+- id: scrubber
+  canonical: поломоечная машина
+  forms:
+  - поломоечной машине
+  - поломоечной машиной
+- id: sewing_machine
+  canonical: промышленная швейная машина
+  forms:
+  - промышленной швейной машине
+- id: serger
+  canonical: оверлок
+  forms:
+  - оверлоке
+  - оверлоком

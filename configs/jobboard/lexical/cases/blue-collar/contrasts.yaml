@@ -1,0 +1,274 @@
+- id: pair01
+  query: грузчик
+  documents:
+  - w001
+  - w007
+  rationale: Грузчик и водитель погрузчика — разные профессии.
+  kind: semantic
+- id: pair02
+  query: комплектовщик ТСД
+  documents:
+  - w002
+  - w001
+  rationale: Упоминание комплектовщиков в соседнем отделе не равно работе комплектовщиком.
+  kind: semantic
+- id: pair03
+  query: кладовщик инвентаризация
+  documents:
+  - w003
+  - w002
+  rationale: Учёт остатков отличается от сборки заказов.
+  kind: semantic
+- id: pair04
+  query: оператор ЧПУ
+  documents:
+  - w021
+  - w022
+  rationale: Оператор и наладчик работают с одним оборудованием, но выполняют разные
+    функции.
+  kind: semantic
+- id: pair05
+  query: водитель категории B
+  documents:
+  - w009
+  - w011
+  rationale: B не подразумевает право управления автобусом категории D.
+  kind: semantic
+- id: pair06
+  query: сварщик полуавтомат
+  documents:
+  - w017
+  - w018
+  rationale: Способ сварки должен сохраняться отдельным свидетельством.
+  kind: semantic
+- id: pair07
+  query: повар
+  documents:
+  - w049
+  - w052
+  rationale: Помощник повара не эквивалентен самостоятельному повару.
+  kind: semantic
+- id: pair08
+  query: кассир
+  documents:
+  - w042
+  - w043
+  rationale: Совмещённая роль продавца-кассира содержит дополнительные обязанности.
+  kind: semantic
+- id: pair09
+  query: охранник 4 разряд
+  documents:
+  - w061
+  - w062
+  rationale: Контролёр КПП не подразумевает удостоверение охранника.
+  kind: semantic
+- id: pair10
+  query: уборщица офиса
+  documents:
+  - w057
+  - w059
+  rationale: Уборка помещений отличается от уборки двора.
+  kind: semantic
+- id: pair11
+  query: горничная
+  documents:
+  - w057
+  - w060
+  rationale: Уборка номера включает обязанности, отличные от офисной уборки.
+  kind: semantic
+- id: pair12
+  query: повар горячего цеха
+  documents:
+  - w050
+  - w051
+  rationale: Горячий и холодный цех не взаимозаменяемы.
+  kind: semantic
+- id: pair13
+  query: слесарь ремонтник
+  documents:
+  - w035
+  - w036
+  rationale: Слесарь производственного оборудования не автоматически сантехник.
+  kind: semantic
+- id: pair14
+  query: автомеханик
+  documents:
+  - w037
+  - w038
+  rationale: Шиномонтаж не охватывает все работы автомеханика.
+  kind: semantic
+- id: pair15
+  query: пеший курьер
+  documents:
+  - w014
+  - w015
+  rationale: Общая профессия не подтверждает способ передвижения.
+  kind: semantic
+- id: pair16
+  query: продавец
+  documents:
+  - w041
+  - w044
+  rationale: Выкладка товара не обязательно включает консультацию покупателей.
+  kind: semantic
+- id: pair17
+  query: грузчик
+  documents:
+  - w065
+  - w066
+  rationale: Одинаковый текст, сегодняшняя и старая публикация.
+  kind: freshness
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair18
+  query: комплектовщик
+  documents:
+  - w067
+  - w068
+  rationale: Отсутствие даты не получает бонус свежести.
+  kind: missing_date
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair19
+  query: кладовщик
+  documents:
+  - w069
+  - w070
+  rationale: Будущая дата получает верхнюю границу бонуса и диагностируется.
+  kind: future_date
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair20
+  query: упаковщик
+  documents:
+  - w071
+  - w072
+  rationale: Одинаковый текст, качество на pivot и в насыщении.
+  kind: quality
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair21
+  query: фасовщик
+  documents:
+  - w073
+  - w074
+  rationale: Отсутствие показателя качества не становится большим бонусом.
+  kind: missing_quality
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair22
+  query: приёмщик товара
+  documents:
+  - w075
+  - w076
+  rationale: Отрицательный показатель качества трактуется как ноль.
+  kind: negative_quality
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair23
+  query: водитель погрузчика
+  documents:
+  - w077
+  - w078
+  rationale: Дневной слабый результат может быть выше ночного сильного по строгой
+    политике.
+  kind: tiers
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair24
+  query: оператор склада
+  documents:
+  - w079
+  - w080
+  rationale: Неизвестная категория попадает в последний tier.
+  kind: unknown_category
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair25
+  query: водитель
+  documents:
+  - w081
+  - w082
+  rationale: Слово проживание в отрицании не доказывает наличие проживания.
+  kind: housing
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair26
+  query: водитель-экспедитор
+  documents:
+  - w083
+  - w084
+  rationale: Фраза без опыта внутри отказа не означает готовность обучать.
+  kind: experience
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair27
+  query: водитель автобуса
+  documents:
+  - w085
+  - w086
+  rationale: Сумма за смену и месячная сумма не сопоставляются как одно число.
+  kind: salary
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair28
+  query: водитель самосвала
+  documents:
+  - w087
+  - w088
+  rationale: 30/30 и 2/2 — разные режимы, не опечатки.
+  kind: rotation
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair29
+  query: водитель автомобиля с манипулятором
+  documents:
+  - w089
+  - w090
+  rationale: CE нельзя ослабить до C.
+  kind: qualification
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair30
+  query: курьер
+  documents:
+  - w091
+  - w092
+  rationale: Слабый свежий результат не обязан побеждать сильный старый.
+  kind: stale_relevance
+  lexical_scores:
+  - 12.0
+  - 11.0
+- id: pair31
+  query: пеший курьер
+  documents:
+  - w093
+  - w094
+  rationale: Выброс numeric signal ограничен функцией насыщения.
+  kind: saturation
+  lexical_scores:
+  - 10.0
+  - 10.0
+- id: pair32
+  query: автомобильный курьер
+  documents:
+  - w095
+  - w096
+  rationale: Отсутствующая категория получает последнюю группу.
+  kind: missing_category
+  lexical_scores:
+  - 10.0
+  - 10.0

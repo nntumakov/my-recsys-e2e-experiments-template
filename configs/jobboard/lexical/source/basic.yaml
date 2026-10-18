@@ -1,0 +1,5 @@
+_target_: src.core.transformers.opensearch.jobboard.query.SourceProfile
+index: ???
+fields: ???
+title_field: null
+term_fields: {}

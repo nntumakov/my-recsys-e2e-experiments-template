@@ -1,0 +1,4 @@
+jobboard:
+  variants:
+    c5:
+      mode: slots

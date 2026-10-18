@@ -1,0 +1,66 @@
+defaults:
+  - /jobboard/lexical/lexicons/blue-collar@jobboard.content: ru
+  - /jobboard/lexical/source@jobboard.source: work
+  - /jobboard/lexical/ranking@jobboard.rankings.relevance: relevance
+  - /jobboard/lexical/ranking@jobboard.rankings.signals: balanced
+  - /jobboard/lexical/ranking@jobboard.rankings.tiers: day-first
+  - _self_
+  - /jobboard/lexical/research/ablation@_global_: none
+jobboard:
+  session:
+    now_ms: ???
+  final_k: 20
+  parser:
+    _target_: src.components.query.jobboard.catalog.work_parser
+    entries: ${jobboard.content.entries}
+    protected: ${jobboard.content.protected}
+    introductions: ${jobboard.content.introductions}
+    unsupported_markers: ${jobboard.content.unsupported_markers}
+    syntax_whitelist: ${jobboard.content.syntax_whitelist}
+  query:
+    _target_: src.core.transformers.opensearch.jobboard.slots.SlotQueryConfig
+    title_field_weight: 4.0
+    default_field_weight: 1.0
+    title_phrase_boost: 2.0
+    literal_minimum_should_match: 2<75%
+    field_weights_by_kind: {}
+    attribute_boosts: {}
+  rewrite:
+    rules: ${jobboard.content.rewrites}
+    keyboard: ${jobboard.content.keyboard}
+  variants:
+    c1:
+      mode: literal
+      query: ${jobboard.query}
+      ranking: ${jobboard.rankings.relevance}
+    c2:
+      mode: literal
+      query: ${jobboard.query}
+      ranking: ${jobboard.rankings.signals}
+    c3:
+      mode: literal
+      query: ${jobboard.query}
+      ranking: ${jobboard.rankings.tiers}
+    c4:
+      mode: slots
+      query: ${jobboard.query}
+      ranking: ${jobboard.rankings.relevance}
+    c5:
+      mode: rewrite
+      query: ${jobboard.query}
+      ranking: ${jobboard.rankings.relevance}
+      rewrite_weight: 0.65
+  registry:
+    _target_: src.core.registry.research.research_registry
+    integration:
+      _target_: src.integrations.opensearch.client.OpenSearchIntegration
+      url: ${connection.url}
+      authorization: ${connection.authorization}
+      timeout: ${connection.timeout}
+    source: ${jobboard.source}
+    parser: ${jobboard.parser}
+    now_ms: ${jobboard.session.now_ms}
+    size: ${jobboard.final_k}
+    rewrite: ${jobboard.rewrite}
+    variants: ${jobboard.variants}
+    selected: ${experiment.variants}

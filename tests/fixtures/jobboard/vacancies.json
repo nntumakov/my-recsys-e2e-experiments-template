@@ -1,0 +1,182 @@
+[
+  {
+    "_id": "j01",
+    "_source": {
+      "title": "Senior Python backend developer",
+      "description": "Разработка серверных API на Python и PostgreSQL. Старший разработчик бэкенда, полностью удалённая работа, команда в Москве.",
+      "city": "moscow",
+      "remote": true
+    }
+  },
+  {
+    "_id": "j02",
+    "_source": {
+      "title": "Java backend developer",
+      "description": "Backend engineer для сервисов на Java и Apache Kafka. Middle, работа в офисе в Москве.",
+      "city": "moscow",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j03",
+    "_source": {
+      "title": "Junior JavaScript frontend developer",
+      "description": "Разработка пользовательского интерфейса на JavaScript и React. Джуниор, удалённая работа из Санкт-Петербурга.",
+      "city": "saint_petersburg",
+      "remote": true
+    }
+  },
+  {
+    "_id": "j04",
+    "_source": {
+      "title": "C++ developer",
+      "description": "Разработка системного ПО на C++ и Linux. Офис в Санкт-Петербурге, требуется опыт промышленной разработки.",
+      "city": "saint_petersburg",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j05",
+    "_source": {
+      "title": "Senior C# .NET backend developer",
+      "description": "Серверная разработка на C# и .NET, база PostgreSQL. Гибридный формат в Москве, старший специалист.",
+      "city": "moscow",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j06",
+    "_source": {
+      "title": "Golang backend developer",
+      "description": "Разработка сервисов на Go, Docker и Kubernetes. Полностью удалённо, команда в Казани.",
+      "city": "kazan",
+      "remote": true
+    }
+  },
+  {
+    "_id": "j07",
+    "_source": {
+      "title": "Project manager",
+      "description": "Руководитель проектов внедрения корпоративного ПО. Планирование сроков и координация команды, офис в Москве.",
+      "city": "moscow",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j08",
+    "_source": {
+      "title": "Product manager",
+      "description": "Менеджер продукта в финтехе. Исследование пользователей и приоритизация продуктовых задач, удалённая работа в Санкт-Петербурге.",
+      "city": "saint_petersburg",
+      "remote": true
+    }
+  },
+  {
+    "_id": "j09",
+    "_source": {
+      "title": "Junior data analyst",
+      "description": "Аналитик данных, SQL и Microsoft Excel. Рассматриваем без опыта, обучение в команде, удалённо из Москвы.",
+      "city": "moscow",
+      "remote": true
+    }
+  },
+  {
+    "_id": "j10",
+    "_source": {
+      "title": "Бухгалтер 1С",
+      "description": "Бухгалтерский учёт в 1С и сверка документов в Excel. Работа в офисе в Казани, нужен опыт ведения учёта.",
+      "city": "kazan",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j11",
+    "_source": {
+      "title": "Водитель категории C",
+      "description": "Перевозка грузов по городу, необходимы водительские права категории C. Работа в Москве.",
+      "city": "moscow",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j12",
+    "_source": {
+      "title": "Медицинская сестра",
+      "description": "Медицинская сестра процедурного кабинета. Нужен подтверждённый профессиональный допуск, работа в клинике в Москве.",
+      "city": "moscow",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j13",
+    "_source": {
+      "title": "Sales manager",
+      "description": "Менеджер по продажам B2B, общение с клиентами. Полностью удалённая работа, команда в Москве.",
+      "city": "moscow",
+      "remote": true
+    }
+  },
+  {
+    "_id": "j14",
+    "_source": {
+      "title": "Senior Python test automation engineer",
+      "description": "Автоматизация тестирования на Python, поддержка тестов API. Офис в Москве, старший инженер по тестированию.",
+      "city": "moscow",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j15",
+    "_source": {
+      "title": "Senior recruiter",
+      "description": "Подбор специалистов и проведение интервью. Удалённо, московская команда, старшая позиция.",
+      "city": "moscow",
+      "remote": true
+    }
+  },
+  {
+    "_id": "j16",
+    "_source": {
+      "title": "Data scientist",
+      "description": "Модели машинного обучения на Python и PyTorch. Удалённая работа из Москвы, фокус на исследованиях данных.",
+      "city": "moscow",
+      "remote": true
+    }
+  },
+  {
+    "_id": "j17",
+    "_source": {
+      "title": "Technical support specialist",
+      "description": "Специалист технической поддержки пользователей Linux. Гибридный формат в Берлине.",
+      "city": "berlin",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j18",
+    "_source": {
+      "title": "Электрик",
+      "description": "Обслуживание электрического оборудования и диагностика неисправностей. Работа на объекте в Новосибирске.",
+      "city": "novosibirsk",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j19",
+    "_source": {
+      "title": "UX designer",
+      "description": "Проектирование пользовательского опыта и исследование интерфейсов. Гибридный формат, команда в Лондоне.",
+      "city": "london",
+      "remote": false
+    }
+  },
+  {
+    "_id": "j20",
+    "_source": {
+      "title": "Работник склада",
+      "description": "Приёмка, размещение и сборка товаров. Можно без опыта, работа на складе в Казани.",
+      "city": "kazan",
+      "remote": false
+    }
+  }
+]
