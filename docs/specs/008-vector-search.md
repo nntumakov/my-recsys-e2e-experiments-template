@@ -1409,7 +1409,7 @@ Local exit evidence — все L, canonical gates и current docs. Live exit evi
 generation и recipe. [Architecture](../architecture.md) описывает владельцев и
 scope remote index ownership; прежний OpenSearch-proxy contract сохраняется.
 [Development](../development.md) различает spec/local/live и реальные evidence.
-[README](../../README.md) содержит исполняемые команды для configs/
+[Руководство по внешним сервисам](../usage.md) содержит исполняемые команды для configs/
 launcher. Spec хранит outcome/решения/contracts/acceptance; notes сохраняют источники
 и trade-offs, не становятся второй current operational инструкцией. Task plan
 уточняется отдельно на ближайший исполнимый этап.

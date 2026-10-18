@@ -1,0 +1,16 @@
+defaults:
+  - ranking/cases@ranking.cases: vacancies
+  - experiments/vacancy-ranking/local@experiment: 002-vacancies
+  - _self_
+
+ranking:
+  k: 3
+  rank_constant: 60
+  text_field: text_match
+  preference_field: preference_match
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: outputs/ranking/${now:%Y-%m-%d}/${now:%H-%M-%S}-${run_id:}

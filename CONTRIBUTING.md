@@ -15,7 +15,7 @@ poetry run pytest
 
 Весь Python, включая код примеров, живёт в `src/`. Конфигурация компонентов —
 в `configs/`: Hydra создаёт объекты, registry связывает transformers по именам.
-Начать знакомство можно с [локального сравнения](configs/experiments/vacancy-ranking/local/001-comparison.yaml),
+Начать знакомство можно с [локального примера](docs/examples/offline-ranking.md),
 затем прочитать [архитектуру](docs/architecture.md) и [словарь](CONTEXT.md).
 
 ## OpenSpec

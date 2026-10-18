@@ -669,7 +669,8 @@ transformer/compiler, HTTP/result conversion — в integrations. Notebook/exper
 Существующие parsed/fuzzy и main default сохраняют поведение. Новый C4/C5 включается
 явным preset. Код может переиспользоваться без навязывания новой политики старым опытам.
 Canonical architecture/CONTEXT/development/README обновлены вместе с реализацией.
-Команды и соответствие presets конфигурационным группам находятся в README.
+Команды и соответствие presets конфигурационным группам находятся в
+[руководстве по внешним сервисам](../usage.md).
 
 До HTTP проверяются missing required config, types, budgets, scripts JSON params,
 field capabilities и несовместимость sort/rescore. Painless source локально

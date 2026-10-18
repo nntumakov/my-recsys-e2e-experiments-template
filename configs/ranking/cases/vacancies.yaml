@@ -1,0 +1,80 @@
+# Scores are illustrative inputs, not measured BM25 or model predictions.
+# Judgments (0–3) are independent of both ranking signals.
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: warehouse
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    filters:
+      - _target_: src.domain.request.filters.QueryFilter
+        text: комплектовщик без опыта 2/2
+    items:
+      _target_: src.domain.collection.serp.SERP
+      items:
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: warehouse-night
+          fields: {title: Комплектовщик ночной смены, description: Сборка заказов с ТСД. Нужен опыт от года., city: Москва, schedule: night, text_match: 9.0, preference_match: 0.2}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: warehouse-trainee
+          fields: {title: Сборщик заказов, description: Обучение работе с ТСД. Опыт не требуется., city: Москва, schedule: 2/2, text_match: 8.0, preference_match: 0.9}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: warehouse-experienced
+          fields: {title: Комплектовщик, description: Сборка заказов. Требуется опыт от года., city: Москва, schedule: 2/2, text_match: 7.0, preference_match: 0.6}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: packer
+          fields: {title: Упаковщик, description: Упаковка готовых заказов. Обучаем на месте., city: Москва, schedule: 2/2, text_match: 3.0, preference_match: 1.0}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: loader
+          fields: {title: Грузчик, description: Разгрузка коробов вручную. Без опыта., city: Москва, schedule: 5/2, text_match: 1.0, preference_match: 0.3}
+  relevance: {warehouse-night: 1, warehouse-trainee: 3, warehouse-experienced: 2, packer: 0, loader: 0}
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: welder
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    filters:
+      - _target_: src.domain.request.filters.QueryFilter
+        text: сварщик вахта с проживанием
+    items:
+      _target_: src.domain.collection.serp.SERP
+      items:
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: welder-camp
+          fields: {title: Сварщик на вахту, description: Сварка металлоконструкций. Проживание в общежитии., city: Тула, schedule: rotation, text_match: 10.0, preference_match: 0.8}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: welder-local
+          fields: {title: Сварщик, description: Сварка металлоконструкций на местном заводе. Жильё не предоставляется., city: Тула, schedule: 5/2, text_match: 8.0, preference_match: 0.1}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: fitter-camp
+          fields: {title: Монтажник на вахту, description: Монтаж без сварочных работ. Проживание и питание., city: Тула, schedule: rotation, text_match: 4.0, preference_match: 1.0}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: welder-travel
+          fields: {title: Электросварщик, description: Выездные работы. Вахта без предоставления жилья., city: Тула, schedule: rotation, text_match: 6.0, preference_match: 0.5}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: cook-camp
+          fields: {title: Повар вахтового посёлка, description: Приготовление еды для бригады. Проживание бесплатно., city: Тула, schedule: rotation, text_match: 1.0, preference_match: 0.9}
+  relevance: {welder-camp: 3, welder-local: 1, fitter-camp: 0, welder-travel: 2, cook-camp: 0}
+- _target_: src.experiments.testing.compare.ComparisonCase
+  key: driver
+  data:
+    _target_: src.core.transformers.data.PipelineData
+    filters:
+      - _target_: src.domain.request.filters.QueryFilter
+        text: водитель категории C дневные смены
+    items:
+      _target_: src.domain.collection.serp.SERP
+      items:
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: driver-c-day
+          fields: {title: Водитель категории C, description: Доставка грузов по городу. Работа днём., city: Казань, schedule: day, text_match: 10.0, preference_match: 1.0}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: driver-c-night
+          fields: {title: Водитель категории C, description: Ночная доставка между складами., city: Казань, schedule: night, text_match: 9.0, preference_match: 0.2}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: driver-ce-day
+          fields: {title: Водитель категории CE, description: Перевозка с прицепом. Дневные рейсы., city: Казань, schedule: day, text_match: 7.0, preference_match: 0.8}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: courier-b-day
+          fields: {title: Водитель-курьер категории B, description: Доставка небольших посылок в дневное время., city: Казань, schedule: day, text_match: 4.0, preference_match: 0.9}
+        - _target_: src.domain.document.vacancy.Vacancy
+          id: dispatcher
+          fields: {title: Диспетчер автопарка, description: Распределение рейсов. Дневная смена., city: Казань, schedule: day, text_match: 1.0, preference_match: 0.7}
+  relevance: {driver-c-day: 3, driver-c-night: 2, driver-ce-day: 0, courier-b-day: 0, dispatcher: 0}

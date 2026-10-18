@@ -1,0 +1,50 @@
+_target_: src.experiments.testing.compare.CompareExperiment
+pipelines:
+  text: text_top
+  preference: preference_top
+  fused: fused
+registry:
+  _target_: src.core.registry.BasicTransformerRegistry
+  entries:
+    text_score:
+      _target_: src.core.transformers.extractors.score.FieldScoreExtractor
+      field: ${ranking.text_field}
+    preference_score:
+      _target_: src.core.transformers.extractors.score.FieldScoreExtractor
+      field: ${ranking.preference_field}
+    sort:
+      _target_: src.core.transformers.transformers.score_sort.ScoreSortTransformer
+    top:
+      _target_: src.core.transformers.transformers.top_k.TopKTransformer
+      k: ${ranking.k}
+    text_all:
+      _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+      steps: [text_score, sort]
+    preference_all:
+      _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+      steps: [preference_score, sort]
+    text_top:
+      _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+      steps: [text_all, top]
+    preference_top:
+      _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+      steps: [preference_all, top]
+    branches:
+      _target_: src.core.transformers.transformers.branch.BranchTransformer
+      branches:
+        text: text_all
+        preference: preference_all
+    rrf:
+      _target_: src.core.transformers.aggregation.rrf.ReciprocalRankFusionTransformer
+      rank_constant: ${ranking.rank_constant}
+    fused:
+      _target_: src.core.transformers.transformers.pipeline.PipelineTransformer
+      steps: [branches, rrf, top]
+cases: ${ranking.cases}
+metrics:
+  ndcg:
+    _target_: src.components.evaluation.metrics.listwise.ndcg.ListWiseNDCG
+    k: ${ranking.k}
+exporters:
+  - _target_: src.components.reporting.exporters.json.JSONExporter
+    path: ${hydra:runtime.output_dir}/comparison.json

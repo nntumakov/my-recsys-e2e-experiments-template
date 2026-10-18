@@ -68,7 +68,7 @@ poetry run ty check
 poetry run pytest
 ```
 
-Запуск и внешние подключения описаны в [README.md](README.md).
-Тесты интеграций используют локальный HTTP-сервер;
+Python-only пример — в [README.md](README.md); внешние подключения —
+в [docs/usage.md](docs/usage.md). Тесты интеграций используют локальный HTTP-сервер;
 они не подтверждают работу реального OpenSearch, Qdrant или TEI.
 Для документационных изменений проверяй ссылки и `git diff --check`.
