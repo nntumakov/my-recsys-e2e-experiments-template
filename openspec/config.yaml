@@ -1,0 +1,23 @@
+schema: spec-driven
+
+context: |
+  Language: Russian
+  All artifacts must be written in Russian.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+  Read AGENTS.md before changing the project.
+  The project uses Python 3.12+, Poetry and Hydra; implementations live in src/.
+  Preserve typed transformers, named registry composition and PipelineData.
+  CONTEXT.md owns terminology; docs/architecture.md owns technical contracts;
+  docs/development.md records delivery status and verification limits.
+  Numbered docs/specs/001–009 remain the contracts for existing capabilities.
+  New changes use OpenSpec; reference those contracts instead of copying them.
+  Python-only examples must use the existing configuration and abstractions.
+rules:
+  proposal:
+    - State the observable outcome, compatibility and scope boundaries.
+  specs:
+    - Specify failure behavior and acceptance evidence, including absence of partial publication.
+  design:
+    - Identify the behavior owner and reuse the project's composition mechanisms.
+  tasks:
+    - Include focused tests and current documentation with each behavior change.
