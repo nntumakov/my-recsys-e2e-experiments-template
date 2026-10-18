@@ -67,10 +67,12 @@ Specs 001–009 остаются действующими контрактами
 
 ```sh
 git switch codex/public-release
-git log --oneline -4
+git log --oneline
 git status --short
-git push --set-upstream origin codex/public-release
+git push origin HEAD:refs/heads/codex/public-release
 ```
+
+Remote и целевая ветка задаются явно; upstream не настраивается.
 
 Перед следующим обновлением забери remote refs и проверь расхождение:
 
