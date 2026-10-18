@@ -1,13 +1,11 @@
 # recsys-experiments
 
-Pet-проект для экспериментов с поиском и ранжированием вакансий. Можно собрать
-несколько способов обработки запроса, сравнить выдачи и сохранить результат,
-не меняя код сценария при каждой настройке весов или состава pipeline.
+Эксперименты с поиском и ранжированием вакансий: сравнение выдач, разбор запросов
+и оценка качества на размеченных данных.
 
-Эксперименты написаны на Python. Hydra создаёт типизированные компоненты,
-registry связывает их по именам, transformers работают с общим PipelineData.
-Есть OpenSearch-поиск, разбор русскоязычных запросов рабочих профессий,
-RRF, NDCG, notebook для сравнения выдач и векторный поиск через TEI/Qdrant.
+Сценарии написаны на Python, состав обработки задаётся Hydra. Именованные
+transformers работают с общим PipelineData; ветки исполняются на независимых копиях,
+результаты сохраняются отдельными артефактами. Подключены OpenSearch и TEI/Qdrant.
 
 ## Попробовать без сервисов
 
@@ -34,9 +32,8 @@ NDCG@3 по каждому запросу и сводная статистика
 poetry run python -m src.experiments.examples.ranking
 ```
 
-Команда печатает JSON без записи на диск. В [Python-файле](src/experiments/examples/ranking.py)
-нет альтернативного runner: Compose API собирает тот же CompareExperiment.
-Параметры CLI остаются обычными Hydra overrides:
+Команда печатает JSON без записи на диск. [Python-пример](src/experiments/examples/ranking.py)
+собирает CompareExperiment через Compose API. Параметры меняются Hydra overrides:
 
 ```sh
 poetry run python -m src.run --config-name ranking ranking.k=2 ranking.rank_constant=0
@@ -48,14 +45,13 @@ poetry run python -m src.run --config-name ranking ranking.k=2 ranking.rank_cons
 | --- | --- |
 | Разобрать конфигурацию, ветки, RRF и NDCG | [Локальный пример](docs/examples/offline-ranking.md) |
 | Подключить свой индекс или запустить batch | [Руководство по внешним сервисам](docs/usage.md) |
-| Сравнить fulltext и embedding варианты в notebook | [Search study](src/experiments/notebooks/search-study.ipynb) и [подготовка](docs/usage.md#десять-вариантов-поиска-и-notebook-сравнения-009) |
+| Сравнить fulltext и embedding варианты в notebook | [Search study](src/experiments/notebooks/search-study.ipynb) и [подготовка](docs/usage.md#сравнение-десяти-вариантов) |
 | Понять границы компонентов | [Архитектура](docs/architecture.md) и [словарь](CONTEXT.md) |
 | Изменить проект, запустить проверки, работать с OpenSpec | [CONTRIBUTING](CONTRIBUTING.md) |
 | Узнать, что проверено и что требует реального сервиса | [Текущий статус](docs/development.md) |
 
 Код находится в `src/`, конфиги — в `configs/`, тесты — в `tests/`.
-Синтетические данные и HTTP fixtures проверяют механику; они не подтверждают
-качество поиска на реальных вакансиях. Live-проверки OpenSearch/Painless,
-GPU и Qdrant описаны отдельно в статусе и спецификациях.
+Учебные данные показывают механику эксперимента. Качество реального поиска
+требует своего корпуса и независимой разметки.
 
 Лицензия — [MIT](LICENSE).

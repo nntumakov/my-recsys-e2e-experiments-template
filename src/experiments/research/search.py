@@ -1,4 +1,4 @@
-"""Preview and compare named research pipelines, sharing ordinary search semantics."""
+"""Preview query plans and compare named search pipelines."""
 
 from collections.abc import Mapping, Sequence
 from copy import deepcopy

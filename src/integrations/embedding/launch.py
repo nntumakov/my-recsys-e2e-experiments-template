@@ -1,4 +1,4 @@
-"""Launch the configured TEI container without managing the search database."""
+"""Start a pinned TEI container and check its encoding endpoints."""
 
 import logging
 import math
@@ -152,7 +152,7 @@ def _docker(
 
 
 def launch(cfg: DictConfig) -> str:
-    """Start a fresh container and verify its HTTP contract; GPU smoke is separate."""
+    """Start a new container and verify health, model info and encoding probes."""
     runtime = cfg.embedding.runtime
     duration = runtime.startup_deadline
     if (

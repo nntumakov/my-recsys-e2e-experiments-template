@@ -1,4 +1,4 @@
-"""Hydra creates only the explicitly registered study variants."""
+"""Instantiate selected search variants from Hydra configuration."""
 
 from collections.abc import Mapping, Sequence
 from typing import cast
@@ -17,7 +17,7 @@ from src.experiments.research.study import StudyExperiment
 
 
 def _configuration_identity(value: object) -> JSONValue:
-    """Credentials and connection URLs have no place in study artifacts or hashes."""
+    """Exclude credentials and deployment addresses from artifacts and hashes."""
     if isinstance(value, Mapping):
         return {
             str(k): _configuration_identity(v)

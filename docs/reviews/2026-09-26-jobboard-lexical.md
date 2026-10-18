@@ -6,10 +6,10 @@
 исправления дополнительно проверены по working-tree diff. Более ранний локальный
 коммит `f9f7f77` не является частью diff этого review.
 
-Два независимых агента GPT-6-sol проверили Standards и Spec; основной агент
-воспроизвёл замечания и внёс исправления. Источники требований — AGENTS.md,
+Проверены стандарты проекта и соответствие спецификации.
+Источники требований — AGENTS.md,
 architecture.md, development.md и локальные [004](../specs/004-end-to-end-search.md)
-и [004A](../specs/004-jobboard-content.md). Issue tracker для этой задачи не нужен.
+и [004A](../specs/004-jobboard-content.md).
 
 ## Standards
 

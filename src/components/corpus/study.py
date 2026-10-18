@@ -1,4 +1,4 @@
-"""One unfiltered cohort must be representable by both E4 branches."""
+"""Validate a shared corpus with nonempty titles and descriptions."""
 
 from pathlib import Path
 

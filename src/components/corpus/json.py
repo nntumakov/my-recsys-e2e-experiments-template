@@ -1,4 +1,4 @@
-"""Strict JSON vacancy array reader."""
+"""Read a complete vacancy corpus with unique ids and JSON fields."""
 
 from pathlib import Path
 

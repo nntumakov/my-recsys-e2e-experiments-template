@@ -372,8 +372,7 @@ docker run --detach \
    `src/`, `configs/`, `poetry.lock` и авторские fixtures. Получить clean checkout
    обычным Git clone/fetch на целевой машине; не копировать `.venv`, outputs,
    credentials и runtime caches. Private корпус доставляется отдельно в
-   согласованный путь. Текущий untracked draft spec не является поставленным Git
-   baseline; в этой исследовательской работе commit/push не выполнялся.
+   отдельный путь. Исследовательская заметка не заменяет реализованный checkout.
 3. В корне checkout выполнить уже существующую команду `poetry install`.
    Это установка locked application dependencies, без PyTorch/vLLM.
    Заполнить один Hydra site profile: внешнее подключение Qdrant, корпус/поля,

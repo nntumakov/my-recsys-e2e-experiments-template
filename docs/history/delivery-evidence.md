@@ -12,7 +12,7 @@
 [Spec 009](../specs/009-search-experiment-matrix.md) реализована локально: пять fulltext
 и пять embedding-вариантов, явные scalar AND filters, независимые snapshots,
 ручное сравнение, CLI/batch и подготовка whole/title/body/chunk generations.
-По уточнению пользователя dense-варианты исследуют разные механизмы и представления
+Dense-варианты исследуют разные механизмы и представления
 на одной pinned E5-base. Основной интерфейс —
 [search-study.ipynb](../../src/experiments/notebooks/search-study.ipynb): preview,
 summary, side-by-side rank lists, union matrix с reference/deltas, полные карточки,
@@ -76,8 +76,7 @@ registry/payload и export formats 001–008 сохраняются.
 
 ## Поставка 008: векторный поиск и самостоятельная инфраструктура
 
-[Spec 008](../specs/008-vector-search.md) финализирована 2026-10-10 по запросу
-пользователя. Зафиксированы TEI/E5-base, внешний user-owned Qdrant, конфигурация
+[Spec 008](../specs/008-vector-search.md) финализирована 2026-10-10. Зафиксированы TEI/E5-base, внешний user-owned Qdrant, конфигурация
 Hydra, query/document encoding, immutable collection generations, publication/
 recovery и отдельные local/live критерии приёмки. Исследовательские основания
 и первичные источники доступны из spec.
@@ -112,7 +111,7 @@ manifest/lockfile не менялись.
 | L19–L20 | `test_vector_launch.py`: subprocess doubles + настоящий TEI HTTP, argv/environment, cache/name/port/image и deadline failures без cleanup; TEI/Qdrant bounded transport и tokenize budget |
 | L21 | Общие gates и все прежние tests; vector notebook дважды исполнен code-cell runner с локальным HTTP, build/audit/preview/search/batch/exports |
 
-Два независимых Astra review по Standards/architecture и specification закрыты;
+Проверки стандартов, архитектуры и спецификации завершены;
 третий acceptance audit усилил L04/L06/L14. Найденное игнорирование
 `qdrant.vector.size/distance` исправлено: обязательная materialized declaration
 проверяется владельцем до HTTP, включая null/non-object cases. Отчёт —
@@ -120,7 +119,7 @@ manifest/lockfile не менялись.
 
 Повторное ревью опубликованной поставки `e15aa3b...d608c8f` выявило ещё два P2:
 late readiness response и проверку полного query JSON body после Qdrant admission.
-Оба исправлены и независимо проверены Astra reviewers. Query body budget теперь
+Оба исправлены и повторно проверены. Query body budget теперь
 проверяется в pure prepare до любого HTTP. Общий `integrations/http_response`
 прерывает чтение body/chunk framing по абсолютному deadline; Timer отменяется
 и завершается до возврата. Index experiment не публикует ready после позднего green.
@@ -142,8 +141,7 @@ Qdrant process/storage остаётся user-owned. Приложение стр�
 не отменяет подтверждённую удалённую готовность. OpenSearch default и прежние
 форматы search/batch сохраняются.
 
-При финализации спецификации три GPT-6 Astra субагента проверили infrastructure,
-encoding и Qdrant contracts. Проверены 46 локальных Markdown targets и синтаксис 22 JSON/YAML/
+При финализации спецификации проверены infrastructure, encoding и Qdrant contracts. Проверены 46 локальных Markdown targets и синтаксис 22 JSON/YAML/
 shell/Python примеров в spec и research notes, whitespace и `git diff --check`.
 Отдельная read-only Hydra composition через `--cfg job` подтвердила общий site
 config для launcher/index/interactive/batch; эксперименты и сервисы не запускались.
@@ -220,14 +218,13 @@ Source template требует только site-specific inputs: URL/auth, inde
 не чтение doc values и не объяснение вычислений OpenSearch.
 
 OpenSearch не устанавливался, Painless не исполнялся, качество и latency не измерялись.
-Эта граница прямо задана пользователем; локальный HTTP не подтверждает удалённую
-совместимость. Исследовательские основания сохранены в заметках о
+Локальный HTTP не подтверждает удалённую совместимость. Исследовательские основания сохранены в заметках о
 [Painless](../research/2026-09-29-painless-ranking.md) и
 [Query Understanding](../research/2026-09-29-query-understanding.md).
 
 ## Реализовано
 
-[Spec 001](../specs/001-interactive-search.md) реализована по явному запросу пользователя:
+[Spec 001](../specs/001-interactive-search.md) реализована:
 домен, PipelineData, registry, transformers, OpenSearch integration, CLI и JSON-экспорт.
 Исходные файлы и абстракции сохранены; добавлены недостающие реализации в тех же
 областях. Настройка запуска описана в [README](../../README.md).
@@ -240,7 +237,7 @@ Python 3.12+, зависимости и инструменты определе�
 [spec 002](../specs/002-evaluation-and-composition.md): NDCG по явной разметке,
 описательная статистика, извлечение score, top-k, последовательные независимые
 ветки, RRF и эксперимент сравнения. Интерактивный поиск по-прежнему не требует
-метрик. Backend оставлен пустым резервом по явному указанию пользователя;
+метрик. Backend оставлен резервом вне области реализации;
 стандартный OpenSearch полностью принадлежит `integrations/opensearch`.
 
 ## Отдельный jobboard-эксперимент
@@ -272,7 +269,7 @@ cases явных filters и q01/q02 для composed smoke. Реальные sour
 
 ## Evidence
 
-2026-09-29 перед commit/merge spec 006 полный прогон завершился **474 passed**.
+2026-09-29 полный прогон spec 006 завершился **474 passed**.
 Прошли Ruff check, Ruff format --check (121 файл), ty check из существующего `.venv`,
 проверка 134 локальных Markdown-ссылок и whitespace новых/изменённых файлов.
 Notebook сохранён без outputs; все его code cells дважды исполнены с локальным HTTP,
@@ -334,7 +331,7 @@ retrieval-файла. Пять вариантов конфигурации из 
 проверены `poetry check --lock`; версии зависимостей при переходе с uv сохранены.
 Чистая установка `poetry install` в отдельное временное окружение и импорт
 зависимостей также прошли; окружение и его download cache удалены.
-Backend оставлен резервом по указанию пользователя.
+Backend остаётся вне области реализации.
 
 Отдельно выполнен настоящий `poetry run python -m src.run` с локальным HTTP:
 два запроса, полные поля, prefix URL, Authorization и EOF с `searches.json`;
@@ -399,9 +396,8 @@ Poetry отсутствовал в PATH, поэтому его команды в
 
 ## Ограничение среды
 
-На текущем устройстве нет развёрнутого OpenSearch и сетевого доступа к реальному
-прокси. По явному условию пользователя live smoke не является блокером локальной
-поставки. Он **не выполнен**: локальный HTTP-тест не подтверждает конкретный
+В среде локальной приёмки не было OpenSearch и доступа к реальному прокси.
+Live smoke выполняется отдельно от локальных тестов. Он **не выполнен**: локальный HTTP-тест не подтверждает конкретный
 удалённый endpoint, credentials, mapping или доступность индекса.
 
 Перед первым использованием на устройстве с доступом достаточно выполнить

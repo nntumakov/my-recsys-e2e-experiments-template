@@ -1,4 +1,4 @@
-"""Manual and batch study orchestration over the existing search payload contract."""
+"""Compare search variants for one query or a CSV query set."""
 
 import json
 import re

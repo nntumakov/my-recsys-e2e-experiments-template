@@ -1,4 +1,4 @@
-"""Opt-in fulltext study policies; legacy lexical compilers remain unchanged."""
+"""Literal, concept, preference, tiered and fused fulltext retrieval."""
 
 import json
 from collections.abc import Mapping
@@ -475,7 +475,7 @@ class FulltextStudyTransformer(StudySearchTransformer):
                         else None,
                     }
                 )
-            # Actual named-query evidence belongs to the source, not guessed text matching.
+            # Only the response can attest which named queries matched.
             native_hits = cast(dict[str, JSONValue], response.response["hits"])["hits"]
             for native in cast(list[JSONValue], native_hits):
                 native = cast(dict[str, JSONValue], native)

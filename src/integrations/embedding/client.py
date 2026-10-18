@@ -1,4 +1,4 @@
-"""Bounded native TEI HTTP calls with no implicit prompts or retries."""
+"""TEI HTTP client with request, response and deadline limits."""
 
 from collections.abc import Sequence
 from http.client import HTTPException

@@ -1,4 +1,4 @@
-"""Word-preserving, UTF-8 byte based bounded vacancy passages."""
+"""Split vacancy text into token-bounded passages using UTF-8 offsets."""
 
 from __future__ import annotations
 
@@ -91,7 +91,7 @@ def token_count(offsets: tuple[tuple[int, int], ...], start: int, stop: int) -> 
 
 
 class ChunkVacancyText(VacancyText):
-    """A distinct v2 recipe: source fields stay complete, only passages are bounded."""
+    """Passage recipe v2; source fields remain complete."""
 
     def __init__(
         self,

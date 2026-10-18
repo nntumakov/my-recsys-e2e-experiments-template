@@ -1,4 +1,4 @@
-"""Conservative shared decomposition for the search-study mechanisms."""
+"""Separate query topics from preferences for search comparisons."""
 
 import re
 import unicodedata
@@ -31,7 +31,7 @@ def decompose_query(
     *,
     semantic: bool = True,
 ) -> StudyQuery:
-    # Validate raw input before normalizing; errors are never abstentions.
+    # Normalization must not turn invalid input into an accepted fallback.
     if not isinstance(text, str) or not text.strip():
         raise ValueError("Query text must be nonempty")
     if len(text) > parser.max_input_characters:

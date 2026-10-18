@@ -1,4 +1,4 @@
-"""Explicit v2 fragment identity and payload; v1 points remain incompatible."""
+"""Fragment identity and payload schema v2 for passage retrieval."""
 
 import re
 from collections.abc import Mapping

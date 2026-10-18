@@ -1,4 +1,4 @@
-"""Versioned single-field ablations for independent title/body retrieval."""
+"""Single-field recipes for independent title and body retrieval."""
 
 from src.components.embedding.vacancy import VacancyText
 from src.domain import JSONValue

@@ -18,7 +18,7 @@ _SHA256 = re.compile(r"[a-f0-9]{64}\Z")
 
 
 class QdrantSource:
-    """Own document identity, scalar capabilities and the persisted build contract."""
+    """Map domain documents and scalar filters to Qdrant points."""
 
     def __init__(
         self,

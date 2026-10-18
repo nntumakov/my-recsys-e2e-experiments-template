@@ -33,7 +33,7 @@ class _NoRedirect(HTTPRedirectHandler):
 
 
 class QdrantIntegration(BaseIntegration):
-    """The bounded native protocol; the indexing experiment owns write ordering."""
+    """Native Qdrant HTTP operations; the experiment controls write ordering."""
 
     def __init__(
         self,

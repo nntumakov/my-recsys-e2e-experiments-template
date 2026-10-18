@@ -1,10 +1,9 @@
 # 009. Десять поисковых экспериментов и ручное исследование с фильтрами
 
 Статус: **локальная поставка завершена; live G01–G09 не выполнены**. Дата: **2026-10-10**.
-Основание: пользователь хочет до переноса сформировать пять фактурных
-полнотекстовых и пять embedding-поисков, сохранив возможность отправлять запросы,
-задавать некоторые жёсткие фильтры и читать выдачу. Уточнение пользователя:
-embedding-варианты различаются прежде всего механизмами и представлением текста.
+Матрица содержит пять полнотекстовых и пять embedding-поисков с ручными
+запросами, явными фильтрами и просмотром выдачи. Embedding-варианты различаются
+механизмами и представлением текста.
 Основные варианты должны различаться admission, score policy или построением
 выдачи на одном corpus/query/hard-filter case; смена числа полей, labels,
 одного веса или обработки только опечаток не заполняет отдельное место матрицы.
@@ -559,7 +558,7 @@ utility rerank versus rank fusion, topic precision и два encode/retrieval ca
 
 Title-only и structured-card recipes сохраняются representation ablations E1/E4,
 а не основными механизмами E2/E3. Если нужны labels/metadata recipe,
-binding/type/map/identity/audit задаются явно и source fields не выдумываются.
+binding/type/map/identity/audit задаются явно; source fields берутся из ответа.
 Отсутствие metadata не превращает labels-only renderer в новый основной опыт.
 
 ## 13. E4 — title/body RRF
@@ -837,8 +836,8 @@ Study preview принимает тот же query/variants/context/filters и �
 Рабочие ячейки имеют явные подписи «Preview: без сети», «Search/compare: внешние
 вызовы», «Чтение результата: без сети». Preview показывает планы всех выбранных
 вариантов, effective filters, original/topic/preference inputs, core/soft spans
-и объявленный active path либо abstention. Вектор не выдумывается; реальные
-encode/native body остаются отдельным явным исследовательским действием.
+и active path либо abstention. Получение вектора и native body выполняется
+отдельной ячейкой с encode.
 
 Каждый успешный compare — независимый снимок одного query и выбранного набора,
 с run_id, временем, composition identity и исходными/effective входами.
@@ -1232,7 +1231,7 @@ boundaries и общие gates проходят. Только это закры�
 
 На целевой машине пользователь предоставляет реальные URL/auth/mapping/ids,
 scalar values, corpus/cohort, выбранную GPU, pinned совместимый image,
-внешний Qdrant и storage/cache. Ни точная GPU, ни SLA сейчас не выдумываются.
+внешний Qdrant и storage/cache. GPU и SLA выбираются по результатам live проверки.
 Перед builds/downloads требуется disk budget, учитывающий минимум whole/title/
 body generations и M chunk points с повторённым payload, а также выбранные recipe
 абляции. E1/E2/E3 переиспользуют whole generation. Строить все одновременно не обязательно;

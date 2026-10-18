@@ -1,4 +1,4 @@
-"""Opt-in slot policies for work queries; legacy parsing keeps its own semantics."""
+"""Recognize roles, qualifications and preferences in vacancy queries."""
 
 import re
 from collections.abc import Sequence

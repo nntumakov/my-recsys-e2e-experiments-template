@@ -13,11 +13,11 @@
 
 Согласованная граница: только dense vector search, Qdrant запускает пользователь,
 корпус изменяемый, целевая машина имеет RAM и NVIDIA GPU. Точная модель GPU, VRAM,
-драйвер и ОС пока неизвестны; «NVIDIA T…» не подтверждает T4. Hybrid не входит.
+драйвер и ОС определяются перед запуском. Hybrid не входит.
 
 Основа: [архитектура](../architecture.md), [доменный язык](../../CONTEXT.md),
 [development](../development.md), [одиночный поиск/batch](005-search-research.md).
-Исследование выполнено тремя субагентами GPT-6 Astra:
+Исследовательские материалы:
 [inference и инфраструктура](../research/2026-10-10-vector-infrastructure.md),
 [encoding запросов и документов](../research/2026-10-10-vector-encoding.md),
 [контракт Qdrant](../research/2026-10-10-qdrant-contract.md).
@@ -1305,8 +1305,8 @@ indexed_only=false сохраняется. ANN recall не является sema
 concurrency/filter selectivity, RAM/VRAM/disk, truncation share и actual settings.
 GET version/descriptor и /info входят в end-to-end первого контура, их стоимость
 не исключается. Caching проверок потребует явного session/lifetime contract.
-Numeric SLA/качество spec не выдумывает: первый live прогон фиксирует результаты,
-после которых принимается цель следующей итерации.
+Первый live прогон фиксирует исходные показатели. По ним выбираются численные
+цели качества и SLA следующей итерации.
 
 ### 15.4. Альтернативы и trade-offs
 

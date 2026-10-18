@@ -9,47 +9,38 @@ poetry run ty check
 poetry run pytest
 ```
 
-Тесты поднимают временные HTTP-серверы на loopback; внешние сервисы и ключи
-не нужны. Проверка настоящего OpenSearch или GPU выполняется отдельно.
-Границы проверенной совместимости перечислены в [development](docs/development.md).
+Тесты интеграций поднимают временные HTTP-серверы на loopback. Проверки настоящих
+OpenSearch, GPU и Qdrant описаны отдельно в [development](docs/development.md).
 
-Весь Python, включая код примеров, живёт в `src/`. Конфигурация компонентов —
-в `configs/`: Hydra создаёт объекты, registry связывает transformers по именам.
-Начать знакомство можно с [локального примера](docs/examples/offline-ranking.md),
-затем прочитать [архитектуру](docs/architecture.md) и [словарь](CONTEXT.md).
+Весь Python, включая примеры, находится в `src/`. Hydra-конфиги — в `configs/`.
+Начни с [локального сравнения](docs/examples/offline-ranking.md), затем прочитай
+[архитектуру](docs/architecture.md) и [словарь](CONTEXT.md).
 
 ## OpenSpec
 
-Для новых изменений нескольких компонентов используем
-[OpenSpec](https://github.com/Fission-AI/OpenSpec). Для небольшого локального
-исправления достаточно кода, нужной проверки и обновления затронутого контракта.
-OpenSpec нужен разработчику, но не нужен для запуска экспериментов.
+Изменения нескольких компонентов и публичных контрактов описываем в
+[OpenSpec](https://github.com/Fission-AI/OpenSpec). Локальному исправлению
+достаточно кода, соответствующей проверки и обновлённой документации.
+Для запуска экспериментов OpenSpec не нужен.
 
-В проекте настроен CLI 1.14.0. Если его нет, установи изолированно, без глобальной
-установки и изменения Python lockfile:
+Проект настроен на CLI 1.14.0. Его можно вызвать без глобальной установки:
 
 ```sh
 npm exec --yes --package=@fission-ai/openspec@1.14.0 -- openspec --version
 ```
 
-Следующие команды предполагают доступный `openspec`; с `npm exec` используй
-тот же префикс перед каждой командой. Повторный `init` после клонирования не нужен.
+Далее используется доступный `openspec`; при запуске через npm exec сохраняй
+тот же префикс. Повторный init после клонирования не требуется.
 
 ```sh
-openspec list
 openspec new change short-change-name
 openspec status --change short-change-name
 openspec instructions proposal --change short-change-name
 ```
 
-В `openspec/changes/<name>/` последовательно появляются `proposal.md`,
-`specs/<capability>/spec.md`, `design.md` и `tasks.md`. Spec описывает поведение,
-совместимость, ошибки и evidence приёмки; design — владельцев и решения;
-tasks — исполнимую работу. Перед реализацией существенные открытые решения
-должны быть согласованы. Явный запрос на реализацию делегирует тактические решения
-внутри принятого scope.
-
-После реализации выполни gates, отметь проверенные tasks и проверь change:
+В `openspec/changes/<name>/` опиши причину и границы в proposal, поведение
+и ошибки в specs, решения в design, исполнение и проверки в tasks.
+После реализации и проверок:
 
 ```sh
 openspec validate short-change-name --strict --no-interactive
@@ -57,20 +48,41 @@ openspec archive short-change-name --yes
 openspec validate --all --strict --no-interactive
 ```
 
-Archive переносит change в `openspec/changes/archive/` и обновляет текущие
-requirements в `openspec/specs/`. Файлы в `.agents/skills/openspec-*` сгенерированы
-CLI для Codex; в новом сеансе они доступны как навыки OpenSpec. Обновляй их через
-`openspec update`, проверяя diff.
+Archive обновляет `openspec/specs/` и сохраняет change в `openspec/changes/archive/`.
+Specs 001–009 остаются действующими контрактами; новые изменения ссылаются на них.
+Термины принадлежат CONTEXT, технические объяснения — architecture, состояние
+проверок — development. Сгенерированные Codex skills обновляются `openspec update`.
 
-Действующие specs 001–009 остаются в `docs/specs/`: массовый перенос ради формата
-не нужен. Новая OpenSpec spec ссылается на затронутый старый контракт и явно
-описывает изменение. Термины обновляются в `CONTEXT.md`, технические контракты —
-в `docs/architecture.md`, статус и реальные проверки — в `docs/development.md`.
+## Публикационная ветка
 
-## Изменения
+`codex/public-release` содержит отдельную публичную историю. Исходная разработка
+сохранена в `master` и `codex/internal-history`. `origin` — GitHub-репозиторий проекта;
+публикационная ветка обновляется под собственным именем, отдельно от master.
 
-В описании изменения укажи наблюдаемое поведение, причину и выполненные проверки.
-Для интеграций различай HTTP fixtures и реальный сервис. Коммить код вместе
-с относящимися к нему конфигурацией, тестами и документацией.
+Работай в `codex/public-release`. Изменение из внутренней истории переноси выбранным
+коммитом через `git cherry-pick <commit>`, затем проверяй diff и запускай gates выше.
+Независимые корни веток не требуют merge для публикации.
 
+Первая публикация ветки:
+
+```sh
+git switch codex/public-release
+git log --oneline -4
+git status --short
+git push --set-upstream origin codex/public-release
+```
+
+Перед следующим обновлением забери remote refs и проверь расхождение:
+
+```sh
+git fetch origin
+git log --left-right --oneline HEAD...origin/codex/public-release
+git diff origin/codex/public-release..HEAD
+git push origin HEAD:refs/heads/codex/public-release
+```
+
+Если на remote есть чужие коммиты, сначала согласуй и включи их в ветку.
+Обычный push отклонит расхождение; автоматический force-push здесь не используется.
+
+Код, конфиги, тесты и относящиеся к ним документы коммить вместе.
 Проект распространяется под [MIT](LICENSE).

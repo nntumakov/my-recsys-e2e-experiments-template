@@ -1,4 +1,4 @@
-"""Expand concise authored dictionaries into the existing typed parsing stages."""
+"""Build query parsers from Hydra lexicons."""
 
 from collections.abc import Mapping, Sequence
 

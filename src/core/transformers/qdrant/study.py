@@ -1,4 +1,4 @@
-"""Dense study mechanisms keep admission, scoring and rank fusion explicit."""
+"""Whole-query, preference, multi-query and title/body vector retrieval."""
 
 from collections.abc import Mapping
 from copy import deepcopy

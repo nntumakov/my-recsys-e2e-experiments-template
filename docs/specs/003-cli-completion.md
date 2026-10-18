@@ -39,4 +39,4 @@ README отвечает за запуск, architecture — за контрак�
 - Регрессия незавершённого pipeline проверяет отсутствие вывода и экспорта.
 - Проверены ссылки документации и `git diff --check`.
 
-Реальный backend и live OpenSearch smoke исключены из приёмки пользователем.
+Backend остаётся вне области spec; live OpenSearch smoke выполняется отдельно.

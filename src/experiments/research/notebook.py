@@ -1,4 +1,4 @@
-"""Notebook composition and the current successful snapshot have explicit owners."""
+"""Compose study sessions and expose the current successful comparison."""
 
 import re
 from collections.abc import Mapping, Sequence
@@ -93,7 +93,7 @@ class StudyNotebookSession:
         context: Mapping[str, JSONValue] | None = None,
         reference_variant: str | None = None,
     ) -> SearchStudyArtifact:
-        # This also covers errors in input binding before any engine is called.
+        # Clear the old snapshot even if input binding fails before the search.
         self.current = None
         result = self.study.compare(
             text,

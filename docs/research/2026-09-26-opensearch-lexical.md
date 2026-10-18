@@ -320,7 +320,7 @@ index/profile и parameters. Не выдавать локально измере
 
 1. **Профиль источника:** известные fields, index/alias, версия/доступные функции,
    условия auth/TLS, full `_source`, смысл document id, ограничения размеров.
-   Не обращаться к admin API без прав и не выдумывать mapping.
+   Использовать подтверждённый mapping и доступные операции API.
 2. **Baseline:** нынешний multi_match с фиксированными fields/size/filters.
 3. **Один усиленный retrieval:** weighted fields + explicit eligibility/MSM +
    optional phrase boost. Проверить слова, разделённые между полями, длинный
@@ -341,7 +341,7 @@ index/profile и parameters. Не выдавать локально измере
    подтверждает фактический index, анализ и возможности; fixtures не заменяют его.
 
 Rescore, date/numeric boost и DFS стоит добавлять после появления проверяемого
-основания. По уточнению пользователя код раскладывается по существующим владельцам
+основания. Код раскладывается по существующим владельцам
 `src`: domain, components разбора, core transformers/DSL, integrations и orchestration
 в experiments. Конкретная карта и обязательный контент находятся в
 [spec 004](../specs/004-end-to-end-search.md) и её приложении; принадлежность одному

@@ -1,4 +1,4 @@
-"""Search-body ranking composition. Source code is authored in Hydra, never here."""
+"""Apply ranking modes to search bodies; Painless scripts come from Hydra."""
 
 import json
 import math
@@ -185,7 +185,7 @@ class RankingConfig:
     def source_diagnostics(
         self, item: BaseDocument, source: SourceProfile, now_ms: int
     ) -> dict[str, JSONValue]:
-        """Inspect returned _source, never pretend it is the engine's doc values."""
+        """Read diagnostics from _source, independently of server-side doc values."""
         values: dict[str, JSONValue] = {}
         flags: list[JSONValue] = []
         for role in sorted(set(self.field_params.values())):

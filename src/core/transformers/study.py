@@ -1,4 +1,4 @@
-"""The narrow preview/admission boundary used by search study compositions."""
+"""Search transformer with local planning and remote source validation."""
 
 from abc import abstractmethod
 

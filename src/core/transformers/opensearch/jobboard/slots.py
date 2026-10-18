@@ -1,4 +1,4 @@
-"""Concept-centric eligibility and field routing, opt-in alongside legacy lexical."""
+"""Compile role, qualification and preference slots into OpenSearch queries."""
 
 import math
 from collections.abc import Mapping

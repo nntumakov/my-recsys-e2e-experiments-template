@@ -9,7 +9,7 @@ from src.domain.document.vacancy import Vacancy
 
 
 class BaseOpenSearchDocument(BaseExternalDocument):
-    """Own the search hit shared by OpenSearch document conversions."""
+    """OpenSearch hit converted by document-specific adapters."""
 
     def __init__(self, hit: Mapping[str, JSONValue]) -> None:
         self.hit = hit

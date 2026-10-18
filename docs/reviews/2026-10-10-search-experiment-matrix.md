@@ -1,24 +1,21 @@
 # Предметное ревью матрицы поисковых экспериментов 009
 
 Дата: **2026-10-10**. Объект: проект [spec 009](../specs/009-search-experiment-matrix.md),
-до реализации. Запрос пользователя — проверить фактурность с помощью субагентов:
-нужны разные механизмы BM25, обработки мягких условий и построения выдачи,
-а не изменение количества полей. Этот отчёт фиксирует найденные слабости и
+до реализации. Предмет проверки — различия механизмов BM25, обработки мягких
+условий и построения выдачи. Этот отчёт фиксирует найденные слабости и
 исправленную исследовательскую матрицу; он не подтверждает качество поиска.
 
-Три субагента независимо читали проект спецификации и текущие owner contracts:
+Проверка охватывала три направления:
 
-| Субагент | Предмет проверки |
+| Направление | Предмет проверки |
 | --- | --- |
-| `fulltext_substance_review` | Самостоятельность fulltext mechanisms, мягкие условия, BM25 composition и controls |
-| `embedding_substance_review` | Dense admission/representation/aggregation, ablations и содержательные contrasts |
-| `factual_contract_review` | Соответствие текущему коду, первичным источникам, фильтрам и выполнимость acceptance |
+| Fulltext | Самостоятельность fulltext mechanisms, мягкие условия, BM25 composition и controls |
+| Embedding | Dense admission/representation/aggregation, ablations и содержательные contrasts |
+| Контракты | Соответствие текущему коду, первичным источникам, фильтрам и выполнимость acceptance |
 
-После переработки первые два проверили новые механизмы повторно. Их уточнения
-внесены в контракты function_score, disjoint tiers, safe span mapping и fixed-pool
-exact scoring. Финальная повторная проверка `factual_contract_review` не нашла
-остаточных противоречий механизмов и acceptance, но выявила необходимость
-отдельного подтверждения BM25 similarity; это уточнение также внесено.
+Повторная проверка уточнила function_score, disjoint tiers, safe span mapping
+и fixed-pool exact scoring. Противоречий между механизмами и acceptance не найдено;
+для BM25 label добавлено отдельное подтверждение similarity.
 Технические источники и граница проверок — в
 [research note](../research/2026-10-10-search-experiment-matrix.md).
 
@@ -123,8 +120,7 @@ Max предотвращает прямой sum/count bonus, но дополни
 
 ## Последующее уточнение рабочего интерфейса
 
-После предметного ревью пользователь согласовал формат проработанного notebook
-со сравнением. Раздел 15 spec дополнен первым запуском и настройкой site config,
+После предметного ревью уточнён интерфейс notebook для сравнения. Раздел 15 spec дополнен первым запуском и настройкой site config,
 единым входом query/variants/filters, двумя видами сравнения, полными карточками,
 snapshot labels, правилами повторного поиска/пересборки и явным сохранением.
 Проработанная сессия topic/preferences входит в приёмку N01–N09 и live G09.
@@ -132,8 +128,8 @@ snapshot labels, правилами повторного поиска/перес
 Это уточнение не меняет десять поисковых механизмов. Переотображение artifact
 не делает HTTP/inference, preview не делает encode, и Run All по умолчанию
 не запускает writes/batch/corpus audit. Неудача нового compare не выдаёт старый
-snapshot за новый результат. Уточнение проверено основным агентом по текущим
-contracts 005/008; отдельное субагентное ревью этой части не проводилось.
+snapshot за новый результат. Уточнение сверено с contracts 005/008;
+отдельного независимого ревью этой части не проводилось.
 После изменения повторно проверены 84 локальных targets и шесть anchors в пяти
 документах, синтаксис трёх примеров spec, fences/whitespace и `git diff --check`.
 
@@ -143,16 +139,14 @@ contracts 005/008; отдельное субагентное ревью этой
 `38af3ab513aad4d1d5326e2dfa25be8aba161eca` на `codex/search-study-009`.
 При проверке authored files ещё не были закоммичены: просмотрены tracked diff и
 все новые study modules/configs/tests, а не только `git diff` без untracked files.
-Spec source — 009, стандарты — AGENTS.md и architecture/development; issue tracker
-для этой задачи не нужен, исходный контракт находится в репозитории.
-Применён двухосевой workflow skill `code-review`; субагенты исключали собственные
-реализации из независимой проверки.
+Требования — spec 009, стандарты — AGENTS.md и architecture/development.
+Стандарты и соответствие спецификации проверялись отдельно от авторства реализации.
 
-| Проверяющий | Независимая область |
+| Проверка | Область |
 | --- | --- |
-| `implement_chunks_009` | Standards/ownership: root orchestration, composition, bindings, artifact, fulltext и notebook |
-| `implement_dense_009` | Spec: чужие fulltext, E5 chunks/source/build, root orchestration/artifact/configs и контент |
-| `implement_fulltext_009` | Дополнительная Spec/Standards проверка чужих E1–E4, representations/cohort и notebook/session |
+| Стандарты | Standards/ownership: root orchestration, composition, bindings, artifact, fulltext и notebook |
+| Спецификация | Spec: чужие fulltext, E5 chunks/source/build, root orchestration/artifact/configs и контент |
+| Дополнительная проверка | Дополнительная Spec/Standards проверка чужих E1–E4, representations/cohort и notebook/session |
 
 ### Standards
 

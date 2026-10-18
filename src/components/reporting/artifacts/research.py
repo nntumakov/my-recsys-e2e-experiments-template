@@ -1,4 +1,4 @@
-"""Versioned diagnostic artifact; legacy result formats remain unchanged."""
+"""Search snapshots with query plans, parsing traces and timing."""
 
 import json
 from collections.abc import Sequence

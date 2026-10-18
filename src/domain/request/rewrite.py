@@ -1,4 +1,4 @@
-"""Immutable evidence of query repair, distinct from the original request."""
+"""Query rewrite proposals, accepted changes and rejection reasons."""
 
 from dataclasses import dataclass
 
